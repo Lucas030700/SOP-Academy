@@ -1,4 +1,5 @@
 const INDEX_URL = "./data/lectures-index.json";
+const APP_VERSION = "3";
 const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1" };
 const state = { modules: [], topics: [], filter: "all", query: "", activeTopic: null };
 const $ = (id) => document.getElementById(id);
@@ -81,8 +82,9 @@ async function openTopic(id) {
   if (!topic) return;
   state.activeTopic = topic;
   try {
-    const response = await fetch(topic.path);
-    if (!response.ok) throw new Error("Lecture file unavailable");
+    const lectureUrl = new URL(topic.path, location.href).href;
+    const response = await fetch(lectureUrl, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Lecture request failed (${response.status})`);
     const markdown = await response.text();
     $("lecture-kicker").textContent = `MODULE ${topic.module} · TOPIC ${topic.topicNumber}`;
     $("lecture-title").textContent = topic.title;
@@ -147,4 +149,4 @@ $("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-
 document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
 window.addEventListener("online",setConnection); window.addEventListener("offline",setConnection);
 setConnection(); loadLibrary();
-if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" }).catch(()=>{}));
