@@ -114,27 +114,14 @@ Ang Accountant naman ay gustong bawasan ang spending kaya ayaw niyang mag-approv
 
 Resulta?
 
-<box border radius="lg" gap={3} padding={3}>
-  <title size="lg">The business problem</title>
-  <row align="center" justify="between">
-    **Customer demand**
-    <title color="success" size="xl" tabularNums>10,000</title>
-  </row>
-  <row align="center" justify="between">
-    **Available finished goods**
-    <title size="lg" tabularNums>2,000</title>
-  </row>
-  <row align="center" justify="between">
-    **Materials supporting production**
-    <title size="lg" tabularNums>6,000</title>
-  </row>
-  <divider color="subtle"/>
-  <row align="center" justify="between">
-    **Potential shortfall**
-    <title color="danger" size="2xl" tabularNums>2,000</title>
-  </row>
-  <text color="secondary" size="xs">Illustrative scenario. Assumes the 6,000-material-supported production quantity is additional to the 2,000 finished goods, and no other constraints.</text>
-</box>
+| Business measure | Quantity |
+|---|---:|
+| Customer demand | 10,000 units |
+| Available finished goods | 2,000 units |
+| Materials supporting production | 6,000 units |
+| **Potential shortfall** | **2,000 units** |
+
+*Illustrative scenario. Assumes the 6,000-material-supported production quantity is additional to the 2,000 finished goods, and no other constraints.*
 
 Hindi aligned ang plans nila.
 
@@ -280,6 +267,10 @@ Let's consolidate their information.
 | Sales demand | 10,000 units |
 | Manufacturing capacity | 8,000 units |
 | Material availability | 7,000 units |
+
+**Demand versus capacity gap:** 2,000 units.
+
+**Demand versus material gap:** 3,000 units.
 
 We can immediately identify two problems:
 
@@ -1637,18 +1628,22 @@ Explain how you would investigate and resolve the discrepancy.
 
 ## Answer Submission
 
-The learner can answer all questions or submit them in batches. Show calculations for Question 7. The instructor should evaluate the answers individually, explain correct and incorrect reasoning, identify knowledge gaps, and provide an overall assessment.
+You can answer all questions or submit them in batches. Show your calculations for Question 7.
 
-### How the answers will be evaluated
+### How I will evaluate your answers
 
-| Evaluation area | What to look for |
+I will assess your understanding based on four areas:
+
+| Evaluation area | What I will look for |
 |---|---|
-| Conceptual understanding | Does the learner understand what S&OP really means? |
-| Technical understanding | Can the learner correctly use the terminology? |
-| Practical application | Can the learner apply S&OP to manufacturing situations? |
-| Analytical thinking | Can the learner identify problems and recommend reasonable business decisions? |
+| Conceptual understanding | Do you understand what S&OP really means? |
+| Technical understanding | Can you correctly use the terminology? |
+| Practical application | Can you apply S&OP to manufacturing situations? |
+| Analytical thinking | Can you identify problems and recommend reasonable business decisions? |
 
-The instructor should also identify whether the learner is ready to progress from Level 1 understanding toward Level 2 technical application.
+I will also identify whether you are ready to progress from Level 1 understanding toward Level 2 technical application.
+
+**Submit my answers for evaluation.**
 
 ---
 
