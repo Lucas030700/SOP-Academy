@@ -108,23 +108,23 @@ function renderLectureMarkdown(markdown) {
   }
   const mathBlocks = [];
   const withMathTokens = markdown
-    .replace(/\\\\\[([\s\S]*?)\\\\\]/g, (_, tex) => {
-      const token = \`SOPMATHBLOCK\${mathBlocks.length}END\`;
+    .replace(/\\\[([\s\S]*?)\\\]/g, (_, tex) => {
+      const token = "SOPMATHBLOCK" + mathBlocks.length + "END";
       mathBlocks.push({ token, tex, display: true });
       return token;
     })
-    .replace(/\\\\\(([\s\S]*?)\\\\\)/g, (_, tex) => {
-      const token = \`SOPMATHINLINE\${mathBlocks.length}END\`;
+    .replace(/\\\(([\s\S]*?)\\\)/g, (_, tex) => {
+      const token = "SOPMATHINLINE" + mathBlocks.length + "END";
       mathBlocks.push({ token, tex, display: false });
       return token;
     })
     .replace(/\$\$([\s\S]*?)\$\$/g, (_, tex) => {
-      const token = \`SOPMATHBLOCK\${mathBlocks.length}END\`;
+      const token = "SOPMATHBLOCK" + mathBlocks.length + "END";
       mathBlocks.push({ token, tex, display: true });
       return token;
     })
     .replace(/(^|[^$])\$([^$\n]+)\$/g, (_, before, tex) => {
-      const token = \`SOPMATHINLINE\${mathBlocks.length}END\`;
+      const token = "SOPMATHINLINE" + mathBlocks.length + "END";
       mathBlocks.push({ token, tex, display: false });
       return before + token;
     });
@@ -132,7 +132,7 @@ function renderLectureMarkdown(markdown) {
   let rendered = marked.parse(withMathTokens, { async: false });
   for (const item of mathBlocks) {
     const tag = item.display ? "div" : "span";
-    const html = \`<\${tag} class="math-render-target" data-display="\${item.display}" data-tex="\${escapeHTML(item.tex)}"></\${tag}>\`;
+    const html = "<" + tag + " class=\"math-render-target\" data-display=\"" + item.display + "\" data-tex=\"" + escapeHTML(item.tex) + "\"></" + tag + ">";
     rendered = rendered.replace(item.token, html);
   }
   const container = document.createElement("div");
