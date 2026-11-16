@@ -128,18 +128,13 @@ function renderLectureMarkdown(markdown) {
   const saveMath = (tex, display) => {
     const token = "SOPMATH" + mathBlocks.length + "TOKEN";
     mathBlocks.push({ token, tex, display });
-    return display ? "
-
-" + token + "
-
-" : token;
+    return display ? "\n\n" + token + "\n\n" : token;
   };
   source = source
     .replace(/\\\[([\s\S]*?)\\\]/g, (_, tex) => saveMath(tex, true))
     .replace(/\\\(([\s\S]*?)\\\)/g, (_, tex) => saveMath(tex, false))
     .replace(/\$\$([\s\S]*?)\$\$/g, (_, tex) => saveMath(tex, true))
-    .replace(/(^|[^$])\$([^$
-]+)\$/g, (_, before, tex) => before + saveMath(tex, false));
+    .replace(/(^|[^$])\$([^\n$]+)\$/g, (_, before, tex) => before + saveMath(tex, false));
   marked.setOptions({ gfm: true, breaks: false });
   let rendered = marked.parse(source, { async: false });
   for (const item of mathBlocks) {
