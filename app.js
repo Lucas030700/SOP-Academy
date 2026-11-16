@@ -98,7 +98,10 @@ async function openTopic(id) {
     const response = await fetch(lectureUrl, { cache: "no-store" });
     if (!response.ok) throw new Error(`Lecture request failed (${response.status})`);
     const markdown = await response.text();
-    const lectureMarkdown = markdown.replace(/^---\\r?\\n[\\s\\S]*?\\r?\\n---\\r?\\n/, "");
+    const lectureMarkdown = markdown.replace(/^---\r?\
+[\s\S]*?\r?\
+---\r?\
+/, "");
     $("reader-content").innerHTML = renderLectureMarkdown(lectureMarkdown);
     $("reader-content").scrollTop = 0;
   } catch (error) {
@@ -114,7 +117,8 @@ async function openTopic(id) {
 function closeReader() {
   $("reader-view").hidden = true;
   document.body.classList.remove("reading-mode");
-  document.querySelector(".topbar").hidden = false;\n  document.querySelector(".shell").hidden = false;
+  document.querySelector(".topbar").hidden = false;
+  document.querySelector(".shell").hidden = false;
   renderModules();
   if (state.activeModule !== null) openModule(state.activeModule);
 }
@@ -127,13 +131,18 @@ function renderLectureMarkdown(markdown) {
   const saveMath = (tex, display) => {
     const token = "SOPMATH" + mathBlocks.length + "TOKEN";
     mathBlocks.push({ token, tex, display });
-    return display ? "\n\n" + token + "\n\n" : token;
+    return display ? "
+
+" + token + "
+
+" : token;
   };
   source = source
     .replace(/\\\[([\s\S]*?)\\\]/g, (_, tex) => saveMath(tex, true))
     .replace(/\\\(([\s\S]*?)\\\)/g, (_, tex) => saveMath(tex, false))
     .replace(/\$\$([\s\S]*?)\$\$/g, (_, tex) => saveMath(tex, true))
-    .replace(/(^|[^$])\$([^$\n]+)\$/g, (_, before, tex) => before + saveMath(tex, false));
+    .replace(/(^|[^$])\$([^$
+]+)\$/g, (_, before, tex) => before + saveMath(tex, false));
   marked.setOptions({ gfm: true, breaks: false });
   let rendered = marked.parse(source, { async: false });
   for (const item of mathBlocks) {
@@ -184,7 +193,8 @@ document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click"
   document.querySelectorAll(".filter").forEach(b => { const active=b===btn; b.classList.toggle("active",active); b.setAttribute("aria-selected",String(active)); });
   renderModules();
 }));
-$("close-dialog").addEventListener("click", () => $("lecture-dialog").close());\n$("reader-back").addEventListener("click", closeReader);
+$("close-dialog").addEventListener("click", () => $("lecture-dialog").close());
+$("reader-back").addEventListener("click", closeReader);
 $("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-dialog")) $("lecture-dialog").close(); });
 document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
 window.addEventListener("online",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="ONLINE";}); window.addEventListener("offline",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="OFFLINE";});
