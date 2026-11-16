@@ -9,8 +9,8 @@
     },
     {
       "moduleNumber": 2,
-      "title": null,
-      "description": null
+      "title": "Supply Chain Management",
+      "description": "Supply chain fundamentals and end-to-end coordination"
     },
     {
       "moduleNumber": 3,
@@ -115,6 +115,15 @@
       "title": "Introduction to Financial Planning",
       "summary": "Understand how financial planning connects with operational planning in S&OP, including revenue, costs, profitability, financial statements, working capital, cash flow, and the financial implications of manufacturing and inventory decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-01-introduction-to-financial-planning.md",
+      "status": "complete"
+    },
+    {
+      "id": "module-02-topic-02-01",
+      "module": 2,
+      "topicNumber": "2.1",
+      "title": "What is Supply Chain Management (SCM)?",
+      "summary": "Understand what a supply chain is, how Supply Chain Management coordinates suppliers, manufacturers, distributors, and customers, the material, information, and financial flows, supply chain objectives and trade-offs, and how S&OP supports end-to-end supply chain coordination.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-01-what-is-supply-chain-management.md",
       "status": "complete"
     }
   ],
