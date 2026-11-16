@@ -1,0 +1,12 @@
+{
+  "name": "S&OP Academy",
+  "short_name": "S&OP Academy",
+  "description": "Personal offline-first S&OP learning library",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#14283f",
+  "orientation": "portrait",
+  "icons": []
+}
