@@ -1,0 +1,68 @@
+{
+  "title": "S&OP Learning Program",
+  "version": 1,
+  "language": "Taglish",
+  "modules": [
+    {
+      "moduleNumber": 1,
+      "title": null,
+      "overviewPath": "curriculum/module-01/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 2,
+      "title": null,
+      "overviewPath": "curriculum/module-02/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 3,
+      "title": null,
+      "overviewPath": "curriculum/module-03/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 4,
+      "title": null,
+      "overviewPath": "curriculum/module-04/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 5,
+      "title": null,
+      "overviewPath": "curriculum/module-05/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 6,
+      "title": null,
+      "overviewPath": "curriculum/module-06/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 7,
+      "title": null,
+      "overviewPath": "curriculum/module-07/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 8,
+      "title": null,
+      "overviewPath": "curriculum/module-08/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 9,
+      "title": null,
+      "overviewPath": "curriculum/module-09/overview.md",
+      "topics": []
+    },
+    {
+      "moduleNumber": 10,
+      "title": null,
+      "overviewPath": "curriculum/module-10/overview.md",
+      "topics": []
+    }
+  ],
+  "note": "Module and topic names must be populated from the established project curriculum. Do not invent missing titles."
+}
