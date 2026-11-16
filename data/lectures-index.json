@@ -145,15 +145,6 @@
       "status": "complete"
     },
     {
-      "id": "module-09-topic-09-04",
-      "module": 9,
-      "topicNumber": "9.4",
-      "title": "Inventory KPIs",
-      "summary": "Understand how organizations measure inventory performance, calculate inventory turnover, DOH/DOS, average inventory, inventory accuracy, stockout rate, fill rate, service level, excess and obsolete inventory, and carrying cost, analyze inventory across raw materials, WIP, and finished goods, and use inventory KPIs to support S&OP decisions.",
-      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-04-inventory-kpis.md",
-      "status": "complete"
-    },
-    {
       "id": "module-09-topic-09-05",
       "module": 9,
       "topicNumber": "9.5",
