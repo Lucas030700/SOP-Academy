@@ -145,6 +145,15 @@
       "status": "complete"
     },
     {
+      "id": "module-09-topic-09-06",
+      "module": 9,
+      "topicNumber": "9.6",
+      "title": "KPI Analysis and Interpretation",
+      "summary": "Understand how to analyze and interpret S&OP KPIs, calculate and investigate performance variances and trends, identify relationships and trade-offs between demand, supply, inventory, and financial indicators, apply root cause analysis and segmentation, and translate validated findings into actionable management recommendations.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-06-kpi-analysis-and-interpretation.md",
+      "status": "complete"
+    },
+    {
       "id": "module-09-topic-09-07",
       "module": 9,
       "topicNumber": "9.7",
