@@ -134,7 +134,16 @@
       "summary": "Understand the major components of a supply chain, their individual responsibilities, how they interact, and how suppliers, procurement, manufacturing, inventory, logistics, distribution, customers, and supporting functions influence S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-02-supply-chain-components.md",
       "status": "complete"
+    },
+    {
+      "id": "module-02-topic-02-03",
+      "module": 2,
+      "topicNumber": "2.3",
+      "title": "Understanding Product Flow in Supply Chain Management",
+      "summary": "Understand the end-to-end physical movement of materials and products from suppliers to customers, the inbound, internal, and outbound stages, inventory transformation and availability, production bottlenecks, supply chain disruptions, and how product flow information supports S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-03-understanding-product-flow-in-supply-chain-management.md",
+      "status": "complete"
     }
   ],
-  "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed."
+  "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
 }
