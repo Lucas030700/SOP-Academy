@@ -151,7 +151,7 @@ function toggleComplete(id) {
 }
 async function loadLibrary() {
   try {
-    const response = await fetch(INDEX_URL);
+    const response = await fetch(INDEX_URL, { cache: "no-store" });
     if (!response.ok) throw new Error("Index not available");
     const data = await response.json();
     state.modules = data.modules || [];
