@@ -27,6 +27,16 @@
           "topicNumber": "1.4",
           "title": "Departments Involved in Sales & Operations Planning (S&OP)",
           "path": "lectures/module-01/topic-01-04-departments-involved-in-sop.md"
+        },
+        {
+          "topicNumber": "1.5",
+          "title": "S&OP vs. Other Planning Processes",
+          "path": "lectures/module-01/topic-01-05-sop-vs-other-planning-processes.md"
+        },
+        {
+          "topicNumber": "1.6",
+          "title": "Planning Horizons in Sales & Operations Planning (S&OP)",
+          "path": "lectures/module-01/topic-01-06-planning-horizons-in-sop.md"
         }
       ]
     },
