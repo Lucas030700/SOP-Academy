@@ -74,6 +74,18 @@
       <button id="complete-button" class="button primary">Mark complete</button>
     </div>
   </dialog>
+  <section id="reader-view" class="reader-view" hidden aria-label="Lecture reader">
+    <header class="reader-head">
+      <button id="reader-back" class="reader-back" type="button" aria-label="Back to module">‹ <span>Library</span></button>
+      <div class="reader-heading"><p id="reader-kicker" class="eyebrow">LECTURE</p><h1 id="reader-title">Topic title</h1></div>
+      <span id="reader-connection" class="reader-status">ONLINE</span>
+    </header>
+    <article id="reader-content" class="reader-content"></article>
+    <footer class="reader-actions">
+      <button id="reader-bookmark" class="button secondary" type="button">☆ Bookmark</button>
+      <button id="reader-complete" class="button primary" type="button">Mark complete</button>
+    </footer>
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
