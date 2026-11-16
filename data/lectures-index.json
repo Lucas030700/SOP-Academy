@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "generatedAt": "2026-11-17",
   "modules": [
     {
@@ -60,7 +60,7 @@
       "topicNumber": "1.1",
       "title": "What is Sales & Operations Planning (S&OP)?",
       "summary": "Understand what S&OP is, why companies need it, what business problems it solves, and how it connects departments.",
-      "path": "./lectures/module-01/topic-01-01-what-is-sales-and-operations-planning.md",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-01-what-is-sales-and-operations-planning.md",
       "status": "complete"
     }
   ],
