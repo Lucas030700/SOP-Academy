@@ -220,7 +220,9 @@
 body:has(#lecture-dialog[open]){overflow:hidden;background:#fff}
 body:has(#lecture-dialog[open]) .topbar,
 body:has(#lecture-dialog[open]) .shell{display:none!important}
-.lecture-dialog,
+.lecture-dialog:not([open]){
+  display:none!important;
+}
 .lecture-dialog[open]{
   position:fixed!important;
   inset:0!important;
