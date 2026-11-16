@@ -107,6 +107,15 @@
       "summary": "Understand short-term, medium-term, and long-term planning; distinguish planning horizon, frequency, and bucket; and connect rolling S&OP plans with strategic direction and operational execution.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-06-planning-horizons-in-sop.md",
       "status": "complete"
+    },
+    {
+      "id": "module-07-topic-07-01",
+      "module": 7,
+      "topicNumber": "7.1",
+      "title": "Introduction to Financial Planning",
+      "summary": "Understand how financial planning connects with operational planning in S&OP, including revenue, costs, profitability, financial statements, working capital, cash flow, and the financial implications of manufacturing and inventory decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-01-introduction-to-financial-planning.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed."
