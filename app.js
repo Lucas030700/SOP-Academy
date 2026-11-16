@@ -82,7 +82,7 @@ async function openTopic(id) {
   if (!topic) return;
   state.activeTopic = topic;
   $("lecture-dialog").close();
-  $("shell")?.setAttribute("hidden", "");
+  document.querySelector(".shell").hidden = true;
   document.querySelector(".topbar").hidden = true;
   $("reader-view").hidden = false;
   document.body.classList.add("reading-mode");
@@ -114,7 +114,7 @@ async function openTopic(id) {
 function closeReader() {
   $("reader-view").hidden = true;
   document.body.classList.remove("reading-mode");
-  document.querySelector(".topbar").hidden = false;
+  document.querySelector(".topbar").hidden = false;\n  document.querySelector(".shell").hidden = false;
   renderModules();
   if (state.activeModule !== null) openModule(state.activeModule);
 }
