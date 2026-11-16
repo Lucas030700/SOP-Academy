@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#14283f">
+  <meta name="description" content="Your personal offline-first S&OP learning library.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <title>S&OP Academy</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="S&OP Academy home">
+      <span class="brand-mark">S</span>
+      <span><strong>S&OP Academy</strong><small>PERSONAL LEARNING LIBRARY</small></span>
+    </a>
+    <span id="connection" class="connection"><i></i> Checking</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">YOUR LEARNING SPACE</p>
+      <h1>Learn S&OP.<br><em>Build understanding.</em></h1>
+      <p class="hero-copy">Your modules, complete lectures, practical examples, and learning progress in one place.</p>
+      <div class="progress-card">
+        <div class="progress-heading"><span>YOUR PROGRESS</span><strong id="progress-count">0 / 0 topics</strong></div>
+        <div class="progress-track"><span id="progress-bar"></span></div>
+        <p id="progress-caption">Your learning progress will appear here.</p>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <div><p class="eyebrow">LIBRARY</p><h2>Learning modules</h2></div>
+      <span id="module-count" class="count-pill">10 modules</span>
+    </section>
+
+    <label class="searchbox">
+      <span aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="Search modules, topics, or terms" autocomplete="off">
+      <kbd>/</kbd>
+    </label>
+
+    <div class="filter-row" role="tablist" aria-label="Library filter">
+      <button class="filter active" data-filter="all" role="tab" aria-selected="true">All modules</button>
+      <button class="filter" data-filter="in-progress" role="tab" aria-selected="false">In progress</button>
+      <button class="filter" data-filter="bookmarked" role="tab" aria-selected="false">Bookmarks</button>
+    </div>
+
+    <section id="module-list" class="module-list" aria-live="polite">
+      <div class="loading">Loading your learning library…</div>
+    </section>
+
+    <section class="quick-panel">
+      <div><span class="quick-icon">⌘</span><div><strong>Formula library</strong><small>Centralized S&OP formulas and definitions</small></div></div>
+      <span class="coming">Coming soon</span>
+    </section>
+    <section class="quick-panel">
+      <div><span class="quick-icon">Aa</span><div><strong>S&OP glossary</strong><small>Understand planning terminology</small></div></div>
+      <span class="coming">Coming soon</span>
+    </section>
+    <footer><span>S&OP ACADEMY</span><span id="version">Offline-ready library</span></footer>
+  </main>
+
+  <dialog id="lecture-dialog" class="lecture-dialog">
+    <div class="dialog-head">
+      <div><p id="lecture-kicker" class="eyebrow">LECTURE</p><h2 id="lecture-title">Topic title</h2></div>
+      <button id="close-dialog" class="close-button" aria-label="Close lecture">×</button>
+    </div>
+    <div id="lecture-body" class="lecture-body"></div>
+    <div class="dialog-actions">
+      <button id="bookmark-button" class="button secondary">☆ Bookmark</button>
+      <button id="complete-button" class="button primary">Mark complete</button>
+    </div>
+  </dialog>
+  <script src="./app.js" defer></script>
+</body>
+</html>
