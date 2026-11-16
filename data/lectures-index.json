@@ -82,6 +82,15 @@
       "status": "complete"
     },
     {
+      "id": "module-01-topic-01-05",
+      "module": 1,
+      "topicNumber": "1.5",
+      "title": "S&OP vs. Other Planning Processes",
+      "summary": "Understand how S&OP differs from strategic, tactical, and operational planning; distinguish Demand Planning, Supply Planning, MPS, MRP, Production Scheduling, S&OE, and financial planning; and explain how the processes connect business objectives with manufacturing execution.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-05-sop-vs-other-planning-processes.md",
+      "status": "complete"
+    },
+    {
       "id": "module-01-topic-01-06",
       "module": 1,
       "topicNumber": "1.6",
