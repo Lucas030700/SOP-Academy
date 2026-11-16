@@ -62,6 +62,15 @@
       "summary": "Understand what S&OP is, why companies need it, what business problems it solves, and how it connects departments.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-01-what-is-sales-and-operations-planning.md",
       "status": "complete"
+    },
+    {
+      "id": "module-01-topic-01-02",
+      "module": 1,
+      "topicNumber": "1.2",
+      "title": "Purpose and Benefits of Sales & Operations Planning (S&OP)",
+      "summary": "Understand why companies implement S&OP, the business problems it addresses, its operational and financial benefits, and how it supports cross-functional decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-02-purpose-and-benefits-of-sales-and-operations-planning.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed."
