@@ -88,8 +88,8 @@ async function openTopic(id) {
     const markdown = await response.text();
     $("lecture-kicker").textContent = `MODULE ${topic.module} · TOPIC ${topic.topicNumber}`;
     $("lecture-title").textContent = topic.title;
-    $("lecture-body").textContent = markdown;
-    $("lecture-body").innerHTML = simpleMarkdown(markdown);
+    const lectureMarkdown = markdown.replace(/^---\\r?\\n[\\s\\S]*?\\r?\\n---\\r?\\n/, "");
+    $("lecture-body").innerHTML = renderLectureMarkdown(lectureMarkdown);
     $("bookmark-button").hidden = false;
     $("complete-button").hidden = false;
     const isBookmarked = bookmarks().includes(id);
@@ -102,20 +102,26 @@ async function openTopic(id) {
     $("lecture-body").innerHTML = `<p><strong>Unable to load this lecture.</strong></p><p>${escapeHTML(error.message)}</p>`;
   }
 }
-function simpleMarkdown(md) {
-  const blocks = md.split(/\n{2,}/).map(block => {
-    const t = block.trim();
-    if (!t) return "";
-    if (t.startsWith("#")) { const level = Math.min(6, (t.match(/^#+/) || ["#"])[0].length); return `<h${level}>${inlineMD(t.replace(/^#+\s*/, ""))}</h${level}>`; }
-    if (t.startsWith("- ") || t.startsWith("* ")) return `<ul>${t.split("\n").map(x => `<li>${inlineMD(x.replace(/^[-*]\s*/, ""))}</li>`).join("")}</ul>`;
-    if (/^\d+\. /.test(t)) return `<ol>${t.split("\n").map(x => `<li>${inlineMD(x.replace(/^\d+\.\s*/, ""))}</li>`).join("")}</ol>`;
-    if (t.startsWith(">")) return `<blockquote>${inlineMD(t.replace(/^>\s?/gm, ""))}</blockquote>`;
-    return `<p>${inlineMD(t).replace(/\n/g,"<br>")}</p>`;
+function renderLectureMarkdown(markdown) {
+  if (!window.marked || !window.katex || !window.renderMathInElement) {
+    throw new Error("The lecture formatting libraries could not be loaded. Please reconnect and refresh.");
+  }
+  marked.setOptions({ gfm: true, breaks: false });
+  const rendered = marked.parse(markdown, { async: false });
+  const container = document.createElement("div");
+  container.innerHTML = rendered;
+  renderMathInElement(container, {
+    delimiters: [
+      { left: "$$", right: "$$", display: true },
+      { left: "\\\\[", right: "\\\\]", display: true },
+      { left: "\\\\(", right: "\\\\)", display: false },
+      { left: "$", right: "$", display: false }
+    ],
+    throwOnError: false,
+    strict: "ignore",
+    trust: false
   });
-  return blocks.join("");
-}
-function inlineMD(text) {
-  return escapeHTML(text).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\*(.+?)\*/g,"<em>$1</em>").replace(/`(.+?)`/g,"<code>$1</code>");
+  return container.innerHTML;
 }
 function toggleBookmark(id) {
   const items = bookmarks(); const next = items.includes(id) ? items.filter(x => x !== id) : [...items,id];
