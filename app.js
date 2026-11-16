@@ -88,7 +88,7 @@ async function openTopic(id) {
     const markdown = await response.text();
     $("lecture-kicker").textContent = `MODULE ${topic.module} · TOPIC ${topic.topicNumber}`;
     $("lecture-title").textContent = topic.title;
-    const lectureMarkdown = markdown.replace(/^---\\r?\\n[\\s\\S]*?\\r?\\n---\\r?\\n/, "");
+    const lectureMarkdown = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
     $("lecture-body").innerHTML = renderLectureMarkdown(lectureMarkdown);
     $("bookmark-button").hidden = false;
     $("complete-button").hidden = false;
@@ -113,8 +113,8 @@ function renderLectureMarkdown(markdown) {
   renderMathInElement(container, {
     delimiters: [
       { left: "$$", right: "$$", display: true },
-      { left: "\\\\[", right: "\\\\]", display: true },
-      { left: "\\\\(", right: "\\\\)", display: false },
+      { left: "\\[", right: "\\]", display: true },
+      { left: "\\(", right: "\\)", display: false },
       { left: "$", right: "$", display: false }
     ],
     throwOnError: false,
