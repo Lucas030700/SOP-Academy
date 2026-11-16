@@ -42,9 +42,15 @@
     },
     {
       "moduleNumber": 2,
-      "title": null,
+      "title": "Supply Chain Management",
       "overviewPath": "curriculum/module-02/overview.md",
-      "topics": []
+      "topics": [
+        {
+          "topicNumber": "2.1",
+          "title": "What is Supply Chain Management (SCM)?",
+          "path": "lectures/module-02/topic-02-01-what-is-supply-chain-management.md"
+        }
+      ]
     },
     {
       "moduleNumber": 3,
