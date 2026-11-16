@@ -145,6 +145,15 @@
       "status": "complete"
     },
     {
+      "id": "module-09-topic-09-05",
+      "module": 9,
+      "topicNumber": "9.5",
+      "title": "Financial KPIs",
+      "summary": "Understand how manufacturing organizations measure financial performance in S&OP, calculate revenue, COGS, gross and operating profit, margins, production cost, inventory carrying cost, working capital, inventory value, budget variance, and forecast-versus-actual performance, and evaluate the financial impact of demand, supply, production, procurement, and inventory decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-05-financial-kpis.md",
+      "status": "complete"
+    },
+    {
       "id": "module-09-topic-09-06",
       "module": 9,
       "topicNumber": "9.6",
