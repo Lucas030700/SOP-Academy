@@ -152,6 +152,15 @@
       "summary": "Understand how S&OP reports and dashboards communicate business performance, monitor demand, supply, inventory, capacity, and financial KPIs, identify exceptions, validate and consolidate data, use Excel, Power BI, SQL, and Python for reporting, and translate findings into management decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-08-sop-reporting-and-dashboard.md",
       "status": "complete"
+    },
+    {
+      "id": "module-09-topic-09-09",
+      "module": 9,
+      "topicNumber": "9.9",
+      "title": "Continuous Improvement",
+      "summary": "Understand how to improve S&OP through KPI monitoring, performance gap analysis, root cause investigation, PDCA, DMAIC, Kaizen, Lean, Six Sigma, measurable improvement initiatives, action ownership, effectiveness measurement, and sustainable process controls.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-09-continuous-improvement.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
