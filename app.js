@@ -98,10 +98,7 @@ async function openTopic(id) {
     const response = await fetch(lectureUrl, { cache: "no-store" });
     if (!response.ok) throw new Error(`Lecture request failed (${response.status})`);
     const markdown = await response.text();
-    const lectureMarkdown = markdown.replace(/^---\r?\
-[\s\S]*?\r?\
----\r?\
-/, "");
+    const lectureMarkdown = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
     $("reader-content").innerHTML = renderLectureMarkdown(lectureMarkdown);
     $("reader-content").scrollTop = 0;
   } catch (error) {
