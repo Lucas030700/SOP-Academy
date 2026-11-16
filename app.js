@@ -90,6 +90,7 @@ async function openTopic(id) {
     $("lecture-title").textContent = topic.title;
     const lectureMarkdown = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
     $("lecture-body").innerHTML = renderLectureMarkdown(lectureMarkdown);
+    $("lecture-body").scrollTop = 0;
     $("bookmark-button").hidden = false;
     $("complete-button").hidden = false;
     const isBookmarked = bookmarks().includes(id);
@@ -100,6 +101,7 @@ async function openTopic(id) {
     $("complete-button").onclick = () => toggleComplete(id);
   } catch (error) {
     $("lecture-body").innerHTML = `<p><strong>Unable to load this lecture.</strong></p><p>${escapeHTML(error.message)}</p>`;
+    $("lecture-body").scrollTop = 0;
   }
 }
 function renderLectureMarkdown(markdown) {
