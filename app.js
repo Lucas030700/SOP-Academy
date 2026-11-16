@@ -1,7 +1,7 @@
 const INDEX_URL = "./data/lectures-index.json";
-const APP_VERSION = "3";
+const APP_VERSION = "4";
 const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1" };
-const state = { modules: [], topics: [], filter: "all", query: "", activeTopic: null };
+const state = { modules: [], topics: [], filter: "all", query: "", activeTopic: null, activeModule: null };
 const $ = (id) => document.getElementById(id);
 const readStore = (key) => { try { return JSON.parse(localStorage.getItem(key) || "[]"); } catch { return []; } };
 const writeStore = (key, value) => localStorage.setItem(key, JSON.stringify(value));
@@ -81,28 +81,42 @@ async function openTopic(id) {
   const topic = state.topics.find(t => t.id === id);
   if (!topic) return;
   state.activeTopic = topic;
+  $("lecture-dialog").close();
+  $("shell")?.setAttribute("hidden", "");
+  document.querySelector(".topbar").hidden = true;
+  $("reader-view").hidden = false;
+  document.body.classList.add("reading-mode");
+  $("reader-kicker").textContent = `MODULE ${topic.module} · TOPIC ${topic.topicNumber}`;
+  $("reader-title").textContent = topic.title;
+  $("reader-content").innerHTML = '<p class="reader-loading">Loading lecture…</p>';
+  $("reader-content").scrollTop = 0;
+  $("reader-connection").textContent = navigator.onLine ? "ONLINE" : "OFFLINE";
+  $("reader-bookmark").hidden = false;
+  $("reader-complete").hidden = false;
   try {
     const lectureUrl = new URL(topic.path, location.href).href;
-    const response = await fetch(lectureUrl, { cache: "no-cache" });
+    const response = await fetch(lectureUrl, { cache: "no-store" });
     if (!response.ok) throw new Error(`Lecture request failed (${response.status})`);
     const markdown = await response.text();
-    $("lecture-kicker").textContent = `MODULE ${topic.module} · TOPIC ${topic.topicNumber}`;
-    $("lecture-title").textContent = topic.title;
-    const lectureMarkdown = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
-    $("lecture-body").innerHTML = renderLectureMarkdown(lectureMarkdown);
-    $("lecture-body").scrollTop = 0;
-    $("bookmark-button").hidden = false;
-    $("complete-button").hidden = false;
-    const isBookmarked = bookmarks().includes(id);
-    $("bookmark-button").textContent = isBookmarked ? "★ Bookmarked" : "☆ Bookmark";
-    const isDone = progress().includes(id);
-    $("complete-button").textContent = isDone ? "Completed ✓" : "Mark complete";
-    $("bookmark-button").onclick = () => toggleBookmark(id);
-    $("complete-button").onclick = () => toggleComplete(id);
+    const lectureMarkdown = markdown.replace(/^---\\r?\\n[\\s\\S]*?\\r?\\n---\\r?\\n/, "");
+    $("reader-content").innerHTML = renderLectureMarkdown(lectureMarkdown);
+    $("reader-content").scrollTop = 0;
   } catch (error) {
-    $("lecture-body").innerHTML = `<p><strong>Unable to load this lecture.</strong></p><p>${escapeHTML(error.message)}</p>`;
-    $("lecture-body").scrollTop = 0;
+    $("reader-content").innerHTML = `<div class="reader-error"><strong>Unable to load this lecture.</strong><p>${escapeHTML(error.message)}</p><button class="button secondary" id="reader-retry" type="button">Try again</button></div>`;
+    $("reader-retry").addEventListener("click", () => openTopic(id));
   }
+  const isBookmarked = bookmarks().includes(id);
+  $("reader-bookmark").textContent = isBookmarked ? "★ Bookmarked" : "☆ Bookmark";
+  $("reader-complete").textContent = progress().includes(id) ? "Completed ✓" : "Mark complete";
+  $("reader-bookmark").onclick = () => toggleBookmark(id);
+  $("reader-complete").onclick = () => toggleComplete(id);
+}
+function closeReader() {
+  $("reader-view").hidden = true;
+  document.body.classList.remove("reading-mode");
+  document.querySelector(".topbar").hidden = false;
+  renderModules();
+  if (state.activeModule !== null) openModule(state.activeModule);
 }
 function renderLectureMarkdown(markdown) {
   if (!window.marked || !window.katex) {
@@ -170,9 +184,9 @@ document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click"
   document.querySelectorAll(".filter").forEach(b => { const active=b===btn; b.classList.toggle("active",active); b.setAttribute("aria-selected",String(active)); });
   renderModules();
 }));
-$("close-dialog").addEventListener("click", () => $("lecture-dialog").close());
+$("close-dialog").addEventListener("click", () => $("lecture-dialog").close());\n$("reader-back").addEventListener("click", closeReader);
 $("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-dialog")) $("lecture-dialog").close(); });
 document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
-window.addEventListener("online",setConnection); window.addEventListener("offline",setConnection);
-setConnection(); loadLibrary();
+window.addEventListener("online",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="ONLINE";}); window.addEventListener("offline",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="OFFLINE";});
+setConnection(); $("version").textContent = `Library v${APP_VERSION}`; loadLibrary();
 if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" }).catch(()=>{}));
