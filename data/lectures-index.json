@@ -89,6 +89,15 @@
       "summary": "Understand why S&OP requires cross-functional collaboration, the responsibilities and information contributions of Sales, Demand Planning, Manufacturing, Procurement, Supply Planning, Inventory, Finance, Product Management and Executive Leadership, how departments interact, how S&OP resolves conflicts, and how an S&OP Analyst supports aligned business decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-04-departments-involved-in-sop.md",
       "status": "complete"
+    },
+    {
+      "id": "module-01-topic-01-06",
+      "module": 1,
+      "topicNumber": "1.6",
+      "title": "Planning Horizons in Sales & Operations Planning (S&OP)",
+      "summary": "Understand short-term, medium-term, and long-term planning; distinguish planning horizon, frequency, and bucket; and connect rolling S&OP plans with strategic direction and operational execution.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-06-planning-horizons-in-sop.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed."
