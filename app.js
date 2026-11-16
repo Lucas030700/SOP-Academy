@@ -1,0 +1,150 @@
+const INDEX_URL = "./data/lectures-index.json";
+const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1" };
+const state = { modules: [], topics: [], filter: "all", query: "", activeTopic: null };
+const $ = (id) => document.getElementById(id);
+const readStore = (key) => { try { return JSON.parse(localStorage.getItem(key) || "[]"); } catch { return []; } };
+const writeStore = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+const progress = () => readStore(STORE.progress);
+const bookmarks = () => readStore(STORE.bookmarks);
+const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+function setConnection() {
+  const el = $("connection");
+  const online = navigator.onLine;
+  el.classList.toggle("online", online);
+  el.innerHTML = online ? "<i></i> Online" : "<i></i> Offline";
+}
+function updateProgress() {
+  const done = progress().length;
+  const total = state.topics.length;
+  $("progress-count").textContent = `${done} / ${total} topics`;
+  $("progress-bar").style.width = total ? `${Math.min(100, done / total * 100)}%` : "0%";
+  $("progress-caption").textContent = total ? (done ? "Keep going. Every completed topic builds your planning toolkit." : "Your learning progress will appear here.") : "Progress tracking is ready. Your lectures will populate this once added.";
+}
+function moduleStatus(module) {
+  const ts = state.topics.filter(t => Number(t.module) === Number(module.moduleNumber));
+  const done = ts.filter(t => progress().includes(t.id)).length;
+  return { total: ts.length, done, percent: ts.length ? done / ts.length * 100 : 0 };
+}
+function renderModules() {
+  const list = $("module-list");
+  const q = slug(state.query);
+  const visible = state.modules.filter(m => {
+    const topics = state.topics.filter(t => Number(t.module) === Number(m.moduleNumber));
+    const text = slug([m.title, ...topics.map(t => t.title)].join(" "));
+    const matches = !q || text.includes(q);
+    const stats = moduleStatus(m);
+    const filterMatches = state.filter === "all" ||
+      (state.filter === "in-progress" && stats.done > 0 && stats.done < stats.total) ||
+      (state.filter === "bookmarked" && topics.some(t => bookmarks().includes(t.id)));
+    return matches && filterMatches;
+  });
+  $("module-count").textContent = `${state.modules.length} modules`;
+  if (!visible.length) {
+    list.innerHTML = '<div class="empty"><strong>No matching modules</strong><p>Try another search or switch the library filter.</p></div>';
+    return;
+  }
+  list.innerHTML = visible.map(m => {
+    const st = moduleStatus(m);
+    const title = m.title || `Module ${String(m.moduleNumber).padStart(2,"0")}`;
+    const desc = m.description || (st.total ? `${st.total} learning topics` : "Module overview and topics awaiting import");
+    return `<button class="module-card" data-module="${m.moduleNumber}">
+      <div class="module-top"><span class="module-number">MODULE ${String(m.moduleNumber).padStart(2,"0")}</span><span class="module-state">${st.total && st.done === st.total ? "COMPLETED" : st.done ? "IN PROGRESS" : ""}</span></div>
+      <h3>${escapeHTML(title)}</h3><p>${escapeHTML(desc)}</p>
+      <div class="module-foot"><span>${st.total ? `${st.done}/${st.total} topics complete` : "Content not imported yet"}</span><span class="mini-track"><span style="width:${st.percent}%"></span></span></div>
+    </button>`;
+  }).join("");
+  list.querySelectorAll("[data-module]").forEach(btn => btn.addEventListener("click", () => openModule(Number(btn.dataset.module))));
+}
+function escapeHTML(value) { return String(value).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+function openModule(number) {
+  const mod = state.modules.find(m => Number(m.moduleNumber) === number);
+  const topics = state.topics.filter(t => Number(t.module) === number);
+  if (!topics.length) {
+    $("lecture-kicker").textContent = `MODULE ${String(number).padStart(2,"0")}`;
+    $("lecture-title").textContent = mod?.title || `Module ${number}`;
+    $("lecture-body").innerHTML = "<p><strong>No lectures have been imported into this module yet.</strong></p><p>Once its topic conversations are published to the GitHub repository, they will appear here after the library is refreshed.</p>";
+    $("bookmark-button").hidden = true;
+    $("complete-button").hidden = true;
+  } else {
+    $("lecture-kicker").textContent = `MODULE ${String(number).padStart(2,"0")}`;
+    $("lecture-title").textContent = mod?.title || `Module ${number}`;
+    $("lecture-body").innerHTML = topics.map(t => `<article class="topic-row"><h3>${escapeHTML(t.topicNumber || "")} · ${escapeHTML(t.title)}</h3><p>${escapeHTML(t.summary || "Complete topic lecture")}</p><button class="button secondary" data-topic="${escapeHTML(t.id)}">Open lecture</button></article>`).join("");
+    $("lecture-body").querySelectorAll("[data-topic]").forEach(b => b.addEventListener("click", () => openTopic(b.dataset.topic)));
+    $("bookmark-button").hidden = true;
+    $("complete-button").hidden = true;
+  }
+  $("lecture-dialog").showModal();
+}
+async function openTopic(id) {
+  const topic = state.topics.find(t => t.id === id);
+  if (!topic) return;
+  state.activeTopic = topic;
+  try {
+    const response = await fetch(topic.path);
+    if (!response.ok) throw new Error("Lecture file unavailable");
+    const markdown = await response.text();
+    $("lecture-kicker").textContent = `MODULE ${topic.module} · TOPIC ${topic.topicNumber}`;
+    $("lecture-title").textContent = topic.title;
+    $("lecture-body").textContent = markdown;
+    $("lecture-body").innerHTML = simpleMarkdown(markdown);
+    $("bookmark-button").hidden = false;
+    $("complete-button").hidden = false;
+    const isBookmarked = bookmarks().includes(id);
+    $("bookmark-button").textContent = isBookmarked ? "★ Bookmarked" : "☆ Bookmark";
+    const isDone = progress().includes(id);
+    $("complete-button").textContent = isDone ? "Completed ✓" : "Mark complete";
+    $("bookmark-button").onclick = () => toggleBookmark(id);
+    $("complete-button").onclick = () => toggleComplete(id);
+  } catch (error) {
+    $("lecture-body").innerHTML = `<p><strong>Unable to load this lecture.</strong></p><p>${escapeHTML(error.message)}</p>`;
+  }
+}
+function simpleMarkdown(md) {
+  const blocks = md.split(/\n{2,}/).map(block => {
+    const t = block.trim();
+    if (!t) return "";
+    if (t.startsWith("#")) { const level = Math.min(6, (t.match(/^#+/) || ["#"])[0].length); return `<h${level}>${inlineMD(t.replace(/^#+\s*/, ""))}</h${level}>`; }
+    if (t.startsWith("- ") || t.startsWith("* ")) return `<ul>${t.split("\n").map(x => `<li>${inlineMD(x.replace(/^[-*]\s*/, ""))}</li>`).join("")}</ul>`;
+    if (/^\d+\. /.test(t)) return `<ol>${t.split("\n").map(x => `<li>${inlineMD(x.replace(/^\d+\.\s*/, ""))}</li>`).join("")}</ol>`;
+    if (t.startsWith(">")) return `<blockquote>${inlineMD(t.replace(/^>\s?/gm, ""))}</blockquote>`;
+    return `<p>${inlineMD(t).replace(/\n/g,"<br>")}</p>`;
+  });
+  return blocks.join("");
+}
+function inlineMD(text) {
+  return escapeHTML(text).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\*(.+?)\*/g,"<em>$1</em>").replace(/`(.+?)`/g,"<code>$1</code>");
+}
+function toggleBookmark(id) {
+  const items = bookmarks(); const next = items.includes(id) ? items.filter(x => x !== id) : [...items,id];
+  writeStore(STORE.bookmarks,next); $("bookmark-button").textContent = next.includes(id) ? "★ Bookmarked" : "☆ Bookmark"; renderModules();
+}
+function toggleComplete(id) {
+  const items = progress(); const next = items.includes(id) ? items.filter(x => x !== id) : [...items,id];
+  writeStore(STORE.progress,next); $("complete-button").textContent = next.includes(id) ? "Completed ✓" : "Mark complete"; updateProgress(); renderModules();
+}
+async function loadLibrary() {
+  try {
+    const response = await fetch(INDEX_URL);
+    if (!response.ok) throw new Error("Index not available");
+    const data = await response.json();
+    state.modules = data.modules || [];
+    state.topics = data.topics || [];
+  } catch {
+    state.modules = Array.from({length:10},(_,i)=>({moduleNumber:i+1,title:null}));
+    state.topics = [];
+  }
+  updateProgress(); renderModules();
+}
+$("search").addEventListener("input", e => { state.query = e.target.value; renderModules(); });
+document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click", () => {
+  state.filter = btn.dataset.filter;
+  document.querySelectorAll(".filter").forEach(b => { const active=b===btn; b.classList.toggle("active",active); b.setAttribute("aria-selected",String(active)); });
+  renderModules();
+}));
+$("close-dialog").addEventListener("click", () => $("lecture-dialog").close());
+$("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-dialog")) $("lecture-dialog").close(); });
+document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
+window.addEventListener("online",setConnection); window.addEventListener("offline",setConnection);
+setConnection(); loadLibrary();
+if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
