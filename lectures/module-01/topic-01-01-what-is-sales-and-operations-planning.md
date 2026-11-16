@@ -10,286 +10,556 @@ status: "complete"
 
 ## Topic 1.1: What is Sales & Operations Planning (S&OP)?
 
-**Learning level:** Level 1 – Understanding
-
-**Learning objective:** Understand what S&OP is, why companies need it, what business problems it solves, how it connects departments, and how it supports coordinated business decisions.
+**Main learning objective:** By the end of this lesson, hindi lang natin masasabi kung ano ang S&OP. Dapat maintindihan mo kung bakit ito kailangan ng isang company, paano nito pinag-uugnay ang different departments, at paano ito ginagamit para makagawa ng isang coordinated business plan.
 
 ---
 
 # 1. Topic Overview
 
-Sales & Operations Planning (S&OP) is a business planning process that helps different departments work from one coordinated plan.
+### What are we going to learn?
 
-Imagine a manufacturing company where Sales expects to sell 10,000 units next month. Manufacturing says it can produce only 8,000 units. Procurement has materials for 7,000 units. Finance wants to control spending and reduce inventory.
+Imagine na nagtatrabaho ka sa isang manufacturing company.
 
-The business faces a basic question: how can it fulfill customer demand if production capacity, materials, and financial resources do not support the sales target?
+May Sales Department na gustong magbenta ng 10,000 units next month. May Manufacturing Department na nagsasabing 8,000 units lang ang kaya nilang gawin. May Procurement Department na nagsasabing kulang ang raw materials. Meanwhile, Finance wants to reduce inventory and control expenses.
 
-This is the kind of business problem S&OP is designed to address.
+Lahat sila may sariling objectives at kanya-kanyang plano.
 
-### What will we learn?
+Pero may isang malaking tanong:
 
-- What S&OP means and what it is intended to accomplish.
-- Why independent departmental plans can conflict.
-- How demand, supply, inventory, capacity, and financial plans connect.
-- What information each department contributes.
-- How an S&OP analyst helps identify gaps and support decisions.
+**Paano matutupad ng company ang 10,000 units na customer demand kung hindi naman kayang suportahan ng production, materials, at available resources ang sales target?**
 
-### Why is S&OP important?
+Dito pumapasok ang Sales & Operations Planning.
 
-A department can perform well against its own targets while the overall company performs poorly. Sales may win orders that Operations cannot fulfill. Procurement may buy materials that are not needed. Manufacturing may produce products that do not match the demand mix. Finance may reduce spending in ways that create supply risks.
+Ang S&OP ay isang business planning process na tumutulong para magkaroon ng iisang coordinated plan ang iba't ibang departments ng company.
 
-S&OP connects these decisions so that departments understand the impact of their plans on the entire business.
+### Why is this topic important?
+
+Sa isang business, hindi sapat na mahusay ang bawat department individually.
+
+Halimbawa:
+
+- Magaling ang Sales dahil nakakakuha sila ng maraming orders.
+- Magaling ang Manufacturing dahil mataas ang production output.
+- Magaling ang Procurement dahil nakakabili sila ng materials at low cost.
+- Magaling ang Finance dahil napapababa nila ang expenses.
+
+Pero paano kung:
+
+- Mas marami ang orders kaysa production capacity?
+- Nakabili ang Procurement ng materials na hindi naman kailangan?
+- Nag-produce ang Manufacturing ng products na walang customer demand?
+- Nagkaroon ng excess inventory habang may shortage naman ng ibang products?
+
+Possible na mahusay ang bawat department, pero hindi maganda ang overall business performance.
+
+**The fundamental purpose of S&OP is to make sure that the different parts of the business are working toward the same overall business objectives.**
 
 ### Why is this the first topic in Module 1?
 
-Before studying demand forecasting, supply planning, inventory, capacity, or financial reconciliation, we need to understand the bigger picture: why these activities must be connected.
+Before learning forecasting, inventory management, capacity planning, supply planning, and other S&OP methodologies, kailangan muna nating maintindihan ang bigger picture.
 
-This topic establishes the foundation for the succeeding S&OP concepts. Forecasting estimates demand; supply planning evaluates how to fulfill it; inventory and capacity planning test feasibility; financial planning evaluates the economic impact; and the S&OP process brings these perspectives together.
+Hindi natin mauunawaan kung bakit kailangan mag-forecast ng demand kung hindi natin alam kung paano ginagamit ang forecast.
+
+Hindi rin natin maiintindihan kung bakit kailangang mag-compute ng inventory requirements kung hindi natin alam kung paano naaapektuhan ng inventory ang production at customer demand.
+
+Kaya ang Topic 1.1 ang foundation ng buong learning program.
+
+### Connection to succeeding topics
+
+| Succeeding subject | Connection to S&OP |
+|---|---|
+| Demand Planning | Understanding kung gaano karaming products ang kakailanganin ng customers |
+| Supply Planning | Determining kung paano matutugunan ang demand |
+| Inventory Management | Ensuring sufficient inventory without excessive stock |
+| Capacity Planning | Checking whether production resources can support demand |
+| Procurement Planning | Ensuring materials are available when needed |
+| Financial Planning | Understanding the financial impact of the business plan |
+| S&OP Process | Combining these activities into one coordinated plan |
+
+For now, tandaan natin:
+
+**S&OP is the process that connects the different planning activities of a business.**
 
 ---
 
 # 2. Layman's Explanation
 
-Imagine that you own a small bottled-water manufacturing business. A large customer orders 10,000 bottles for next month.
+## Let's understand S&OP without technical terminology first.
 
-Your business has five important people:
+Imagine na ikaw ang may-ari ng isang small manufacturing business na gumagawa ng bottled water.
 
-1. **Salesperson:** talks to customers and secures orders.
-2. **Production Supervisor:** organizes the manufacturing work.
-3. **Purchasing Officer:** buys bottles, caps, labels, and other materials.
-4. **Warehouse Supervisor:** monitors available stock.
-5. **Accountant:** monitors expenses, revenue, and profitability.
+Mayroon kang five important people:
 
-### Scenario A: No coordinated planning
+1. **Salesperson:** Siya ang kumakausap sa customers at kumukuha ng orders.
+2. **Production Supervisor:** Siya ang nag-aasikaso ng paggawa ng bottled water.
+3. **Purchasing Officer:** Siya ang bumibili ng bottles, caps, labels, at other materials.
+4. **Warehouse Supervisor:** Siya ang nagmo-monitor ng available inventory.
+5. **Accountant:** Siya ang nagmo-monitor ng expenses, revenue, at profitability.
 
-Sales promises the customer 10,000 bottles. Production assumes it can make 10,000, but a machine has scheduled maintenance. Purchasing has ordered materials for only 6,000 bottles. Warehouse has 2,000 finished bottles. Finance is trying to reduce spending and has not approved additional purchases.
+Ngayon, may malaking customer na nag-order ng 10,000 bottles para sa next month.
 
-Everyone is doing their own job, but the plans do not fit together.
+Ano ang mangyayari?
 
-If the 2,000 finished bottles are usable and the 6,000 units of materials support additional production, potential supply is 8,000 bottles. The business may be 2,000 bottles short.
+### Scenario A: Walang S&OP
+
+Ang Salesperson ay agad na nangako na kayang i-deliver ang 10,000 bottles.
+
+Ang Production Supervisor ay nagsabing kaya niyang gumawa ng 10,000 bottles, pero hindi niya alam na may existing maintenance schedule ang machine.
+
+Ang Purchasing Officer ay bumili ng materials para sa 6,000 bottles lang dahil iyon ang nasa previous purchasing plan.
+
+Ang Warehouse Supervisor ay nagsabing mayroon silang 2,000 bottles na finished goods inventory.
+
+Ang Accountant naman ay gustong bawasan ang spending kaya ayaw niyang mag-approve ng additional purchases.
+
+Resulta?
+
+<box border radius="lg" gap={3} padding={3}>
+  <title size="lg">The business problem</title>
+  <row align="center" justify="between">
+    **Customer demand**
+    <title color="success" size="xl" tabularNums>10,000</title>
+  </row>
+  <row align="center" justify="between">
+    **Available finished goods**
+    <title size="lg" tabularNums>2,000</title>
+  </row>
+  <row align="center" justify="between">
+    **Materials supporting production**
+    <title size="lg" tabularNums>6,000</title>
+  </row>
+  <divider color="subtle"/>
+  <row align="center" justify="between">
+    **Potential shortfall**
+    <title color="danger" size="2xl" tabularNums>2,000</title>
+  </row>
+  <text color="secondary" size="xs">Illustrative scenario. Assumes the 6,000-material-supported production quantity is additional to the 2,000 finished goods, and no other constraints.</text>
+</box>
+
+Hindi aligned ang plans nila.
+
+Everyone is doing their job, pero walang nag-coordinate ng overall business plan.
 
 ### Scenario B: With S&OP
 
-The departments review the same customer requirement and share their constraints. They discuss the inventory that can be used, the production schedule, the material shortfall, supplier delivery timing, and the additional cost.
+Before making commitments, nag-meeting ang Sales, Manufacturing, Procurement, Warehouse, at Finance.
 
-They may agree to use 2,000 finished bottles, produce another 8,000, purchase the required materials, adjust the schedule, and confirm a realistic delivery commitment with the customer.
+Pinag-usapan nila:
 
-The important difference is not that S&OP magically creates more resources. It makes the business problem visible early and helps departments agree on a realistic response.
+- Ilang units ang kailangan ng customer?
+- Ilang units ang available sa warehouse?
+- Ilang units ang kayang i-produce?
+- Sapat ba ang raw materials?
+- Kaya ba ng budget ang additional purchases?
+- May alternative production schedule ba?
 
-**A simple way to remember S&OP:** It is the company's coordinated game plan. Each department has a different role, but they work toward shared business objectives.
+After evaluating the situation, nag-agree sila sa isang realistic plan.
+
+For example:
+
+- Use 2,000 units from existing inventory.
+- Produce another 8,000 units.
+- Purchase the additional materials needed.
+- Adjust the production schedule.
+- Confirm the delivery commitment with Sales.
+- Evaluate the additional costs with Finance.
+
+Now, everyone is working toward the same plan.
+
+### The easiest way to understand S&OP
+
+Imagine na ang isang company ay isang basketball team.
+
+- Sales wants to score.
+- Manufacturing executes the plays.
+- Procurement provides the equipment.
+- Warehouse manages available resources.
+- Finance manages the budget.
+- Management decides the overall strategy.
+
+Kahit magaling ang bawat player, mahihirapan ang team kung walang coordinated game plan.
+
+**S&OP is the company's game-planning process.**
+
+Hindi ibig sabihin na lahat ng departments ay gagawa ng exactly the same work. Ibig sabihin, lahat sila ay may shared understanding of what the business is trying to achieve and how each department will contribute.
 
 ---
 
 # 3. Understanding the Business Problem
 
-Consider an electronic-components manufacturer. The company expects an increase in customer demand next month, but each department prepares its own plan based on its local priorities.
+Now, let's move from the simple example to a more realistic manufacturing environment.
 
-## 3.1 Independent departmental plans
+## 3.1 What happens when departments operate independently?
 
-### Sales
+Let's imagine a company manufacturing electronic components.
 
-Sales expects:
-- Customer A: 5,000 units.
-- Customer B: 3,000 units.
-- Customer C: 2,000 units.
+The company produces several models of electronic components and supplies them to different customers.
 
-Total expected demand: **10,000 units**.
+For the next month, the company expects an increase in demand.
 
-Sales wants to secure revenue, win business, and satisfy customers. A risk arises if Sales commits to quantities and dates without confirming supply feasibility.
+However, each department creates its own plan based on its own priorities.
 
-### Manufacturing / Operations
+### Department 1: Sales
 
-Manufacturing reports:
+Sales wants to maximize revenue and customer satisfaction.
+
+Their plan:
+
+- Customer A needs 5,000 units.
+- Customer B needs 3,000 units.
+- Customer C needs 2,000 units.
+
+Total expected demand: 10,000 units.
+
+Their priority is to fulfill customer orders and avoid losing business.
+
+**Potential problem:** Sales might commit to delivery quantities without verifying production capacity or material availability.
+
+### Department 2: Manufacturing
+
+Manufacturing wants to maintain production efficiency and minimize operating disruptions.
+
+Their plan:
+
 - Available production capacity: 8,000 units.
 - Planned production: 8,000 units.
-- No additional overtime currently planned.
+- No additional overtime planned.
 
-Manufacturing wants stable operations and efficient use of resources. The risk is that its plan may not reflect the full customer requirement.
+Their priority is to maintain efficient production.
 
-### Procurement
+**Potential problem:** Manufacturing may follow its own capacity plan without understanding the actual customer demand of 10,000 units.
 
-Procurement reports:
+### Department 3: Procurement
+
+Procurement wants to ensure material availability while controlling purchasing costs.
+
+Their plan:
+
 - Materials available for 7,000 units.
-- Additional materials require 30 days of supplier lead time.
-- The supplier requires advance confirmation.
+- Additional materials require 30 days lead time.
+- Supplier requires advance confirmation.
 
-Procurement wants to secure materials at the right time and cost. If the demand increase is communicated too late, materials may not arrive when production needs them.
+Their priority is to purchase materials at the right time and cost.
 
-### Inventory / Warehouse
+**Potential problem:** Procurement may not purchase enough materials because the demand increase was not communicated early.
 
-Warehouse reports:
+### Department 4: Inventory/Warehouse
+
+Warehouse wants to maintain accurate inventory and avoid excessive stock.
+
+Their plan:
+
 - Finished goods inventory: 1,000 units.
-- Raw materials sufficient for 7,000 units.
+- Raw materials inventory: equivalent to 7,000 production units.
 
-The risk is that inventory may be in the wrong product, location, condition, or allocation status. A quantity shown in the system is not automatically available for every customer requirement.
+Their priority is to maintain inventory accuracy and availability.
 
-### Finance
+**Potential problem:** Inventory may appear sufficient in total quantity, but the actual materials might not match the required product models.
 
-Finance wants to:
-- Reduce unnecessary inventory investment.
+### Department 5: Finance
+
+Finance wants to control expenses and maintain profitability.
+
+Their plan:
+
+- Reduce inventory investment.
 - Minimize overtime.
 - Avoid emergency purchases.
-- Maintain budget discipline.
+- Maintain the approved operating budget.
 
-Cost control is important, but decisions made without understanding the supply risk can unintentionally limit the company's ability to fulfill demand.
+Their priority is financial efficiency.
 
-## 3.2 Consolidating the plans
+**Potential problem:** Cost-reduction decisions may unintentionally limit the company's ability to fulfill demand.
 
-| Planning measure | Quantity |
+## 3.2 What happens when we combine their plans?
+
+Let's consolidate their information.
+
+| Departmental plan | Quantity |
 |---|---:|
 | Sales demand | 10,000 units |
 | Manufacturing capacity | 8,000 units |
-| Material-supported production | 7,000 units |
-| Finished goods inventory | 1,000 units |
+| Material availability | 7,000 units |
 
-Demand exceeds production capacity by 2,000 units. Demand exceeds the material-supported production quantity by 3,000 units. However, these gaps must be interpreted carefully because finished goods inventory may cover part of demand, and inventory and production must be evaluated by product, timing, and allocation.
+We can immediately identify two problems:
 
-## 3.3 Consequences of misalignment
+1. Manufacturing cannot produce the full 10,000 units using its current capacity.
+2. Procurement cannot support the full demand using current material availability.
+
+Even if Manufacturing operates at maximum capacity, the company can only produce 8,000 units.
+
+But even that 8,000-unit production plan is not currently supported by available materials.
+
+### 3.3 The consequences of misaligned planning
 
 | Business area | Possible consequence |
 |---|---|
-| Sales | Missed delivery commitments or lost orders |
-| Manufacturing | Disruptions, overtime, or schedule changes |
+| Sales | Missed delivery commitments |
+| Manufacturing | Production disruption or overtime |
 | Procurement | Emergency purchases and higher costs |
-| Inventory | Shortages, excess stock, or incorrect allocation |
-| Finance | Unexpected expenses and lower profitability |
-| Customer | Delayed deliveries and reduced satisfaction |
+| Inventory | Shortages or incorrect inventory allocation |
+| Finance | Higher expenses and reduced profitability |
+| Customer | Delayed deliveries and lower satisfaction |
 
-The root problem is not necessarily that one department is performing badly. The problem is that their plans are not coordinated.
+Notice something important:
+
+The problem is not necessarily that one department is doing its job incorrectly.
+
+The problem is that **their individual plans are not aligned with one another.**
+
+This is one of the central business problems that S&OP is designed to address.
 
 ---
 
 # 4. Technical Explanation
 
-## 4.1 Professional definition
+Now that we understand the business problem, let's introduce the actual professional definition.
 
-**Sales & Operations Planning (S&OP) is a cross-functional business planning process that aligns an organization's demand, supply, inventory, operational capacity, and financial plans to establish one feasible and agreed-upon business plan.**
+## 4.1 What is Sales & Operations Planning?
 
-Let's break down the definition:
+**Sales & Operations Planning (S&OP)** is a cross-functional business planning process that aligns an organization's demand, supply, inventory, operational capacity, and financial plans to establish one feasible and agreed-upon business plan.
 
-| Term | Meaning |
+Let's break down the definition.
+
+| Term | Meaning in simple Taglish |
 |---|---|
-| Cross-functional | Involving different departments or business functions |
-| Business planning process | A structured approach to planning and decision-making |
-| Demand | The quantity of products customers are expected to require |
-| Supply | The products the company can provide through inventory, production, or other sources |
-| Inventory | Materials and products held by the business |
-| Operational capacity | The production resources and capability available |
-| Financial plan | Expected revenue, costs, and financial implications |
-| Feasible plan | A plan that can realistically be executed |
-| Agreed-upon plan | A plan reviewed and accepted by the relevant functions and management |
+| Cross-functional | Involving multiple departments or business functions |
+| Business planning process | A structured way of planning and making business decisions |
+| Demand | How many products customers are expected to need |
+| Supply | How the company will provide the required products |
+| Inventory | Products and materials currently available or expected to be available |
+| Operational capacity | The resources and production capability available to fulfill demand |
+| Financial plan | The expected revenue, costs, and financial impact |
+| Feasible plan | A plan that the company can realistically execute |
+| Agreed-upon plan | A plan that relevant departments and management have reviewed and accepted |
 
-The key idea is **one feasible and agreed-upon business plan**. It does not mean every department has identical numbers. Demand, production, inventory, and purchases are different measures. It means everyone understands how those measures relate to the same business plan.
+The most important phrase here is:
 
-## 4.2 Main objectives of S&OP
+**One feasible and agreed-upon business plan.**
 
-### 1. Balance demand and supply
+Hindi ibig sabihin na lahat ng departments ay may identical responsibilities. It means they work with the same agreed assumptions, priorities, quantities, and timelines.
 
-The company compares customer requirements with the supply it can realistically provide. If demand is 10,000 units and available supply is 8,000, S&OP helps evaluate options such as additional capacity, more materials, existing inventory, another facility, or revised customer delivery dates.
+## 4.2 Main Objectives of S&OP
 
-### 2. Improve cross-functional alignment
+There are several reasons why organizations implement S&OP.
 
-Departments use consistent assumptions and share important changes. This reduces situations where Sales, Manufacturing, Procurement, and Finance make decisions using conflicting or outdated information.
+### Objective 1: Balance Demand and Supply
 
-### 3. Improve customer service
+The company must understand the relationship between customer requirements and its ability to fulfill them.
 
-Better coordination can improve the company's ability to provide the right product, quantity, and delivery timing. It can reduce missed delivery dates, shortages, and unfulfilled orders.
+Example:
 
-### 4. Optimize inventory
+- Demand: 10,000 units.
+- Supply capability: 8,000 units.
 
-S&OP helps avoid both understocking and overstocking. Understocking can cause lost sales and service problems. Overstocking can increase storage costs, working capital requirements, and obsolescence risk.
+There is a 2,000-unit gap.
 
-### 5. Optimize operational resources
+S&OP helps determine how to close this gap.
 
-The company evaluates machines, labor, working hours, raw materials, warehouse space, and supplier capacity against the plan.
+Possible options:
 
-### 6. Connect operations with financial objectives
+- Increase production capacity.
+- Purchase additional materials.
+- Use available inventory.
+- Transfer production to another facility.
+- Negotiate delivery schedules with customers.
 
-An operational decision has financial consequences. Increasing production may require additional materials, overtime, labor, transportation, and inventory investment. Finance helps evaluate whether the plan supports revenue and profitability objectives.
+The goal is to establish a realistic plan instead of simply assuming that demand can be fulfilled.
 
-## 4.3 Core principles
+### Objective 2: Improve Cross-Functional Alignment
+
+S&OP ensures that departments are not working with conflicting plans.
+
+For example, if Sales expects 10,000 units, Manufacturing, Procurement, and Finance should understand the implications of that demand.
+
+Hindi dapat may department na gumagamit ng outdated information habang ang ibang department ay gumagamit na ng updated forecast.
+
+### Objective 3: Improve Customer Service
+
+Customer service in this context means the company's ability to deliver the right products, in the required quantities, at the expected time.
+
+When demand and supply are properly coordinated, the company can reduce:
+
+- Missed delivery dates.
+- Product shortages.
+- Unfulfilled customer orders.
+- Unexpected production delays.
+
+### Objective 4: Optimize Inventory
+
+S&OP helps companies maintain sufficient inventory without unnecessarily accumulating excess stock.
+
+Two situations that companies want to avoid:
+
+**Understocking:** Kulang ang inventory para matugunan ang demand.
+
+**Overstocking:** Sobra ang inventory compared to actual or expected demand.
+
+Both have financial consequences.
+
+Understocking can cause lost sales, while overstocking can increase storage costs, working capital requirements, and obsolescence risks.
+
+### Objective 5: Optimize Operational Resources
+
+S&OP helps determine whether available resources can support the business plan.
+
+These resources include:
+
+- Machines and equipment.
+- Production lines.
+- Manpower.
+- Working hours.
+- Raw materials.
+- Warehouse space.
+- Supplier capacity.
+
+For example, if demand increases by 20%, the company needs to evaluate whether its current production resources can support that increase.
+
+### Objective 6: Connect Operational Plans with Financial Goals
+
+A company does not operate just to produce products.
+
+Ultimately, it needs to generate revenue and maintain profitability.
+
+For example:
+
+Sales may propose increasing production by 3,000 units.
+
+But this may require:
+
+- Additional raw material purchases.
+- Overtime expenses.
+- Additional labor.
+- Higher transportation costs.
+- Increased inventory investment.
+
+S&OP helps Finance and management understand whether the proposed plan makes financial sense.
+
+## 4.3 Core Principles of S&OP
+
+Let's identify the fundamental principles that guide an effective S&OP process.
 
 | Principle | Explanation |
 |---|---|
 | Cross-functional collaboration | Departments share information and coordinate decisions |
-| One set of numbers | Functions use consistent, reviewed planning data and assumptions |
-| Demand-supply balance | Customer requirements are evaluated against available resources |
+| One set of numbers | Departments work from consistent, agreed-upon planning data |
+| Demand and supply balance | Customer requirements are evaluated against available resources |
 | Integrated planning | Operational decisions are connected to financial implications |
-| Management involvement | Leaders resolve important conflicts and set priorities |
-| Continuous review | Plans are revisited as business conditions change |
-| Forward-looking decisions | The company anticipates problems instead of reacting only after they occur |
+| Management involvement | Leadership resolves important conflicts and approves business direction |
+| Continuous review | Plans are regularly reviewed and updated as conditions change |
+| Forward-looking decisions | The company anticipates future problems instead of reacting only after they occur |
 
-### Understanding “one set of numbers”
+### Understanding "One Set of Numbers"
 
-Suppose Sales forecasts 10,000 units, Manufacturing plans 8,000, Procurement has materials for 7,000, and Finance projects revenue based on 10,000 units.
+This is an important concept.
 
-These numbers are not automatically wrong because they measure different things. The problem occurs when the relationships, assumptions, and gaps are not understood or communicated.
+Imagine the following:
 
-An aligned plan might state:
+- Sales forecast: 10,000 units.
+- Manufacturing plan: 8,000 units.
+- Procurement plan: Materials for 7,000 units.
+- Finance forecast: Revenue based on 10,000 units.
+
+Each department is using a different planning quantity.
+
+This creates confusion.
+
+For example:
+
 - Approved demand: 10,000 units.
-- Beginning available finished goods: 2,000 units.
 - Planned production: 8,000 units.
-- Material and capacity actions: identified, timed, and assigned.
+- Available inventory: 2,000 units.
+- Additional capacity or supply actions: Identified and assigned.
 
-Everyone can then work from the same reviewed planning position.
+Notice that one set of numbers does not mean every quantity must be identical. Demand, production, inventory, and purchases are different measurements.
 
-## 4.4 Fundamental concepts and terminology
+It means everyone understands how those numbers relate to the same business plan.
+
+## 4.4 Fundamental Concepts You Must Know
+
+Before going deeper into the S&OP process, familiarize yourself with these terms.
 
 | Concept | Simple explanation |
 |---|---|
-| Demand | Expected customer requirement |
-| Demand forecast | Estimate of future customer demand |
+| Demand | How many products customers are expected to need |
+| Demand Forecast | Estimate of future customer demand |
 | Supply | Products available to fulfill demand |
-| Supply plan | Plan for producing or obtaining required supply |
-| Capacity | Available production capability under defined conditions |
+| Supply Plan | Plan for producing or obtaining the required supply |
+| Capacity | Maximum output that available resources can support under defined conditions |
 | Inventory | Materials and products held by the company |
-| Demand-supply gap | Difference between expected demand and available or planned supply |
+| Demand-Supply Gap | Difference between expected demand and available or planned supply |
 | Constraint | A limitation that prevents the company from achieving its target |
-| Trade-off | Choosing between alternatives with different benefits and costs |
-| Consensus plan | Agreed planning position developed through cross-functional discussion |
-| Financial reconciliation | Checking the financial implications of the operational plan |
-| Executive decision | Management decision on issues requiring authority or strategic direction |
+| Trade-off | Choosing between alternatives with different advantages and disadvantages |
+| Consensus Plan | An agreed planning position developed through cross-functional discussions |
+| Financial Reconciliation | Checking whether the operational plan is consistent with financial expectations |
+| Executive Decision | Management decision on significant issues that require authority or strategic direction |
 
-A **trade-off** occurs when one option improves one outcome but creates a cost or risk elsewhere. For example, overtime may help fulfill demand but increase labor costs. S&OP does not remove every constraint; it makes constraints visible and supports informed choices.
+One particularly important term is **trade-off**.
 
-## 4.5 S&OP as an organizational planning function
+For example:
 
-S&OP connects five fundamental questions:
+The company can increase production using overtime.
 
-1. What do customers need? **Demand planning.**
-2. What can the company provide? **Supply planning.**
-3. What resources are required? **Capacity, materials, and inventory planning.**
-4. What are the financial consequences? **Financial planning.**
-5. What should the company do? **Management decision-making.**
+However, overtime increases manufacturing costs.
 
-A change in customer demand can affect production, procurement, inventory, costs, and revenue. S&OP gives the organization a company-wide view of those relationships.
+The company must decide whether the additional cost is justified by the benefits of fulfilling customer demand.
+
+That is a trade-off.
+
+S&OP does not magically remove business constraints. It makes those constraints visible and helps the company evaluate its options.
+
+## 4.5 S&OP as an Organizational Planning Function
+
+S&OP is not simply a meeting between departments.
+
+It is a structured management process that connects different planning horizons and business functions.
+
+It helps answer five fundamental questions:
+
+1. **What do customers need?**  
+   Demand planning.
+
+2. **What can the company provide?**  
+   Supply planning.
+
+3. **What resources are required?**  
+   Capacity, materials, and inventory planning.
+
+4. **What are the financial consequences?**  
+   Financial planning.
+
+5. **What should the company actually do?**  
+   Management decision-making.
+
+These questions are interconnected.
+
+A change in customer demand can affect production, procurement, inventory, costs, and revenue.
+
+That is why S&OP needs a company-wide perspective.
 
 ---
 
 # 5. How S&OP Works
 
-S&OP brings information from different departments together to develop one coordinated plan. The following is a simplified conceptual flow; actual processes vary by organization.
+Now let's understand how the different departments work together.
 
-## 5.1 General process
+The easiest way to understand S&OP is to imagine that the company is building one complete business plan using information from different departments.
 
-1. **Demand planning:** Determine how much customers are expected to need.
-2. **Supply planning:** Determine how the company can produce or obtain the required products.
-3. **Inventory and capacity evaluation:** Check materials, finished goods, labor, machines, and other constraints.
-4. **Financial reconciliation:** Evaluate revenue, costs, inventory investment, and profitability implications.
-5. **Management review and decision:** Resolve significant gaps, approve priorities, and assign actions.
-6. **Execution and monitoring:** Translate the agreed plan into detailed operational schedules and monitor results.
+## 5.1 The general S&OP flow
 
-## 5.2 The major planning activities
+1. **Demand Planning:** What do customers need?
+2. **Supply Planning:** Can we produce or obtain the required products?
+3. **Inventory and Capacity Evaluation:** Do we have enough materials, inventory, and production resources?
+4. **Financial Reconciliation:** Does the proposed plan make financial sense?
+5. **Management Review and Decision:** What business plan should we approve and execute?
 
-### A. Demand planning
+This is a simplified conceptual flow. Actual S&OP processes can have additional steps, meetings, and feedback loops depending on the company.
 
-The company estimates future customer requirements using:
-- Historical sales.
-- Customer orders and forecasts.
-- Sales input.
-- Market trends.
-- Promotions.
-- New product launches.
+## 5.2 Understanding the five major planning activities
+
+### A. Demand Planning
+
+The company determines how much products customers are expected to purchase.
 
 Example:
 
@@ -300,122 +570,206 @@ Example:
 | Model C | 2,000 |
 | **Total** | **10,000** |
 
-Sales contributes commercial knowledge; Demand Planning consolidates information into a structured demand forecast. The goal is to investigate differences between statistical forecasts, customer information, and sales expectations.
+The information can come from:
 
-### B. Supply planning
+- Historical sales.
+- Customer orders.
+- Sales forecasts.
+- Market trends.
+- Customer promotions.
+- New product launches.
 
-The company determines how to fulfill demand. It asks:
-- How many units should be manufactured?
+The output is an agreed demand picture that the company can use for further planning.
+
+### B. Supply Planning
+
+The company determines how to fulfill the expected demand.
+
+Questions include:
+
+- How many units should we manufacture?
 - How much finished goods inventory is available?
-- How much raw material is required?
-- Can suppliers deliver on time?
-- Is overtime or another shift necessary?
+- How much raw material do we need?
+- Can our suppliers deliver on time?
+- Do we need overtime or additional shifts?
 
 The output is a proposed supply plan.
 
-### C. Inventory and capacity evaluation
+### C. Inventory and Capacity Evaluation
 
-The company checks whether the plan is operationally feasible. It reviews finished goods, raw materials, work-in-process, machine availability, labor, maintenance, and product mix.
+The company checks whether the proposed plan is operationally feasible.
 
-**Work-in-Process (WIP)** means products that have entered manufacturing but are not yet complete.
+For example:
 
-A warehouse may show 3,000 finished units, but 500 may already be allocated to another customer. The quantity physically or systemically present is not necessarily free inventory.
+- Available finished goods: 1,000 units.
+- Available raw materials: Enough for 7,000 units.
+- Available production capacity: 8,000 units.
 
-### D. Financial reconciliation
+The company must evaluate whether the inventory and production resources can support the expected demand.
 
-Finance evaluates the financial implications of the operational plan.
+### D. Financial Reconciliation
 
-Illustrative example:
+The company evaluates the financial impact of the operational plan.
 
-| Financial component | Amount |
+For example:
+
+| Financial component | Illustrative amount |
 |---|---:|
 | Expected revenue | ₱5,000,000 |
 | Material costs | ₱2,000,000 |
 | Manufacturing costs | ₱1,000,000 |
 | Other operating costs | ₱500,000 |
 
-These values are assumptions for learning, not industry benchmarks. Finance evaluates whether the plan is consistent with financial objectives and identifies the impact of proposed actions.
+Finance checks whether the proposed operating plan supports the company's financial objectives.
 
-### E. Management review
+The values above are illustrative, not actual industry benchmarks.
 
-Departments present unresolved issues and options. Management may decide which customers to prioritize, whether to approve overtime, whether to purchase additional materials, whether to negotiate delivery schedules, or whether additional capacity is needed.
+### E. Management Review
 
-## 5.3 Simple example of connecting the plans
+The different departments present unresolved issues and proposed solutions.
 
-Suppose expected demand is 10,000 units. The company has 2,000 available finished goods units and can produce 8,000 more.
+Management evaluates:
 
-**Total supply formula:**
+- Which customers should receive priority?
+- Should the company approve overtime?
+- Should additional materials be purchased?
+- Should delivery schedules be negotiated?
+- Is additional production capacity necessary?
+- Is the proposed financial impact acceptable?
 
-Total Supply = Beginning Finished Goods Inventory + Planned Production
+The output is a management-aligned business plan with decisions and assigned actions.
 
-Total Supply = 2,000 + 8,000 = **10,000 units**
+## 5.3 How S&OP connects the plans
 
-The quantities balance, but the plan is not automatically feasible. The company must still confirm that:
-- The 2,000 finished units are usable, available, and the correct product.
-- Materials are sufficient for 8,000 units.
-- Production can finish on time.
-- Machines and labor are available.
-- Suppliers can meet required dates.
-- The financial impact is acceptable.
+Let's use one simple example.
 
-A feasible plan must work in quantity, product mix, timing, resources, and financial terms.
+Suppose the expected demand is 10,000 units.
+
+The company has 2,000 finished goods units and can produce another 8,000 units.
+
+The supply plan becomes:
+
+\[
+\text{Total Supply} = \text{Beginning Inventory} + \text{Planned Production}
+\]
+
+\[
+=2,000+8,000=10,000
+\]
+
+Therefore:
+
+\[
+\text{Demand} = \text{Total Supply}
+\]
+
+At first glance, the plan appears balanced.
+
+But we still need to confirm:
+
+- Are the 2,000 units usable and available for the right customers?
+- Are materials sufficient for 8,000 units?
+- Can production complete those 8,000 units on time?
+- Are labor and machines available?
+- Can Procurement meet the material delivery schedule?
+- Is the production plan financially acceptable?
+
+This is the difference between simply calculating supply and developing a feasible business plan.
+
+**A plan is not truly feasible just because the total quantities match. The timing, product mix, resources, and financial impact must also work.**
 
 ---
 
 # 6. Departmental Roles and Responsibilities
 
-S&OP is cross-functional. No single department has all the information needed to develop the complete business plan.
+S&OP is cross-functional, meaning no single department can develop the complete plan independently.
 
-## 6.1 Sales
+Let's discuss each department.
+
+## 6.1 Sales Department
 
 **Main responsibility:** Understand customer requirements and communicate expected sales.
 
 Information provided:
+
 - Customer orders.
 - Expected sales volume.
 - Customer forecasts.
 - New business opportunities.
-- Delivery requirements.
+- Customer delivery requirements.
 - Changes in customer demand.
 - Important customer commitments.
 
-Example: Sales reports that Customer A expects to increase monthly orders from 3,000 to 5,000 units. This information gives the organization an opportunity to prepare.
+Why does Sales matter?
+
+Because the company needs to understand what customers are likely to purchase before deciding how much to produce.
+
+Example:
+
+Sales informs the company that Customer A will increase its monthly orders from 3,000 to 5,000 units.
+
+Without this information, the company might underestimate future demand.
 
 ## 6.2 Demand Planning
 
 **Main responsibility:** Develop and maintain the demand forecast.
 
 Information provided:
-- Historical demand.
-- Statistical forecasts.
-- Forecast adjustments based on market information.
+
+- Historical demand data.
+- Statistical forecast.
+- Adjustments based on market information.
 - Forecast accuracy.
 - Demand trends.
-- Product- and customer-level projections.
+- Product-level and customer-level demand projections.
 
-Sales and Demand Planning are related but not necessarily the same function. Sales contributes customer and market knowledge; Demand Planning consolidates information into a structured forecast and investigates differences between inputs.
+Important distinction:
+
+Sales and Demand Planning are related, but they are not necessarily the same function.
+
+Sales provides commercial knowledge and customer information.
+
+Demand Planning consolidates available information into a structured demand forecast.
+
+Example:
+
+Sales expects 10,000 units based on customer discussions.
+
+Demand Planning reviews historical data and identifies that the normal expected demand is only 8,500 units.
+
+They investigate the difference and determine whether the additional 1,500 units are supported by actual customer information.
+
+The goal is not to blindly accept every sales estimate or statistical forecast. It is to establish the most reasonable demand picture.
 
 ## 6.3 Manufacturing / Operations
 
 **Main responsibility:** Determine how much the company can realistically produce.
 
 Information provided:
+
 - Available production capacity.
 - Machine availability.
 - Production schedules.
 - Labor availability.
-- Yield and expected downtime.
+- Production yield.
 - Planned maintenance.
 - Manufacturing constraints.
 - Production lead times.
 
-Theoretical capacity does not always equal practical available capacity. A machine may have a high rated output, but maintenance, changeovers, downtime, staffing, and yield affect achievable production.
+Example:
+
+Manufacturing reports that its theoretical capacity is 10,000 units, but after considering scheduled maintenance and expected downtime, realistic available capacity is only 8,500 units.
+
+This distinction is important.
+
+Theoretical capacity does not always equal practical available capacity.
 
 ## 6.4 Procurement
 
-**Main responsibility:** Ensure that required purchased materials and components are available when needed.
+**Main responsibility:** Ensure that required materials and purchased components are available when needed.
 
 Information provided:
+
 - Raw material availability.
 - Supplier lead times.
 - Open purchase orders.
@@ -424,30 +778,52 @@ Information provided:
 - Minimum order quantities.
 - Supplier delivery risks.
 
-Example: Manufacturing needs materials for 10,000 units, but the supplier can deliver materials for only 7,000 within the required period. Procurement investigates alternatives, expedited delivery, or revised schedules.
+Example:
+
+Manufacturing requires materials for 10,000 units.
+
+However, Procurement reports that the supplier can only deliver materials for 7,000 units within the required period.
+
+This creates a supply constraint.
+
+Procurement can then investigate alternative suppliers, expedited delivery, or revised purchasing schedules.
 
 ## 6.5 Inventory / Warehouse
 
 **Main responsibility:** Provide accurate information about available inventory.
 
 Information provided:
+
 - Finished goods inventory.
 - Raw material inventory.
-- Work-in-process.
+- Work-in-process inventory.
 - Inventory aging.
 - Expired or obsolete stock.
 - Inventory allocation.
 - Stock discrepancies.
 
-Inventory must be evaluated by product, location, condition, ownership, and allocation status. A system quantity is not automatically available to fulfill every demand.
+Important terminology:
+
+**Work-in-Process (WIP)** refers to products that have entered the manufacturing process but are not yet completed.
+
+Example:
+
+The warehouse system shows 3,000 units of finished goods.
+
+However, 500 units are already allocated to another customer.
+
+Therefore, those 500 units may not be available for the new demand being evaluated.
+
+This is why inventory accuracy and availability matter.
 
 ## 6.6 Finance
 
 **Main responsibility:** Evaluate the financial implications of the business plan.
 
 Information provided:
+
 - Revenue projections.
-- Material costs.
+- Cost of materials.
 - Manufacturing expenses.
 - Labor and overtime costs.
 - Inventory investment.
@@ -455,14 +831,22 @@ Information provided:
 - Profitability projections.
 - Budget limitations.
 
-Finance helps the business understand the cost and financial consequences of different options. Its role is not simply to reject expenses.
+Example:
+
+Manufacturing proposes additional overtime to produce 2,000 units.
+
+Finance evaluates whether the additional labor cost is justified by the expected revenue and customer requirements.
+
+Finance does not simply reject expenses. Its role is to help the company understand the financial consequences of its decisions.
 
 ## 6.7 Senior Management
 
 **Main responsibility:** Provide strategic direction and resolve significant business conflicts.
 
-Typical decisions:
+Information and decisions include:
+
 - Business priorities.
+- Strategic targets.
 - Customer prioritization.
 - Resource allocation.
 - Capacity investment.
@@ -470,9 +854,20 @@ Typical decisions:
 - Acceptance of business risks.
 - Resolution of unresolved demand-supply gaps.
 
-For example, management may prioritize strategic customers, approve additional shifts, outsource part of production, or negotiate revised delivery dates.
+Example:
 
-## 6.8 Departmental summary
+Sales wants to fulfill all customer orders, but Manufacturing cannot support the full demand.
+
+Management may decide to:
+
+- Prioritize strategic customers.
+- Approve additional shifts.
+- Outsource part of production.
+- Negotiate revised delivery dates.
+
+These decisions may require authority beyond the individual departments.
+
+## 6.8 Summary of Departmental Responsibilities
 
 | Department | Primary question |
 |---|---|
@@ -480,243 +875,453 @@ For example, management may prioritize strategic customers, approve additional s
 | Demand Planning | How much demand should we plan for? |
 | Manufacturing | How much can we produce? |
 | Procurement | Can we obtain the required materials? |
-| Inventory / Warehouse | What stock is actually available? |
+| Inventory/Warehouse | What stock is actually available? |
 | Finance | What is the financial impact? |
 | Senior Management | What should the business prioritize and approve? |
 
-Each department is responsible for accurate information, identifying constraints, and contributing to a common business decision.
+**Important professional insight:** S&OP is not about making all departments responsible for everything. It is about making each department responsible for providing accurate information, identifying constraints, and contributing to a common business decision.
 
 ---
 
 # 7. Practical Manufacturing Example
 
-This illustrative scenario demonstrates how an S&OP analyst can identify a demand-supply gap, evaluate alternatives, and support an aligned plan. All quantities, prices, costs, and lead times below are assumptions for learning, not actual industry standards.
+Now let's apply everything to a realistic manufacturing situation.
 
-## 7.1 Business scenario
+This is where we start thinking like an S&OP analyst.
 
-An electronic-components manufacturer expects demand to increase next month.
+## 7.1 Business Scenario
+
+Imagine that you are working as an S&OP Analyst for an electronic components manufacturing company.
+
+The company manufactures three product models, but for simplicity, we will focus on one product.
+
+The Sales Department expects a significant increase in customer demand next month.
+
+### Monthly business requirements
 
 | Parameter | Illustrative assumption |
 |---|---:|
 | Expected demand | 10,000 units |
-| Beginning finished goods inventory | 1,500 units |
-| Regular monthly production capacity | 7,000 units |
-| Materials available for production | 6,000 units |
+| Finished goods inventory | 1,500 units |
+| Production capacity | 7,000 units/month |
+| Material-supported output | 6,000 units |
+| Product selling price | ₱500/unit |
+| Variable production cost | ₱300/unit |
 | Additional overtime capacity | 1,500 units |
 | Additional material delivery | 2,500 units |
 | Supplier lead time | 20 days |
-| Selling price | ₱500 per unit |
-| Variable production cost | ₱300 per unit |
-| Additional overtime premium | ₱50 per overtime unit |
 
-Assume the finished goods inventory is usable, available, and the correct product. Assume overtime capacity is additional to regular capacity, and the additional materials can arrive before production needs them.
+All values are illustrative assumptions, not actual industry standards.
 
-## 7.2 Step 1: Identify demand
+Additional information:
 
-Expected demand = **10,000 units**.
+Assume that the overtime capacity is additional to regular capacity, the supplier can deliver the additional materials before production is needed, and all inventory and production quantities refer to the same product.
 
-This is the customer requirement that the company must evaluate.
+Our objective is to develop a feasible business plan that can satisfy the 10,000-unit demand.
 
-## 7.3 Step 2: Evaluate available inventory
+## 7.2 Step 1: Identify the Demand
 
-Required Production = Demand − Available Finished Goods Inventory
+Sales provides the expected demand:
 
-Required Production = 10,000 − 1,500
+\[
+\text{Demand}=10,000\text{ units}
+\]
 
-**Required production = 8,500 units.**
+The company needs to determine whether it can fulfill this demand.
 
-The company does not need to manufacture all 10,000 units because 1,500 usable finished units are already available.
+At this stage, we do not yet assume that the company can produce 10,000 units.
 
-## 7.4 Step 3: Evaluate production capacity
+We simply establish the demand requirement.
 
-Capacity Gap = Required Production − Regular Capacity
+## 7.3 Step 2: Evaluate Available Inventory
 
-Capacity Gap = 8,500 − 7,000
+The company already has 1,500 units of finished goods inventory.
 
-**Capacity gap = 1,500 units.**
+Therefore, the remaining quantity that needs to be supplied through production is:
 
-Manufacturing reports that it can provide 1,500 additional units through overtime.
+\[
+\text{Required Production}
+=
+\text{Demand}-\text{Available Inventory}
+\]
 
-Regular capacity + Overtime capacity = 7,000 + 1,500 = **8,500 units**.
+\[
+=10,000-1,500
+\]
 
-Capacity can now support the required production quantity, subject to schedule and resource confirmation.
+\[
+\boxed{8,500\text{ units}}
+\]
 
-## 7.5 Step 4: Evaluate material availability
+Interpretation:
 
-Material Shortage = Required Production − Material-Supported Production
+The company does not need to manufacture all 10,000 units.
 
-Material Shortage = 8,500 − 6,000
+It only needs to manufacture 8,500 units, assuming the 1,500 finished goods units are usable, available, and correctly allocated.
 
-**Material shortage = 2,500 units of production support.**
+This illustrates why inventory planning is important.
 
-Procurement confirms that the supplier can deliver the additional materials within the required period. The company must still validate the delivery date, quality, and material specification.
+## 7.4 Step 3: Evaluate Production Capacity
 
-A capacity solution alone is insufficient if materials are unavailable.
+Regular production capacity is 7,000 units.
 
-## 7.6 Step 5: Develop the proposed supply plan
+Required production is 8,500 units.
+
+Therefore:
+
+\[
+\text{Capacity Gap}
+=
+8,500-7,000
+\]
+
+\[
+\boxed{1,500\text{ units}}
+\]
+
+Manufacturing reports that 1,500 units of additional overtime capacity can be made available.
+
+Therefore:
+
+\[
+7,000+1,500=8,500
+\]
+
+Production capacity is now sufficient.
+
+But wait.
+
+We still have to check material availability.
+
+## 7.5 Step 4: Evaluate Material Availability
+
+Procurement reports that available materials can support 6,000 units of production.
+
+Required production is 8,500 units.
+
+Therefore:
+
+\[
+\text{Material Shortage}
+=
+8,500-6,000
+\]
+
+\[
+\boxed{2,500\text{ units}}
+\]
+
+The company needs materials for another 2,500 units.
+
+Procurement confirms that the supplier can deliver the additional materials within the required period.
+
+Now, the company can potentially support the full 8,500-unit production requirement.
+
+Notice what happened:
+
+Even after solving the production capacity problem, the company still had a material constraint.
+
+**A feasible production plan requires both available capacity and sufficient materials.**
+
+## 7.6 Step 5: Develop the Proposed Supply Plan
+
+Let's consolidate the information.
 
 | Supply component | Quantity |
 |---|---:|
 | Beginning finished goods inventory | 1,500 |
 | Regular production | 7,000 |
-| Overtime production | 1,500 |
+| Additional overtime production | 1,500 |
 | **Total available supply** | **10,000** |
 
-Total Supply = Beginning Finished Goods Inventory + Planned Production
+Check:
 
-Total Supply = 1,500 + 7,000 + 1,500 = **10,000 units**.
+\[
+\text{Total Supply}=1,500+7,000+1,500
+\]
 
-Supply-Demand Gap = Total Supply − Demand = 10,000 − 10,000 = **0 units**.
+\[
+\boxed{10,000\text{ units}}
+\]
 
-The plan is quantitatively balanced. Timing, product mix, material delivery, and resource feasibility must still be validated.
+Compare against demand:
 
-## 7.7 Step 6: Evaluate the financial impact
+\[
+\text{Supply-Demand Gap}=10,000-10,000
+\]
 
-Assumptions:
-- Selling price: ₱500 per unit.
-- Variable production cost: ₱300 per produced unit.
-- Regular production: 7,000 units.
-- Overtime production: 1,500 units.
-- Additional overtime premium: ₱50 per overtime unit.
+\[
+\boxed{0\text{ units}}
+\]
 
-**A. Expected revenue**
+The plan is quantitatively balanced.
 
-10,000 × ₱500 = **₱5,000,000**
+However, we still need to check financial feasibility.
 
-**B. Regular production cost**
+## 7.7 Step 6: Evaluate the Financial Impact
 
-7,000 × ₱300 = **₱2,100,000**
+Assume the following additional financial information:
 
-**C. Overtime production cost**
+| Financial parameter | Amount |
+|---|---:|
+| Selling price | ₱500/unit |
+| Variable production cost | ₱300/unit |
+| Regular production quantity | 7,000 |
+| Overtime production quantity | 1,500 |
+| Additional overtime cost | ₱50/unit |
 
-Base variable cost: 1,500 × ₱300 = ₱450,000
+For simplicity, assume the ₱300 variable cost applies to all produced units, and the additional ₱50 overtime cost applies only to the 1,500 overtime units.
 
-Additional overtime premium: 1,500 × ₱50 = ₱75,000
+**A. Expected Revenue**
 
-Total overtime production cost = **₱525,000**
+\[
+10,000\times ₱500
+\]
 
-**D. Total production cost**
+\[
+=\boxed{₱5,000,000}
+\]
 
-₱2,100,000 + ₱525,000 = **₱2,625,000**
+**B. Regular Production Cost**
 
-**E. Revenue less production cost**
+\[
+7,000\times ₱300
+\]
 
-₱5,000,000 − ₱2,625,000 = **₱2,375,000**
+\[
+=\boxed{₱2,100,000}
+\]
 
-This is an illustrative contribution before other expenses, including fixed overhead, transportation, taxes, and other operating costs. It is not net profit. The simplified calculation also excludes detailed inventory valuation and timing effects.
+**C. Overtime Production Cost**
 
-Finance must evaluate whether the additional overtime and material costs are justified by the expected business benefit.
+\[
+1,500\times ₱300
+=
+₱450,000
+\]
 
-## 7.8 Step 7: Evaluate alternatives
+Additional overtime premium:
+
+\[
+1,500\times ₱50
+=
+₱75,000
+\]
+
+Total overtime production cost:
+
+\[
+₱450,000+₱75,000
+=
+\boxed{₱525,000}
+\]
+
+**D. Total Production Cost**
+
+\[
+₱2,100,000+₱525,000
+\]
+
+\[
+=\boxed{₱2,625,000}
+\]
+
+**E. Revenue Less Production Cost**
+
+\[
+₱5,000,000-₱2,625,000
+\]
+
+\[
+=\boxed{₱2,375,000}
+\]
+
+This is an illustrative contribution before other expenses, such as material purchases, inventory valuation effects, fixed overhead, transportation, taxes, and other operating costs. It is not net profit.
+
+## 7.8 Step 7: Evaluate Alternative Solutions
+
+A good S&OP analyst should not immediately recommend the first available solution.
+
+Instead, evaluate alternatives.
+
+Let's compare three possible approaches.
 
 | Option | Proposed action | Main consideration |
 |---|---|---|
-| A | Use overtime and purchase additional materials | Full demand fulfillment, with higher operating costs |
-| B | Maintain regular capacity only | Avoid overtime, but creates a supply shortfall |
-| C | Negotiate delayed deliveries with selected customers | Reduces immediate resource pressure, but may affect customer service |
+| A | Use overtime and purchase additional materials | Higher operating costs but full demand fulfillment |
+| B | Maintain regular capacity only | 1,500-unit production shortfall |
+| C | Negotiate delayed deliveries with selected customers | Lower immediate resource requirements but potential customer impact |
 
-### Option A: Full demand fulfillment
+Let's analyze them.
+
+**Option A: Full demand fulfillment**
 
 - Use 1,500 overtime production capacity.
-- Secure materials for the additional 2,500 units.
+- Purchase materials for another 2,500 units.
 - Produce 8,500 units.
 - Use 1,500 existing finished goods units.
 
-Advantage: The company can potentially fulfill all 10,000 units.
+Advantage: The company can fulfill all 10,000 units.
 
 Disadvantage: Additional overtime and procurement costs.
 
-### Option B: Regular capacity only
+**Option B: Regular capacity only**
 
 - Produce 7,000 units.
 - Use 1,500 finished goods units.
-- Total supply = 8,500 units.
-- Unfulfilled demand = 10,000 − 8,500 = **1,500 units**.
+
+Total supply:
+
+\[
+7,000+1,500=8,500
+\]
+
+Unfulfilled demand:
+
+\[
+10,000-8,500=1,500
+\]
 
 Advantage: Avoids overtime costs.
 
-Disadvantage: The company cannot fulfill full demand within the period.
+Disadvantage: The company cannot fulfill the full customer demand.
 
-### Option C: Negotiate delivery schedules
+**Option C: Negotiate delivery schedules**
 
-The company may arrange partial deliveries and negotiate later delivery dates for some customers.
+The company could arrange partial deliveries and negotiate later delivery dates for some customers.
 
-Advantage: Reduces immediate resource pressure.
+Advantage: Reduces the pressure to fulfill everything within the original period.
 
-Disadvantage: May affect customer satisfaction, contractual commitments, or future business.
+Disadvantage: Could affect customer satisfaction and future business.
 
-There is no universally correct option. The decision depends on customer importance, contractual obligations, financial impact, production feasibility, and strategic priorities.
+There is no universally correct option.
 
-## 7.9 Step 8: Establish the agreed business plan
+The best decision depends on customer importance, contractual obligations, financial impact, production feasibility, and strategic priorities.
 
-Suppose management approves Option A.
+## 7.9 Step 8: Establish the Agreed Business Plan
+
+After reviewing the alternatives, suppose management approves Option A.
+
+The agreed plan becomes:
 
 | Department | Agreed action |
 |---|---|
-| Sales | Confirm the 10,000-unit customer requirement and delivery expectations |
+| Sales | Confirm the 10,000-unit customer requirement |
 | Manufacturing | Produce 8,500 units using regular and overtime capacity |
 | Procurement | Secure materials for the additional 2,500 units |
 | Warehouse | Allocate 1,500 available finished goods units |
-| Finance | Monitor overtime, purchasing costs, and financial impact |
-| Management | Approve required resources and monitor execution |
+| Finance | Monitor overtime and purchasing costs |
+| Management | Approve resources and monitor execution |
 
-Expected result:
+### Expected result
+
 - Total supply: 10,000 units.
 - Expected demand: 10,000 units.
-- Remaining quantitative supply gap: 0 units.
+- Remaining supply gap: 0 units.
 
-This illustrates the purpose of S&OP: connecting demand, inventory, production, materials, capacity, and financial considerations into one coordinated business decision.
+This is what S&OP is trying to accomplish.
 
-S&OP does not necessarily create detailed purchase orders or daily machine schedules itself. The agreed business plan is translated into more detailed execution and scheduling processes.
+Not simply forecasting demand.
+
+Not simply preparing a production schedule.
+
+Not simply monitoring inventory.
+
+**It is the process of connecting all these activities into one coordinated business decision.**
+
+### Important distinction
+
+S&OP does not necessarily execute every production order, purchase order, or daily machine schedule itself.
+
+It establishes the aligned business plan. More detailed execution and scheduling processes translate that plan into operational activities.
+
+For example, the approved 8,500-unit production requirement may later be translated into weekly production schedules and daily machine schedules.
+
+We will encounter these planning distinctions as we progress through the curriculum.
 
 ---
 
 # 8. Common Misconceptions and Mistakes
 
+As you enter the S&OP profession, there are several misunderstandings that you should avoid.
+
 | Misconception | Correct understanding |
 |---|---|
-| S&OP is just a monthly meeting | It is an ongoing, structured planning process supported by regular meetings |
+| S&OP is just a monthly meeting | It is an ongoing, structured business planning process supported by regular meetings |
 | S&OP is only forecasting | Forecasting is one input to S&OP, not the entire process |
 | S&OP belongs only to Supply Chain | It is cross-functional and involves commercial, operational, financial, and management teams |
-| Sales determines what Manufacturing must produce | Sales provides demand information; supply feasibility must also be evaluated |
-| Manufacturing should always maximize output | Production should align with demand, inventory, capacity, and business priorities |
+| Sales determines what Manufacturing must produce | Sales provides demand information, but supply feasibility must also be evaluated |
+| Manufacturing should always produce the maximum possible quantity | Production should be aligned with demand, inventory, capacity, and business priorities |
 | More inventory is always better | Excess inventory creates cost and working capital risks |
-| The forecast must always be fulfilled | Constraints may require prioritization, negotiation, or alternative solutions |
-| Finance only checks expenses | Finance evaluates financial implications of the overall business plan |
-| S&OP eliminates all shortages | It identifies risks and supports decisions, but cannot eliminate every constraint |
-| An approved plan never changes | Plans must be reviewed as demand, supply, and business conditions change |
+| The demand forecast must always be fulfilled | Constraints may require prioritization, negotiation, or alternative solutions |
+| Finance only checks expenses | Finance helps evaluate the financial implications of the entire business plan |
+| S&OP eliminates all shortages | S&OP identifies risks and supports decisions, but cannot eliminate every constraint |
+| An approved plan will never change | Plans must be reviewed as demand, supply, and business conditions change |
 
-## 8.1 Five practical mistakes
+## 8.1 Five Practical Mistakes to Watch Out For
 
-### Mistake 1: Accepting the Sales forecast without validation
+**Mistake 1: Accepting the Sales Forecast Without Validation**
 
-Sales forecasts 15,000 units, but available customer information supports only 9,000. Producing 15,000 without investigation may create excess inventory.
+Example:
 
-### Mistake 2: Ignoring material lead time
+Sales forecasts 15,000 units, but actual customer requirements only support 9,000 units.
 
-Manufacturing needs materials next week, but the supplier requires 30 days. A plan that ignores lead time is not feasible.
+If Manufacturing produces 15,000 units without validation, the company could accumulate excess inventory.
 
-### Mistake 3: Looking only at total production capacity
+**Mistake 2: Ignoring Material Lead Time**
 
-A company may have enough total capacity for 10,000 units, but the required product mix may overload one specific machine or production line.
+Example:
 
-### Mistake 4: Ignoring financial implications
+Manufacturing needs materials next week, but Procurement's supplier needs 30 days to deliver.
 
-Overtime may fulfill demand but reduce profitability if additional costs are not evaluated.
+A production plan that ignores supplier lead time is not feasible.
 
-### Mistake 5: Treating S&OP as a reporting activity
+**Mistake 3: Looking Only at Total Production Capacity**
 
-If every department presents reports but nobody discusses gaps, makes decisions, assigns actions, or follows up, the process has not delivered its intended value.
+Example:
+
+A company has enough total capacity to produce 10,000 units.
+
+However, Model A requires Machine 1, while Model B requires Machine 2. Machine 1 is already fully utilized.
+
+Total capacity may look sufficient, but the required product mix cannot be produced.
+
+**Mistake 4: Ignoring Financial Implications**
+
+Example:
+
+The company approves overtime to fulfill customer demand but fails to calculate the additional production costs.
+
+The company may achieve its volume target but experience lower profitability.
+
+**Mistake 5: Treating S&OP as a Reporting Activity**
+
+Example:
+
+Every department presents reports, but nobody discusses the problems or makes decisions.
+
+The meeting ends with information but no agreed actions.
+
+This is not effective S&OP.
+
+An effective process must lead to decisions, accountability, and follow-through.
 
 ---
 
 # 9. Business Perspective and Decision-Making
 
-## 9.1 What does an S&OP Analyst do?
+Now let's connect this topic to the actual responsibilities of an S&OP Analyst.
 
-An S&OP Analyst helps transform information from multiple departments into business insights that support planning and decisions.
+This is particularly important because your role is not simply to consolidate spreadsheets or prepare presentations.
+
+Your responsibility is to help the organization understand its business position and support better planning decisions.
+
+## 9.1 What does an S&OP Analyst actually do?
+
+An S&OP Analyst works with information from multiple departments and helps transform that information into meaningful business insights.
 
 Typical responsibilities include:
+
 1. Collecting information from different departments.
 2. Consolidating demand and supply data.
 3. Reviewing planning assumptions.
@@ -728,11 +1333,15 @@ Typical responsibilities include:
 9. Supporting planning discussions.
 10. Tracking agreed actions and decisions.
 
-Responsibilities vary depending on the company's S&OP maturity and organizational structure.
+The exact responsibilities vary depending on the company's S&OP maturity and organizational structure.
 
-## 9.2 Difference between reporting and analysis
+## 9.2 The Difference Between Reporting and Analysis
 
-### Reporting approach
+Let's compare two approaches.
+
+**Approach A: Reporting**
+
+You prepare an Excel report showing:
 
 | Metric | Quantity |
 |---|---:|
@@ -740,72 +1349,95 @@ Responsibilities vary depending on the company's S&OP maturity and organizationa
 | Production capacity | 8,000 |
 | Available materials | 7,000 |
 
-The report communicates the numbers, but does not explain their implications.
+Then you send the report to management.
 
-### Analytical approach
+This is useful, but it only communicates the numbers.
 
-An analyst interprets the same information:
+**Approach B: Analytical S&OP Reporting**
+
+You analyze the same numbers and identify:
+
 - Demand exceeds capacity by 2,000 units.
-- Material availability is below required demand.
-- Available materials may not support full production capacity.
+- Material availability is 3,000 units below demand.
+- Material availability is also insufficient to support the full available production capacity.
 - Additional supplier deliveries or alternative sourcing may be required.
 - Additional production capacity may be necessary.
-- Customer delivery adjustments may need to be evaluated.
+- The company may need to evaluate overtime or customer delivery adjustments.
 
-The analyst then presents possible actions and their business implications.
+Then you present the possible solutions and their implications.
 
-## 9.3 S&OP supports different business decisions
+This is much more valuable.
+
+### The S&OP Analyst's thinking process
+
+1. **DATA:** Demand, inventory, capacity, materials, costs.
+2. **ANALYSIS:** Identify gaps, trends, risks, and constraints.
+3. **INSIGHTS:** Explain what the numbers mean for the business.
+4. **RECOMMENDATIONS:** Evaluate possible actions and trade-offs.
+5. **BUSINESS DECISIONS:** Support management in selecting the best course of action.
+
+This is an important mindset to develop.
+
+## 9.3 How S&OP Supports Different Business Decisions
 
 | Business area | Questions S&OP helps answer |
 |---|---|
-| Demand | Are customer requirements expected to increase or decrease? |
-| Production | Is there enough capacity to meet expected demand? |
-| Procurement | Are additional materials required? |
-| Inventory | Is stock sufficient, excessive, or at risk? |
-| Customer service | Can commitments be fulfilled on time? |
+| Demand | Are we expecting an increase or decrease in customer requirements? |
+| Production | Do we have enough capacity to meet expected demand? |
+| Procurement | Do we need to purchase additional materials? |
+| Inventory | Do we have sufficient stock, or are we at risk of excess inventory? |
+| Customer service | Can we fulfill customer commitments on time? |
 | Costs | What additional costs will the proposed plan create? |
 | Profitability | Which option provides the best financial outcome? |
-| Management | Which resources and priorities should be approved? |
+| Management | What resources and business priorities should be approved? |
 
-## 9.4 Relationship with business performance
+## 9.4 Understanding the Relationship Between S&OP and Business Performance
+
+S&OP decisions influence several important business performance areas.
+
+Some examples:
 
 | Performance area | How S&OP can help |
 |---|---|
 | Revenue | Better demand and supply alignment can reduce missed sales opportunities |
-| Customer service | Better availability and delivery planning |
+| Customer service | Improved availability and delivery planning |
 | Inventory | Better coordination of stock requirements |
-| Production efficiency | Better alignment of production plans with demand |
+| Production efficiency | Improved alignment of production plans and expected demand |
 | Procurement efficiency | Better purchasing visibility and supplier coordination |
 | Working capital | More informed inventory investment decisions |
 | Profitability | Better evaluation of costs, revenue, and operational trade-offs |
 
-S&OP does not automatically improve every KPI. Results depend on information quality, assumptions, decisions, and execution.
+Remember that S&OP does not automatically improve every KPI.
 
-## 9.5 Developing the S&OP professional mindset
+Its effectiveness depends on the quality of information, planning assumptions, decisions, and execution.
 
-When demand increases, ask:
+## 9.5 Developing the S&OP Professional Mindset
+
+I want you to start developing a habit of asking these questions whenever you look at business data:
+
+**When demand increases:**
 - Can supply support the increase?
-- Are materials sufficient?
+- Do we have enough materials?
 - Is additional capacity required?
 - What happens to inventory?
 
-When demand decreases, ask:
-- Will excess inventory accumulate?
-- Should production be reduced?
-- Can purchasing be postponed?
+**When demand decreases:**
+- Will we accumulate excess inventory?
+- Should we reduce production?
+- Can we postpone purchasing?
 - What happens to supplier commitments?
 
-When production capacity is constrained, ask:
-- Can overtime help?
-- Can production be transferred?
-- Can some work be outsourced?
+**When production capacity is constrained:**
+- Can we use overtime?
+- Can we transfer production?
+- Can we outsource?
 - Should customer deliveries be rescheduled?
 
-When inventory is high, ask:
-- Is inventory aligned with future demand?
+**When inventory is high:**
+- Is the inventory aligned with future demand?
 - Is it the correct product mix?
-- Is it usable and available?
-- Is there an obsolescence risk?
+- Is it usable inventory?
+- Is there a risk of obsolescence?
 
 The professional mindset is to look beyond an individual metric and understand its effect on the entire business.
 
@@ -813,19 +1445,43 @@ The professional mindset is to look beyond an individual metric and understand i
 
 # 10. Key Takeaways
 
-## 10.1 The most important lessons
+Let's consolidate everything we discussed.
 
-1. **S&OP is a business planning process.** It connects departments to establish one coordinated business plan.
-2. **S&OP addresses disconnected departmental planning.** Strong individual departments can still produce poor overall results if their plans conflict.
-3. **Demand and supply must be balanced.** The company must understand customer requirements and whether it has sufficient resources to fulfill them.
-4. **S&OP is cross-functional.** Sales, Demand Planning, Manufacturing, Procurement, Inventory, Finance, and Senior Management contribute.
-5. **S&OP integrates operational and financial planning.** Production decisions affect materials, labor, inventory, revenue, costs, and profitability.
-6. **S&OP supports business decisions.** It identifies gaps, evaluates alternatives, and helps management establish priorities.
-7. **S&OP is more than a meeting or report.** Its value comes from coordinated planning, decisions, accountability, and execution.
+## 10.1 The Most Important Things to Remember
 
-## 10.2 Essential terminology
+**1. S&OP is a business planning process.**
 
-| Term | Meaning |
+It connects different departments to establish one coordinated business plan.
+
+**2. S&OP solves the problem of disconnected departmental planning.**
+
+A company can have excellent individual departments but still experience poor overall performance if their plans conflict.
+
+**3. Demand and supply must be balanced.**
+
+The company needs to understand what customers require and whether it has sufficient resources to fulfill those requirements.
+
+**4. S&OP is cross-functional.**
+
+Sales, Demand Planning, Manufacturing, Procurement, Inventory, Finance, and Senior Management all contribute.
+
+**5. S&OP integrates operational and financial planning.**
+
+A production decision has consequences for material costs, labor, inventory, costs, revenue, and profitability.
+
+**6. S&OP supports business decisions.**
+
+It identifies gaps, evaluates alternatives, and helps management establish priorities.
+
+**7. S&OP is not just a meeting or report.**
+
+Its real value comes from coordinated planning, decisions, accountability, and execution.
+
+## 10.2 Essential Terminology
+
+These are the terms I want you to become comfortable using.
+
+| Terminology | Meaning |
 |---|---|
 | S&OP | Sales & Operations Planning |
 | Cross-functional | Involving different departments |
@@ -835,18 +1491,24 @@ The professional mindset is to look beyond an individual metric and understand i
 | Capacity | Available production capability |
 | Inventory | Materials and products held by the company |
 | Constraint | Limitation affecting business operations |
-| Demand-supply gap | Difference between demand and supply |
+| Demand-Supply Gap | Difference between demand and supply |
 | Trade-off | Decision involving competing benefits and costs |
-| Consensus plan | Agreed planning position |
-| Financial reconciliation | Evaluating financial implications of the plan |
+| Consensus Plan | Agreed planning position |
+| Financial Reconciliation | Evaluating the financial implications of the plan |
 | Feasibility | Whether the plan can realistically be executed |
-| Executive review | Management evaluation and decision-making |
+| Executive Review | Management evaluation and decision-making |
 
-## 10.3 Professional definition to remember
+## 10.3 The One-Sentence Definition
+
+If someone asks you during a business meeting:
+
+**"What is S&OP?"**
+
+I want you to be able to explain it this way:
 
 > Sales & Operations Planning is a cross-functional business planning process that aligns customer demand with the company's supply capabilities, inventory, production capacity, and financial objectives to establish one feasible and agreed-upon business plan.
 
-Understand the meaning behind every part of the definition rather than memorizing it word for word.
+Understand the meaning behind every part of that definition. Hindi kailangang kabisaduhin lang.
 
 ---
 
@@ -854,31 +1516,69 @@ Understand the meaning behind every part of the definition rather than memorizin
 
 **Instructions:** Answer the questions before reviewing the solutions with your instructor. Answers are intentionally not included in this lecture.
 
-## Part A. Conceptual understanding
+## Part A. Conceptual Understanding
 
-**Question 1.** In your own words, what is Sales & Operations Planning? Explain its purpose without simply repeating the formal definition.
+**Question 1.**
 
-**Question 2.** Why does a company need S&OP if it already has separate departments for Sales, Manufacturing, Procurement, and Finance?
+In your own words, what is Sales & Operations Planning?
 
-**Question 3.** What is the difference between Demand Planning and S&OP? Are they the same thing? Explain their relationship.
+Explain its purpose without simply repeating the formal definition.
 
-**Question 4.** What does it mean when we say that S&OP establishes “one agreed-upon business plan”? Does it mean every department must have exactly the same production, inventory, and demand numbers? Explain.
+**Question 2.**
 
-## Part B. Situational understanding
+Why does a company need S&OP if it already has separate departments for Sales, Manufacturing, Procurement, and Finance?
 
-**Question 5.** Sales forecasts 12,000 units for next month. Manufacturing can produce only 9,000 units. Procurement can support 8,000 units. Finished goods inventory is 1,000 units. Sales insists that the company should commit to 12,000 units.
+**Question 3.**
 
-Answer:
+What is the difference between Demand Planning and S&OP?
+
+Are they the same thing? Explain their relationship.
+
+**Question 4.**
+
+What does it mean when we say that S&OP establishes "one agreed-upon business plan"?
+
+Does it mean that every department must have exactly the same production, inventory, and demand numbers? Explain.
+
+## Part B. Situational Understanding
+
+**Question 5.**
+
+Imagine that Sales forecasts 12,000 units for next month.
+
+However:
+
+- Manufacturing can only produce 9,000 units.
+- Procurement can only support 8,000 units.
+- Finished goods inventory is 1,000 units.
+
+The Sales Department insists that the company should still commit to 12,000 units.
+
+As an S&OP Analyst:
+
 a. What is the primary business problem?
-b. Which departments should participate in resolving it?
+
+b. Which departments should participate in resolving the issue?
+
 c. What information would you request from each department?
+
 d. What possible solutions would you recommend?
 
-**Question 6.** Manufacturing wants to increase production to 15,000 units to maximize machine utilization. Expected customer demand is only 10,000 units. Would you recommend producing 15,000 units? Explain the possible consequences of accepting or rejecting the proposal.
+**Question 6.**
 
-## Part C. Numerical and business analysis
+Suppose Manufacturing wants to increase production to 15,000 units because it wants to maximize machine utilization.
 
-**Question 7.** A manufacturing company has the following information:
+However, the expected customer demand is only 10,000 units.
+
+Would you recommend producing 15,000 units?
+
+Explain the possible consequences of accepting or rejecting the proposal.
+
+## Part C. Numerical and Business Analysis
+
+**Question 7.**
+
+A manufacturing company has the following information:
 
 | Parameter | Quantity |
 |---|---:|
@@ -888,52 +1588,80 @@ d. What possible solutions would you recommend?
 | Available materials | Enough for 9,000 units |
 | Additional overtime capacity | 2,000 units |
 
-Answer:
+Answer the following:
+
 a. How many units need to be produced to fulfill demand?
+
 b. What is the production capacity gap?
+
 c. What is the material shortage?
+
 d. Can the company fulfill the full demand using the available resources?
+
 e. What additional actions would you recommend?
 
-Show your calculations. Assume the finished goods inventory is usable and available, and material-supported output refers to additional production.
+Show your calculations.
 
-## Part D. Professional thinking
+## Part D. Professional Thinking
 
-**Question 8.** You are presenting to senior management and discover that:
+**Question 8.**
+
+Imagine that you are presenting to senior management.
+
+You discover that:
+
 - Demand is increasing.
 - Inventory is decreasing.
 - Supplier lead times are becoming longer.
 - Production capacity is almost fully utilized.
 
-What would you tell management? What business risks should they be concerned about?
+What would you tell management?
 
-**Question 9.** What is the difference between an S&OP Analyst who simply prepares reports and an S&OP Analyst who provides valuable business insights? Give an example.
+More importantly, what business risks should they be concerned about?
 
-**Question 10.** You discover that Sales and Manufacturing are using different demand figures in their respective reports. What would you do? Explain how you would investigate and resolve the discrepancy.
+**Question 9.**
+
+What is the difference between an S&OP Analyst who simply prepares reports and an S&OP Analyst who provides valuable business insights?
+
+Give an example.
+
+**Question 10.**
+
+Suppose you discover that Sales and Manufacturing are using different demand figures in their respective reports.
+
+What would you do?
+
+Explain how you would investigate and resolve the discrepancy.
 
 ---
 
-## Evaluation Criteria
+## Answer Submission
 
-Answers will be evaluated across four areas:
+The learner can answer all questions or submit them in batches. Show calculations for Question 7. The instructor should evaluate the answers individually, explain correct and incorrect reasoning, identify knowledge gaps, and provide an overall assessment.
 
-| Area | What to demonstrate |
+### How the answers will be evaluated
+
+| Evaluation area | What to look for |
 |---|---|
-| Conceptual understanding | Understanding what S&OP means and why it exists |
-| Technical understanding | Correct use of terminology and planning concepts |
-| Practical application | Ability to apply S&OP to manufacturing situations |
-| Analytical thinking | Ability to identify problems and recommend reasonable business decisions |
+| Conceptual understanding | Does the learner understand what S&OP really means? |
+| Technical understanding | Can the learner correctly use the terminology? |
+| Practical application | Can the learner apply S&OP to manufacturing situations? |
+| Analytical thinking | Can the learner identify problems and recommend reasonable business decisions? |
 
-The next learning step is to evaluate the learner's answers for Topic 1.1. Do not proceed to Topic 1.2 until the learner is comfortable with these foundational concepts.
+The instructor should also identify whether the learner is ready to progress from Level 1 understanding toward Level 2 technical application.
 
 ---
 
-## Instructor's Closing Note
+## Final Instructor's Note
 
-An S&OP professional does not look at a business problem from the perspective of just one department. They look at how a decision in one department affects the entire organization.
+One mindset I want you to carry throughout this entire learning program:
 
-Increasing production might solve a supply problem but create an inventory problem. Reducing inventory might improve working capital but increase stockout risk. Reducing procurement costs might look beneficial but create supplier lead-time risks.
+**An S&OP professional does not look at a business problem from the perspective of just one department. They look at how a decision in one department affects the entire organization.**
 
-The goal is to understand these relationships and help the business make coordinated, informed decisions.
+For example, increasing production might solve a supply problem but create an inventory problem. Reducing inventory might improve working capital but increase the risk of stockouts. Reducing procurement costs might look beneficial but could create supplier lead-time risks.
 
-**That is the foundation of becoming an effective S&OP professional.**
+Your job is to understand these relationships.
+
+That is the foundation of becoming an effective S&OP professional.
+
+**Our next step is to evaluate your answers for Topic 1.1. We will not proceed to Topic 1.2 until you are comfortable with these foundational concepts.**
