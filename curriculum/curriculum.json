@@ -74,7 +74,13 @@
       "moduleNumber": 7,
       "title": null,
       "overviewPath": "curriculum/module-07/overview.md",
-      "topics": []
+      "topics": [
+        {
+          "topicNumber": "7.1",
+          "title": "Introduction to Financial Planning",
+          "path": "lectures/module-07/topic-07-01-introduction-to-financial-planning.md"
+        }
+      ]
     },
     {
       "moduleNumber": 8,
@@ -91,7 +97,7 @@
     {
       "moduleNumber": 10,
       "title": null,
-      "overviewPath": "curriculum/module-10/overview.md",
+      "overviewPath": "curriculum/module-010/overview.md",
       "topics": []
     }
   ],
