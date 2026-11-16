@@ -7,7 +7,13 @@
       "moduleNumber": 1,
       "title": null,
       "overviewPath": "curriculum/module-01/overview.md",
-      "topics": []
+      "topics": [
+        {
+          "topicNumber": "1.1",
+          "title": "What is Sales & Operations Planning (S&OP)?",
+          "path": "lectures/module-01/topic-01-01-what-is-sales-and-operations-planning.md"
+        }
+      ]
     },
     {
       "moduleNumber": 2,
