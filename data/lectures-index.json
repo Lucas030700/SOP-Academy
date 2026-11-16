@@ -143,6 +143,15 @@
       "summary": "Understand the end-to-end physical movement of materials and products from suppliers to customers, the inbound, internal, and outbound stages, inventory transformation and availability, production bottlenecks, supply chain disruptions, and how product flow information supports S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-03-understanding-product-flow-in-supply-chain-management.md",
       "status": "complete"
+    },
+    {
+      "id": "module-09-topic-09-08",
+      "module": 9,
+      "topicNumber": "9.8",
+      "title": "S&OP Reporting and Dashboard",
+      "summary": "Understand how S&OP reports and dashboards communicate business performance, monitor demand, supply, inventory, capacity, and financial KPIs, identify exceptions, validate and consolidate data, use Excel, Power BI, SQL, and Python for reporting, and translate findings into management decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-08-sop-reporting-and-dashboard.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
