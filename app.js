@@ -107,46 +107,39 @@ function renderLectureMarkdown(markdown) {
     throw new Error("The lecture formatting libraries could not be loaded. Please reconnect and refresh.");
   }
   const mathBlocks = [];
-  const withMathTokens = markdown
-    .replace(/\\\[([\s\S]*?)\\\]/g, (_, tex) => {
-      const token = "SOPMATHBLOCK" + mathBlocks.length + "END";
-      mathBlocks.push({ token, tex, display: true });
-      return token;
-    })
-    .replace(/\\\(([\s\S]*?)\\\)/g, (_, tex) => {
-      const token = "SOPMATHINLINE" + mathBlocks.length + "END";
-      mathBlocks.push({ token, tex, display: false });
-      return token;
-    })
-    .replace(/\$\$([\s\S]*?)\$\$/g, (_, tex) => {
-      const token = "SOPMATHBLOCK" + mathBlocks.length + "END";
-      mathBlocks.push({ token, tex, display: true });
-      return token;
-    })
-    .replace(/(^|[^$])\$([^$\n]+)\$/g, (_, before, tex) => {
-      const token = "SOPMATHINLINE" + mathBlocks.length + "END";
-      mathBlocks.push({ token, tex, display: false });
-      return before + token;
-    });
+  let source = markdown;
+  const saveMath = (tex, display) => {
+    const token = "SOPMATH" + mathBlocks.length + "TOKEN";
+    mathBlocks.push({ token, tex, display });
+    return display ? "\n\n" + token + "\n\n" : token;
+  };
+  source = source
+    .replace(/\\\[([\s\S]*?)\\\]/g, (_, tex) => saveMath(tex, true))
+    .replace(/\\\(([\s\S]*?)\\\)/g, (_, tex) => saveMath(tex, false))
+    .replace(/\$\$([\s\S]*?)\$\$/g, (_, tex) => saveMath(tex, true))
+    .replace(/(^|[^$])\$([^$\n]+)\$/g, (_, before, tex) => before + saveMath(tex, false));
   marked.setOptions({ gfm: true, breaks: false });
-  let rendered = marked.parse(withMathTokens, { async: false });
+  let rendered = marked.parse(source, { async: false });
   for (const item of mathBlocks) {
-    const tag = item.display ? "div" : "span";
-    const html = "<" + tag + " class=\"math-render-target\" data-display=\"" + item.display + "\" data-tex=\"" + escapeHTML(item.tex) + "\"></" + tag + ">";
-    rendered = rendered.replace(item.token, html);
+    let equation;
+    try {
+      equation = katex.renderToString(item.tex.trim(), {
+        displayMode: item.display,
+        throwOnError: false,
+        strict: "ignore",
+        trust: false
+      });
+    } catch (error) {
+      equation = "<code>" + escapeHTML(item.tex) + "</code>";
+    }
+    if (item.display) {
+      rendered = rendered.replace("<p>" + item.token + "</p>", equation);
+      rendered = rendered.replace(item.token, equation);
+    } else {
+      rendered = rendered.replace(item.token, equation);
+    }
   }
-  const container = document.createElement("div");
-  container.innerHTML = rendered;
-  container.querySelectorAll(".math-render-target").forEach(node => {
-    const tex = node.getAttribute("data-tex") || "";
-    katex.render(tex, node, {
-      displayMode: node.getAttribute("data-display") === "true",
-      throwOnError: false,
-      strict: "ignore",
-      trust: false
-    });
-  });
-  return container.innerHTML;
+  return rendered;
 }
 function toggleBookmark(id) {
   const items = bookmarks(); const next = items.includes(id) ? items.filter(x => x !== id) : [...items,id];
