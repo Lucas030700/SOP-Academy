@@ -71,6 +71,15 @@
       "summary": "Understand why companies implement S&OP, the business problems it addresses, its operational and financial benefits, and how it supports cross-functional decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-02-purpose-and-benefits-of-sales-and-operations-planning.md",
       "status": "complete"
+    },
+    {
+      "id": "module-01-topic-01-03",
+      "module": 1,
+      "topicNumber": "1.3",
+      "title": "Understanding Demand and Supply",
+      "summary": "Understand demand and supply in business and manufacturing, distinguish customer needs, orders, actual sales and forecasted demand, assess supply capability and constraints, and analyze demand-supply gaps in S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-03-understanding-demand-and-supply.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed."
