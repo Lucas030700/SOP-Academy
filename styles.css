@@ -214,3 +214,68 @@
   .dialog-head{padding-top:17px;padding-bottom:15px}
   .lecture-body{padding-top:25px;padding-bottom:35px}
 }
+
+
+/* Full-page lecture mode: no floating modal/card appearance */
+body:has(#lecture-dialog[open]){overflow:hidden;background:#fff}
+body:has(#lecture-dialog[open]) .topbar,
+body:has(#lecture-dialog[open]) .shell{display:none!important}
+.lecture-dialog,
+.lecture-dialog[open]{
+  position:fixed!important;
+  inset:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  width:100vw!important;
+  height:100vh!important;
+  height:100dvh!important;
+  max-width:none!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+  background:#fff!important;
+}
+.lecture-dialog::backdrop{background:transparent!important;backdrop-filter:none!important}
+.dialog-head{
+  width:100%;
+  padding-left:max(22px,calc((100vw - 1000px)/2));
+  padding-right:max(22px,calc((100vw - 1000px)/2));
+}
+.lecture-body{
+  width:100%;
+  max-width:1000px;
+  flex:1 1 auto;
+  margin:0 auto;
+  padding-left:clamp(22px,5vw,72px);
+  padding-right:clamp(22px,5vw,72px);
+  overflow-y:auto!important;
+  overscroll-behavior:contain;
+}
+.dialog-actions{
+  width:100%;
+  padding-left:max(20px,calc((100vw - 1000px)/2));
+  padding-right:max(20px,calc((100vw - 1000px)/2));
+}
+@media(max-width:650px){
+  .dialog-head{
+    padding-left:20px!important;
+    padding-right:16px!important;
+    border-radius:0!important;
+  }
+  .lecture-body{
+    max-width:none!important;
+    padding:23px 21px 42px!important;
+    font-size:16px!important;
+    line-height:1.8!important;
+  }
+  .dialog-actions{
+    justify-content:stretch!important;
+    padding-left:16px!important;
+    padding-right:16px!important;
+    border-radius:0!important;
+  }
+}
