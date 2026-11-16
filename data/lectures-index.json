@@ -1,11 +1,11 @@
 {
-  "version": 1,
-  "generatedAt": null,
+  "version": 2,
+  "generatedAt": "2026-11-17",
   "modules": [
     {
       "moduleNumber": 1,
-      "title": null,
-      "description": null
+      "title": "Introduction to Sales & Operations Planning",
+      "description": "S&OP foundations and core concepts"
     },
     {
       "moduleNumber": 2,
@@ -53,6 +53,16 @@
       "description": null
     }
   ],
-  "topics": [],
-  "note": "No original lectures have been migrated yet. Add verified lecture metadata and file paths here as lectures are published."
+  "topics": [
+    {
+      "id": "module-01-topic-01-01",
+      "module": 1,
+      "topicNumber": "1.1",
+      "title": "What is Sales & Operations Planning (S&OP)?",
+      "summary": "Understand what S&OP is, why companies need it, what business problems it solves, and how it connects departments.",
+      "path": "./lectures/module-01/topic-01-01-what-is-sales-and-operations-planning.md",
+      "status": "complete"
+    }
+  ],
+  "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed."
 }
