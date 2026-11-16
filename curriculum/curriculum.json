@@ -49,6 +49,11 @@
           "topicNumber": "2.1",
           "title": "What is Supply Chain Management (SCM)?",
           "path": "lectures/module-02/topic-02-01-what-is-supply-chain-management.md"
+        },
+        {
+          "topicNumber": "2.2",
+          "title": "Supply Chain Components",
+          "path": "lectures/module-02/topic-02-02-supply-chain-components.md"
         }
       ]
     },
