@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "generatedAt": null,
+  "modules": [
+    {
+      "moduleNumber": 1,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 2,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 3,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 4,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 5,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 6,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 7,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 8,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 9,
+      "title": null,
+      "description": null
+    },
+    {
+      "moduleNumber": 10,
+      "title": null,
+      "description": null
+    }
+  ],
+  "topics": [],
+  "note": "No original lectures have been migrated yet. Add verified lecture metadata and file paths here as lectures are published."
+}
