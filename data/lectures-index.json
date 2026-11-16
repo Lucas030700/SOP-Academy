@@ -80,6 +80,15 @@
       "summary": "Understand demand and supply in business and manufacturing, distinguish customer needs, orders, actual sales and forecasted demand, assess supply capability and constraints, and analyze demand-supply gaps in S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-03-understanding-demand-and-supply.md",
       "status": "complete"
+    },
+    {
+      "id": "module-01-topic-01-04",
+      "module": 1,
+      "topicNumber": "1.4",
+      "title": "Departments Involved in Sales & Operations Planning (S&OP)",
+      "summary": "Understand why S&OP requires cross-functional collaboration, the responsibilities and information contributions of Sales, Demand Planning, Manufacturing, Procurement, Supply Planning, Inventory, Finance, Product Management and Executive Leadership, how departments interact, how S&OP resolves conflicts, and how an S&OP Analyst supports aligned business decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-01/topic-01-04-departments-involved-in-sop.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed."
