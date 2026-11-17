@@ -341,6 +341,15 @@
       "summary": "Understand internal business, external market, product, and customer-related factors that influence demand; distinguish normal variation, event-driven changes, temporary changes, structural changes, incremental demand, and demand shifts; quantify forecast adjustments, avoid double-counting, and evaluate demand assumptions and risks during S&OP Demand Review.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-05-demand-influencing-factors.md",
       "status": "complete"
+    },
+    {
+      "id": "module-03-topic-03-06",
+      "module": 3,
+      "topicNumber": "3.6",
+      "title": "Consensus Demand Planning",
+      "summary": "Understand how statistical forecasts, customer information, market intelligence, and cross-functional inputs are evaluated and reconciled into one agreed demand plan; assess judgmental adjustments, avoid double-counting, conduct Demand Reviews, resolve conflicting assumptions, and communicate demand risks and decisions in S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-06-consensus-demand-planning.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
