@@ -683,6 +683,15 @@
       "summary": "Understand the purpose and position of the Supply Review Meeting in the monthly S&OP cycle; distinguish Demand Review from Supply Review; coordinate Supply Planning, Production, Operations, Procurement, Inventory, Logistics and Finance; evaluate demand, inventory, production capacity, material availability, supplier commitments and operational constraints; calculate required production, capacity utilization, projected inventory, supply-demand gaps, material availability, backlog and production attainment; compare supply alternatives; develop a feasible proposed supply plan; and prepare risks, recommendations, action items and escalations for Pre-S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-04-supply-review-meeting.md",
       "status": "complete"
+    },
+    {
+      "id": "module-08-topic-08-05",
+      "module": 8,
+      "topicNumber": "8.5",
+      "title": "Pre-S&OP Meeting",
+      "summary": "Understand the purpose and position of the Pre-S&OP Meeting in the monthly S&OP cycle; distinguish Demand Review, Supply Review, Pre-S&OP and Executive S&OP; coordinate cross-functional participants and decision rights; consolidate consensus demand, proposed supply, inventory, capacity, material and financial inputs; reconcile demand and supply gaps; evaluate operational and financial scenarios, trade-offs, risks and opportunities; calculate projected inventory, capacity and material shortages, revenue, costs, contribution and budget variances; develop recommendations, identify executive decisions, prepare Pre-S&OP presentations, and document decisions, owners and deadlines.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-05-pre-sop-meeting.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
