@@ -1421,3 +1421,26 @@ body{background:#f6f7f8!important;color:#292d31!important}
 :root[data-theme="dark"] .reader-heading *{
   color:#f4f4f4!important;
 }
+
+
+/* Reader navigation: keep the Module control text-only while retaining its tap target */
+.reader-back{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  padding:0!important;
+  min-width:0!important;
+  min-height:44px;
+}
+:root[data-theme="dark"] #reader-back,
+:root[data-theme="dark"] .reader-back,
+:root[data-theme="dark"] button#reader-back,
+:root[data-theme="dark"] #reader-back:active,
+:root[data-theme="dark"] .reader-back:active{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#ededed!important;
+  -webkit-text-fill-color:#ededed!important;
+}
