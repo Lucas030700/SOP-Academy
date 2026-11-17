@@ -323,6 +323,15 @@
       "summary": "Understand demand forecasting and its role in S&OP; distinguish forecasts from customer orders, sales forecasts, targets, budgets, demand plans, supply plans and production plans; evaluate historical, customer, commercial, product and external forecasting inputs; compare qualitative and quantitative approaches; understand forecast levels, granularity, aggregation, horizons, the forecasting workflow and uncertainty; and apply demand forecasting concepts to manufacturing and cross-functional planning decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-03-introduction-to-demand-forecasting.md",
       "status": "complete"
+    },
+    {
+      "id": "module-03-topic-03-04",
+      "module": 3,
+      "topicNumber": "3.4",
+      "title": "Quantitative Forecasting Methods",
+      "summary": "Understand and apply quantitative forecasting methods using historical demand data; calculate and compare naive forecasts, simple and weighted moving averages, simple exponential smoothing, linear trend regression, and basic seasonal forecasts; evaluate forecast errors using MAD, MAPE, MSE and bias; select methods based on demand patterns; and interpret statistical forecasts for manufacturing, procurement, inventory, and S&OP Demand Review decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-04-quantitative-forecasting-methods.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
