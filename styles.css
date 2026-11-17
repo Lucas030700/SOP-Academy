@@ -1209,3 +1209,116 @@ body.reading-mode .shell{display:none!important}
   .module-progress .module-overview>strong{font-size:11px!important}
   .lecture-body{padding:13px 19px 28px!important}
 }
+
+
+/* Minimal black-and-white visual system */
+:root{
+  color-scheme:light;
+  --navy:#171717;
+  --ink:#181818;
+  --muted:#737373;
+  --line:#e5e5e5;
+  --paper:#f7f7f7;
+  --white:#fff;
+  --teal:#555;
+  --soft:#f0f0f0;
+}
+body{background:#f7f7f7!important;color:#181818!important}
+.topbar{background:#171717!important;color:#fff!important}
+.brand-mark{border-radius:7px!important;color:#fff!important;border-color:#666!important}
+.connection i{background:#bdbdbd!important}
+.progress-card{border-color:#555!important;background:#242424!important;border-radius:8px!important}
+.progress-heading,.progress-heading strong,.progress-card p{color:#eee!important}
+.progress-track{background:#555!important}
+.progress-track span,.mini-track span,.module-overview-track span{background:#777!important}
+.searchbox,.module-card,.topic-row,.quick-panel,.empty,.reference-card,.formula-item,.glossary-card{
+  border-color:#e2e2e2!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+}
+.module-card:hover{border-color:#999!important}
+.module-state,.module-number,.module-foot,.topic-number,.topic-status{color:#666!important}
+.module-card h3,.topic-row h3{color:#171717!important}
+.module-card p,.topic-row p{color:#666!important}
+.library-tabs{border-radius:8px!important;background:#ededed!important}
+.library-tab{border-radius:6px!important;color:#555!important}
+.library-tab.active{background:#171717!important;color:#fff!important;box-shadow:none!important}
+.sticky-library-controls{background:#f7f7f7!important;box-shadow:0 5px 12px rgba(0,0,0,.06)!important}
+.module-progress .module-overview{border-radius:8px!important;background:#f1f1f1!important;border-color:#e1e1e1!important}
+.module-progress .module-overview>span,.module-progress .module-overview>strong{color:#333!important}
+.topic-row .button,.button.secondary{background:#eee!important;color:#222!important;border-radius:6px!important}
+.button.primary,#reader-complete:not(.is-complete){background:#171717!important;color:#fff!important;border-radius:6px!important}
+#reader-complete.is-complete{background:#e9e9e9!important;color:#222!important;border:1px solid #ccc!important}
+.close-button{border-radius:7px!important;background:#eee!important;color:#222!important}
+.module-number,.topic-number,.topic-status,.count-pill,.coming,.quick-icon{border-radius:5px!important}
+.lecture-dialog,.dialog-head,.dialog-actions,.reader-view,.reader-head,.reader-actions,.reader-content{
+  border-radius:0!important;
+}
+.lecture-dialog{background:#fff!important;color:#222!important}
+.dialog-head,.dialog-actions{background:#fff!important}
+.dialog-head h2,.lecture-body h1,.lecture-body h2,.lecture-body h3,.lecture-body h4,.lecture-body strong{color:#181818!important}
+.lecture-body{color:#333!important}
+.lecture-body blockquote{background:#f3f3f3!important;border-left-color:#777!important;color:#444!important;border-radius:0 5px 5px 0!important}
+.lecture-body table{border-radius:6px!important}
+.lecture-body thead,.lecture-body th{background:#eee!important;color:#222!important}
+.lecture-body tr:nth-child(even) td{background:#fafafa!important}
+.lecture-body pre,.lecture-body code,.lecture-body .katex-display{background:#f2f2f2!important;color:#222!important;border-radius:5px!important}
+.topbar-tools{display:flex;align-items:center;gap:14px}
+.theme-toggle{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  min-height:32px;padding:5px 9px;border:1px solid #555;border-radius:6px;
+  background:#292929;color:#fff;font:600 10px "DM Sans",sans-serif;cursor:pointer;
+}
+.theme-icon{font-size:14px;line-height:1}
+.theme-label{letter-spacing:.02em}
+.theme-toggle:focus-visible{outline:2px solid #aaa;outline-offset:3px}
+/* Optional dark mode, remembered on this device */
+:root[data-theme="dark"]{color-scheme:dark;--ink:#ededed;--muted:#aaa;--line:#383838;--paper:#111;--white:#1c1c1c;--navy:#080808}
+:root[data-theme="dark"] body{background:#111!important;color:#eee!important}
+:root[data-theme="dark"] .topbar{background:#080808!important;border-bottom:1px solid #292929!important}
+:root[data-theme="dark"] .brand small,:root[data-theme="dark"] .connection{color:#bbb!important}
+:root[data-theme="dark"] .brand-mark{color:#eee!important;border-color:#555!important}
+:root[data-theme="dark"] .sticky-library-controls{background:#111!important;box-shadow:0 5px 12px rgba(0,0,0,.5)!important}
+:root[data-theme="dark"] .progress-card{background:#202020!important;border-color:#444!important}
+:root[data-theme="dark"] .progress-heading,:root[data-theme="dark"] .progress-heading strong,:root[data-theme="dark"] .progress-card p{color:#eee!important}
+:root[data-theme="dark"] .progress-track{background:#484848!important}
+:root[data-theme="dark"] .progress-track span,:root[data-theme="dark"] .mini-track span,:root[data-theme="dark"] .module-overview-track span{background:#bbb!important}
+:root[data-theme="dark"] .searchbox,:root[data-theme="dark"] .module-card,:root[data-theme="dark"] .topic-row,:root[data-theme="dark"] .quick-panel,:root[data-theme="dark"] .empty,:root[data-theme="dark"] .reference-card,:root[data-theme="dark"] .formula-item,:root[data-theme="dark"] .glossary-card{
+  background:#1c1c1c!important;background-image:none!important;border-color:#383838!important;color:#eee!important;
+}
+:root[data-theme="dark"] .searchbox input{color:#eee!important}
+:root[data-theme="dark"] .searchbox input::placeholder{color:#999!important}
+:root[data-theme="dark"] .module-card h3,:root[data-theme="dark"] .topic-row h3,:root[data-theme="dark"] .reference-card h3,:root[data-theme="dark"] .glossary-card h3,:root[data-theme="dark"] .formula-item summary{color:#f1f1f1!important}
+:root[data-theme="dark"] .module-card p,:root[data-theme="dark"] .topic-row p,:root[data-theme="dark"] .reference-card p,:root[data-theme="dark"] .glossary-card p,:root[data-theme="dark"] .formula-detail p{color:#bdbdbd!important}
+:root[data-theme="dark"] .module-number,:root[data-theme="dark"] .topic-number,:root[data-theme="dark"] .topic-status,:root[data-theme="dark"] .reference-meta,:root[data-theme="dark"] .formula-category,:root[data-theme="dark"] .count-pill,:root[data-theme="dark"] .coming{background:#303030!important;color:#ccc!important;border-color:#444!important}
+:root[data-theme="dark"] .module-state,:root[data-theme="dark"] .module-foot{color:#aaa!important}
+:root[data-theme="dark"] .library-tabs{background:#222!important;border-color:#3c3c3c!important}
+:root[data-theme="dark"] .library-tab{color:#ccc!important}
+:root[data-theme="dark"] .library-tab.active{background:#eee!important;color:#111!important}
+:root[data-theme="dark"] .module-progress{background:#111!important;box-shadow:0 5px 12px rgba(0,0,0,.45)!important}
+:root[data-theme="dark"] .module-progress .module-overview{background:#222!important;border-color:#3b3b3b!important}
+:root[data-theme="dark"] .module-progress .module-overview>span,:root[data-theme="dark"] .module-progress .module-overview>strong{color:#eee!important}
+:root[data-theme="dark"] .module-progress .module-overview-track{background:#444!important}
+:root[data-theme="dark"] .dialog-head,:root[data-theme="dark"] .dialog-actions,:root[data-theme="dark"] .lecture-dialog,:root[data-theme="dark"] .reader-view,:root[data-theme="dark"] .reader-head,:root[data-theme="dark"] .reader-actions,:root[data-theme="dark"] .reader-content{background:#111!important;color:#e8e8e8!important;border-color:#333!important}
+:root[data-theme="dark"] .dialog-head h2,:root[data-theme="dark"] .lecture-body h1,:root[data-theme="dark"] .lecture-body h2,:root[data-theme="dark"] .lecture-body h3,:root[data-theme="dark"] .lecture-body h4,:root[data-theme="dark"] .lecture-body strong{color:#f2f2f2!important}
+:root[data-theme="dark"] .lecture-body{color:#ddd!important}
+:root[data-theme="dark"] .lecture-body h2,:root[data-theme="dark"] .lecture-body hr{border-color:#383838!important}
+:root[data-theme="dark"] .lecture-body blockquote{background:#222!important;border-left-color:#aaa!important;color:#ddd!important}
+:root[data-theme="dark"] .lecture-body th,:root[data-theme="dark"] .lecture-body thead{background:#292929!important;color:#eee!important}
+:root[data-theme="dark"] .lecture-body td,:root[data-theme="dark"] .lecture-body th{border-color:#414141!important}
+:root[data-theme="dark"] .lecture-body tr:nth-child(even) td{background:#191919!important}
+:root[data-theme="dark"] .lecture-body pre,:root[data-theme="dark"] .lecture-body code,:root[data-theme="dark"] .lecture-body .katex-display{background:#252525!important;color:#eee!important;border-color:#404040!important}
+:root[data-theme="dark"] .button.secondary,:root[data-theme="dark"] .topic-row .button,:root[data-theme="dark"] .module-card button{background:#303030!important;color:#eee!important;border-color:#484848!important}
+:root[data-theme="dark"] .button.primary,:root[data-theme="dark"] #reader-complete:not(.is-complete){background:#eee!important;color:#111!important}
+:root[data-theme="dark"] #reader-complete.is-complete{background:#303030!important;color:#eee!important;border-color:#555!important}
+:root[data-theme="dark"] .close-button{background:#303030!important;color:#eee!important}
+:root[data-theme="dark"] .theme-toggle{background:#eee!important;color:#111!important;border-color:#eee!important}
+:root[data-theme="dark"] footer{color:#888!important}
+/* Sharper, quieter geometry across the interface */
+.hero,.progress-card,.module-card,.topic-row,.reference-card,.formula-item,.glossary-card,.quick-panel,.searchbox,.library-tabs,.module-overview,.module-progress .module-overview,.lecture-dialog,.lecture-body pre,.lecture-body table,.button,.close-button,.theme-toggle{border-radius:6px!important}
+.hero{border-radius:7px!important}
+@media(max-width:650px){
+ .topbar-tools{gap:8px}
+ .theme-toggle{min-height:30px;padding:4px 7px}
+ .connection{font-size:9px}
+}
