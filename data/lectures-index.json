@@ -584,6 +584,15 @@
       "summary": "Understand how companies develop, evaluate, and compare alternative business scenarios involving demand, supply, capacity, inventory, supplier disruptions, and financial conditions; distinguish forecasting, scenario planning, sensitivity analysis, and contingency planning; calculate scenario demand, feasible production, available supply, projected inventory, supply-demand gaps, capacity utilization, fulfillment, revenue, costs, profitability, risk exposure, and expected outcomes; develop base, upside, downside, and combined manufacturing scenarios; identify trigger points and contingency actions; and prepare scenario analysis and recommendations for Pre-S&OP and management review.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-05-scenario-planning.md",
       "status": "complete"
+    },
+    {
+      "id": "module-06-topic-06-06",
+      "module": 6,
+      "topicNumber": "6.6",
+      "title": "Trade-off Analysis",
+      "summary": "Understand how companies evaluate competing business alternatives and balance cost, capacity, inventory, customer service, delivery, risk, and profitability; distinguish trade-off analysis from scenario planning and cost-benefit analysis; calculate incremental cost and savings, contribution margin, cost per additional unit, inventory carrying cost, revenue exposure, total relevant cost, and net financial benefit; apply cost-benefit analysis, weighted decision matrices, sensitivity analysis, risk-impact assessment, and multi-criteria decision-making; compare overtime, subcontracting, inventory utilization, and demand rescheduling in a manufacturing shortage scenario; and prepare evidence-based trade-off analysis for Pre-S&OP and management decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-06-trade-off-analysis.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
