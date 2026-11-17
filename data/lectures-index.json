@@ -118,6 +118,15 @@
       "status": "complete"
     },
     {
+      "id": "module-07-topic-07-02",
+      "module": 7,
+      "topicNumber": "7.2",
+      "title": "Revenue and Sales Planning",
+      "summary": "Understand how companies translate sales forecasts and demand plans into projected revenue; distinguish sales planning, demand planning and revenue planning; evaluate historical sales, customer orders, selling prices, product and customer mix, promotions and seasonality; forecast revenue at product and customer levels; calculate revenue, average selling price, growth, volume, price, mix and budget variances; reconcile price-volume-mix effects without double-counting; and align revenue expectations with production, inventory, capacity, procurement and S&OP management decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-02-revenue-and-sales-planning.md",
+      "status": "complete"
+    },
+    {
       "id": "module-02-topic-02-01",
       "module": 2,
       "topicNumber": "2.1",
