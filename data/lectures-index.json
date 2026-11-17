@@ -163,6 +163,15 @@
       "status": "complete"
     },
     {
+      "id": "module-02-topic-02-06",
+      "module": 2,
+      "topicNumber": "2.6",
+      "title": "Manufacturing Strategies",
+      "summary": "Understand Make-to-Stock (MTS), Make-to-Order (MTO), Assemble-to-Order (ATO), and Engineer-to-Order (ETO); compare their production triggers, inventory requirements, customization, lead times, forecasting and capacity needs; explain push, pull, decoupling points, CODP and postponement; evaluate strategy selection factors; and apply manufacturing strategies to demand, supply, capacity, procurement, inventory, financial planning, and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-06-manufacturing-strategies.md",
+      "status": "complete"
+    },
+    {
       "id": "module-09-topic-09-01",
       "module": 9,
       "topicNumber": "9.1",
