@@ -255,8 +255,30 @@ function toggleBookmark(id) {
   writeStore(STORE.bookmarks,next); $("bookmark-button").textContent = next.includes(id) ? "★ Bookmarked" : "☆ Bookmark"; renderModules();
 }
 function toggleComplete(id) {
-  const items = progress(); const next = items.includes(id) ? items.filter(x => x !== id) : [...items,id];
-  writeStore(STORE.progress,next); $("complete-button").textContent = next.includes(id) ? "Completed ✓" : "Mark complete"; updateProgress(); setView(state.view);
+  const items = progress();
+  const isNowComplete = !items.includes(id);
+  const next = isNowComplete ? [...items, id] : items.filter(x => x !== id);
+  writeStore(STORE.progress, next);
+
+  const label = isNowComplete ? "Completed ✓" : "Mark complete";
+  const moduleButton = $("complete-button");
+  const readerButton = $("reader-complete");
+  if (moduleButton) {
+    moduleButton.textContent = label;
+    moduleButton.setAttribute("aria-pressed", String(isNowComplete));
+  }
+  if (readerButton && state.activeTopic?.id === id) {
+    readerButton.textContent = label;
+    readerButton.setAttribute("aria-pressed", String(isNowComplete));
+    readerButton.classList.toggle("is-complete", isNowComplete);
+  }
+
+  updateProgress();
+  renderModules();
+  renderReferenceLibraries();
+
+  const activeModuleDialog = $("lecture-dialog").open && state.activeModule !== null;
+  if (activeModuleDialog) openModule(state.activeModule);
 }
 async function loadLibrary() {
   const list = $("module-list");
