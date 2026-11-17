@@ -404,6 +404,15 @@
       "summary": "Understand lead time and its role in supply chain planning; distinguish procurement, manufacturing, order processing, transportation, cumulative, and end-to-end lead times; measure planned and actual lead time, average duration, variability, and reliability; calculate cumulative lead time and estimated completion and delivery dates using calendar and working days; analyze the effects of lead time on procurement, production, inventory, customer service, and S&OP planning; and evaluate strategies to improve lead time and manage supplier delays.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-05-lead-time-management.md",
       "status": "complete"
+    },
+    {
+      "id": "module-04-topic-04-06",
+      "module": 4,
+      "topicNumber": "4.6",
+      "title": "Bottleneck Analysis",
+      "summary": "Understand how to identify, measure, analyze, and manage production bottlenecks; distinguish bottlenecks, constraints, and capacity shortages; calculate process capacity, throughput, cycle time, utilization, and capacity gaps; apply the Theory of Constraints and its Five Focusing Steps; evaluate bottleneck improvement alternatives; and communicate capacity constraints and their business implications during S&OP Supply Review and Pre-S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-06-bottleneck-analysis.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
