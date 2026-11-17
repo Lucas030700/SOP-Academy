@@ -646,3 +646,99 @@ body.reading-mode{overflow:hidden;background:#fff}
 .reader-progress-track{width:3px;height:min(42vh,320px);min-height:120px;background:#e8edf1}
 .reader-progress-track span{background:#2c9b83}
 @media(max-width:650px){.reader-progress{right:5px;width:5px}.reader-progress-track{height:28vh;min-height:90px;width:2px}.reader-content{padding-right:28px}}
+
+
+/* Fixed academy frame, no page zoom or rubber-band drag */
+html{overscroll-behavior-y:none}
+body{overscroll-behavior-y:none;touch-action:pan-y}
+.topbar{position:sticky;top:0;z-index:30;flex-shrink:0}
+.progress-hero{
+  position:sticky;
+  top:70px;
+  z-index:25;
+  margin:0 -22px 13px;
+  padding:10px 22px;
+  border-radius:0 0 15px 15px;
+  background:rgba(245,247,250,.97);
+  box-shadow:0 7px 18px rgba(20,40,63,.045);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.progress-hero .progress-card{padding:10px 15px 8px}
+.progress-hero .progress-card p{font-size:9px}
+.searchbox{margin-top:0;margin-bottom:12px;box-shadow:0 3px 12px rgba(20,40,63,.035)}
+.library-tabs{margin-top:0}
+.module-card{
+  border:1px solid #e6ebf0;
+  border-radius:15px;
+  background:linear-gradient(155deg,#fff 0%,#fbfcfd 100%);
+  box-shadow:0 5px 16px rgba(22,45,70,.045);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.module-card:active{transform:translateY(1px);box-shadow:0 2px 7px rgba(22,45,70,.05)}
+.reference-list{gap:9px}
+.formula-item{
+  min-width:0;
+  overflow:hidden;
+  border:1px solid #e2e9ef;
+  border-radius:13px;
+  background:linear-gradient(145deg,#fff,#fbfcfd);
+  box-shadow:0 3px 12px rgba(20,40,63,.035);
+}
+.formula-item summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  min-height:54px;
+  padding:13px 15px;
+  color:#1b3045;
+  font:700 13px/1.4 Manrope,sans-serif;
+  list-style:none;
+  cursor:pointer;
+}
+.formula-item summary::-webkit-details-marker{display:none}
+.formula-item summary i{
+  display:grid;
+  place-items:center;
+  flex:0 0 24px;
+  width:24px;height:24px;
+  border-radius:8px;
+  background:#edf3f5;
+  color:#477365;
+  font:500 17px/1 "DM Sans",sans-serif;
+  font-style:normal;
+  transition:transform .2s,background .2s;
+}
+.formula-item[open] summary{border-bottom:1px solid #edf1f4}
+.formula-item[open] summary i{transform:rotate(45deg);background:#e5f1ed}
+.formula-detail{padding:12px 15px 15px}
+.formula-category{
+  display:inline-block;
+  margin-bottom:10px;
+  color:#718394;
+  font:700 8px "DM Sans",sans-serif;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.formula-detail .formula-equation{
+  margin:0 0 10px;
+  border-color:#e5edf0;
+  border-radius:9px;
+  background:#f4f8f8;
+  color:#183c55;
+}
+.formula-detail p{margin:8px 0 0;color:#526273;font-size:11px;line-height:1.62}
+.formula-detail p strong{color:#263b50}
+.glossary-card{
+  border-radius:14px;
+  border-color:#e5ebf0;
+  box-shadow:0 4px 13px rgba(20,40,63,.035);
+}
+@media(max-width:650px){
+  .progress-hero{top:62px;margin:0 -15px 11px;padding:8px 15px}
+  .progress-hero .progress-card{padding:9px 12px 8px}
+  .searchbox{height:44px}
+  .formula-item summary{min-height:51px;padding:12px 13px;font-size:12px}
+  .formula-detail{padding:11px 13px 14px}
+}
