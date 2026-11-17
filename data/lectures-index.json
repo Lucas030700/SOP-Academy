@@ -494,6 +494,15 @@
       "summary": "Understand Days of Supply and how to calculate and interpret inventory coverage using on-hand, available inventory, and inventory position; distinguish calendar-day and working-day coverage; evaluate consumption changes, receipts, allocations, variability and lead times; project inventory depletion and stockout timing; calculate target inventory and coverage gaps; and apply DOS to manufacturing, procurement, production planning, and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-05-days-of-supply.md",
       "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-06",
+      "module": 5,
+      "topicNumber": "5.6",
+      "title": "Lead Time and Safety Stock",
+      "summary": "Understand procurement, production, and replenishment lead time; distinguish planned and actual lead time; explain safety stock, cycle stock, and excess inventory; analyze demand and lead time variability, supplier reliability, forecast accuracy, and service levels; calculate safety stock using buffer days, demand variability, lead time variability, and combined variability; and apply inventory protection calculations to manufacturing and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-06-lead-time-and-safety-stock.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
