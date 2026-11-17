@@ -19,8 +19,8 @@
     },
     {
       "moduleNumber": 4,
-      "title": null,
-      "description": null
+      "title": "Supply Planning",
+      "description": "Understand how organizations translate demand plans into feasible supply plans by coordinating production, procurement, inventory, capacity, workforce, suppliers, and fulfillment."
     },
     {
       "moduleNumber": 5,
@@ -358,6 +358,15 @@
       "title": "Forecast Accuracy and Forecast Bias",
       "summary": "Understand how to measure forecast accuracy and error using MAD, MAPE, WAPE, MSE and RMSE; measure cumulative forecast error, mean forecast error and forecast bias; interpret forecasting performance at SKU, product-family and aggregate levels; investigate root causes; and use forecast KPIs to improve manufacturing and S&OP Demand Reviews.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-07-forecast-accuracy-and-forecast-bias.md",
+      "status": "complete"
+    },
+    {
+      "id": "module-04-topic-04-01",
+      "module": 4,
+      "topicNumber": "4.1",
+      "title": "Understanding Supply Planning",
+      "summary": "Understand what Supply Planning is, how it differs from Demand Planning, what makes a supply plan feasible, the objectives and components of supply planning, required planning information, the supply planning process and strategies, and how S&OP analysts identify constraints, evaluate supply alternatives, and communicate supply gaps.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-01-understanding-supply-planning.md",
       "status": "complete"
     }
   ],
