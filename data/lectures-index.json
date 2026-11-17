@@ -145,6 +145,15 @@
       "status": "complete"
     },
     {
+      "id": "module-02-topic-02-04",
+      "module": 2,
+      "topicNumber": "2.4",
+      "title": "Understanding Demand Information",
+      "summary": "Understand the sources and types of demand information, distinguish actual demand, sales, customer orders, backlog and forecasts, classify demand by time, product, customer and value, recognize demand patterns and data-quality problems, evaluate demand adjustments and exceptions, consolidate demand without double-counting, and explain how reliable demand information supports S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-04-understanding-demand-information.md",
+      "status": "complete"
+    },
+    {
       "id": "module-09-topic-09-01",
       "module": 9,
       "topicNumber": "9.1",
