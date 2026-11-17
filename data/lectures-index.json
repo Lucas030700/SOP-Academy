@@ -305,6 +305,15 @@
       "summary": "Understand what demand represents in business and supply chain planning; distinguish customer needs, actual demand, sales, customer orders, open orders, backlog, historical demand, and forecasted demand; classify independent, dependent, derived, unconstrained, and constrained demand; identify internal and external demand drivers, demand patterns, planning levels, variability, and uncertainty; and apply demand analysis to manufacturing and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-01-understanding-demand.md",
       "status": "complete"
+    },
+    {
+      "id": "module-03-topic-03-02",
+      "module": 3,
+      "topicNumber": "3.2",
+      "title": "Types of Demand Information",
+      "summary": "Understand historical demand and actual sales, customer orders and backlog, customer forecasts, internal Sales input, statistical forecasts, market intelligence, promotional and new-product demand, and documented demand adjustments; evaluate source reliability, consolidate overlapping information without double-counting, and prepare a validated demand planning input for S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-02-types-of-demand-information.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
