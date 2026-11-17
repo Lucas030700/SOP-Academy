@@ -1,5 +1,5 @@
 const INDEX_URL = "./data/lectures-index.json";
-const APP_VERSION = "4";
+const APP_VERSION = "5";
 const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1" };
 const state = { modules: [], topics: [], view: "modules", query: "", activeTopic: null, activeModule: null };
 const $ = (id) => document.getElementById(id);
@@ -254,17 +254,30 @@ function toggleComplete(id) {
   writeStore(STORE.progress,next); $("complete-button").textContent = next.includes(id) ? "Completed ✓" : "Mark complete"; updateProgress(); setView(state.view);
 }
 async function loadLibrary() {
+  const list = $("module-list");
+  list.innerHTML = '<div class="loading">Loading your learning library…</div>';
   try {
-    const response = await fetch(INDEX_URL, { cache: "no-store" });
-    if (!response.ok) throw new Error("Index not available");
+    const response = await fetch(INDEX_URL + "?v=14", { cache: "no-store" });
+    if (!response.ok) throw new Error(`Lecture index request failed (${response.status})`);
     const data = await response.json();
-    state.modules = data.modules || [];
-    state.topics = data.topics || [];
-  } catch {
+    if (!data || !Array.isArray(data.modules) || !Array.isArray(data.topics)) {
+      throw new Error("The lecture index has an unexpected format.");
+    }
+    state.modules = data.modules;
+    state.topics = data.topics;
+    updateProgress();
+    setView(state.view);
+  } catch (error) {
+    console.error("S&OP Academy library load failed:", error);
     state.modules = Array.from({length:10},(_,i)=>({moduleNumber:i+1,title:null}));
     state.topics = [];
+    updateProgress();
+    setView(state.view);
+    if (state.view === "modules") {
+      list.insertAdjacentHTML("afterbegin", '<div class="empty library-warning"><strong>Unable to refresh lecture data</strong><p>The module list is shown as a fallback. Check your connection, then try again.</p><button class="button secondary" id="retry-library" type="button">Retry loading</button></div>');
+      $("retry-library").addEventListener("click", loadLibrary);
+    }
   }
-  updateProgress(); renderModules();
 }
 $("search").addEventListener("input", e => { state.query = e.target.value; renderModules(); renderReferenceLibraries(); });
 document.querySelectorAll(".library-tab").forEach(btn => btn.addEventListener("click", () => setView(btn.dataset.view)));
