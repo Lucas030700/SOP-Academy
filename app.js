@@ -101,15 +101,26 @@ async function openTopic(id) {
     const lectureMarkdown = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
     $("reader-content").innerHTML = renderLectureMarkdown(lectureMarkdown);
     $("reader-content").scrollTop = 0;
+    requestAnimationFrame(updateReaderProgress);
   } catch (error) {
     $("reader-content").innerHTML = `<div class="reader-error"><strong>Unable to load this lecture.</strong><p>${escapeHTML(error.message)}</p><button class="button secondary" id="reader-retry" type="button">Try again</button></div>`;
     $("reader-retry").addEventListener("click", () => openTopic(id));
+    requestAnimationFrame(updateReaderProgress);
   }
   const isBookmarked = bookmarks().includes(id);
   $("reader-bookmark").textContent = isBookmarked ? "★ Bookmarked" : "☆ Bookmark";
   $("reader-complete").textContent = progress().includes(id) ? "Completed ✓" : "Mark complete";
   $("reader-bookmark").onclick = () => toggleBookmark(id);
   $("reader-complete").onclick = () => toggleComplete(id);
+}
+function updateReaderProgress() {
+  const content = $("reader-content");
+  const maxScroll = Math.max(0, content.scrollHeight - content.clientHeight);
+  const ratio = maxScroll > 0 ? Math.min(1, Math.max(0, content.scrollTop / maxScroll)) : 1;
+  const remaining = Math.max(0, Math.ceil((1 - ratio) * 100));
+  $("reader-progress-fill").style.height = `${ratio * 100}%`;
+  $("reader-remaining").textContent = `${remaining}% left`;
+  $("reader-progress").setAttribute("aria-label", `${Math.round(ratio * 100)} percent read, ${remaining} percent remaining`);
 }
 function closeReader() {
   $("reader-view").hidden = true;
@@ -187,6 +198,8 @@ document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click"
 }));
 $("close-dialog").addEventListener("click", () => $("lecture-dialog").close());
 $("reader-back").addEventListener("click", closeReader);
+$("reader-content").addEventListener("scroll", updateReaderProgress, { passive: true });
+window.addEventListener("resize", () => { if (!$("reader-view").hidden) updateReaderProgress(); });
 $("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-dialog")) $("lecture-dialog").close(); });
 document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
 window.addEventListener("online",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="ONLINE";}); window.addEventListener("offline",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="OFFLINE";});
