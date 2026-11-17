@@ -940,3 +940,50 @@ body.reading-mode .shell{display:none!important}
   .lecture-body .module-topic-list .topic-row p{font-size:11.5px!important;line-height:1.58!important;margin-bottom:12px!important}
   .lecture-body .module-topic-list .topic-row .button{min-height:39px!important;min-width:124px!important}
 }
+
+
+/* Sticky library controls: progress, search, and section tabs */
+:root{--academy-topbar-height:70px;--academy-progress-stack:126px}
+.topbar{position:sticky!important;top:0!important;z-index:80!important}
+.progress-hero{
+  position:sticky!important;
+  top:var(--academy-topbar-height)!important;
+  z-index:75!important;
+}
+.searchbox{
+  position:sticky!important;
+  top:calc(var(--academy-topbar-height) + var(--academy-progress-stack))!important;
+  z-index:74!important;
+  display:flex!important;
+  background:rgba(255,255,255,.98)!important;
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+.library-tabs{
+  position:sticky!important;
+  top:calc(var(--academy-topbar-height) + var(--academy-progress-stack) + 54px)!important;
+  z-index:73!important;
+  background:rgba(237,241,245,.98)!important;
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+/* Keep the module completion summary visible while its topic list scrolls */
+.lecture-body .module-overview{
+  position:sticky!important;
+  top:-1px!important;
+  z-index:12!important;
+  background:linear-gradient(135deg,#f8fafc 0%,#f1f5f8 100%)!important;
+  box-shadow:0 7px 13px rgba(20,40,63,.045)!important;
+}
+@media(max-width:650px){
+  :root{--academy-topbar-height:62px;--academy-progress-stack:116px}
+  .searchbox{
+    top:calc(var(--academy-topbar-height) + var(--academy-progress-stack))!important;
+    margin-bottom:9px!important;
+  }
+  .library-tabs{
+    top:calc(var(--academy-topbar-height) + var(--academy-progress-stack) + 53px)!important;
+    margin-bottom:12px!important;
+  }
+  .lecture-body .module-overview{top:-1px!important}
+}
