@@ -242,6 +242,15 @@
       "summary": "Understand the differences between Sales & Operations Planning and Sales & Operations Execution, their planning horizons, responsibilities, processes, KPIs, escalation rules, feedback loop, and how an S&OP Analyst connects medium-term planning with short-term manufacturing execution.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-09-sop-vs-soe.md",
       "status": "complete"
+    },
+    {
+      "id": "module-08-topic-08-07",
+      "module": 8,
+      "topicNumber": "8.7",
+      "title": "Roles and Responsibilities",
+      "summary": "Understand the cross-functional S&OP organizational structure, departmental roles, responsibilities throughout the S&OP cycle, decision authority, accountability, collaboration, escalation, the S&OP Analyst's role, and how to apply a RACI Matrix in a manufacturing environment.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-07-roles-and-responsibilities.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
