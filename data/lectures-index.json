@@ -620,6 +620,15 @@
       "summary": "Understand cost, expense, expenditure and cash outflow; classify fixed, variable, direct, indirect, manufacturing, non-manufacturing, product, period and relevant costs; calculate direct materials, direct labor, manufacturing overhead, manufacturing cost, COGM, COGS and cost variances; analyze cost behavior, economies of scale and capacity utilization; and evaluate how demand, production, procurement, overtime, subcontracting, inventory build-ahead and rescheduling decisions affect manufacturing costs and S&OP financial performance.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-03-cost-fundamentals.md",
       "status": "complete"
+    },
+    {
+      "id": "module-07-topic-07-04",
+      "module": 7,
+      "topicNumber": "7.4",
+      "title": "Profit and Margin",
+      "summary": "Understand profit fundamentals and the differences between revenue, cost, profit and cash flow; distinguish gross, operating and net profit; calculate gross, operating, net and contribution margins, markup, break-even quantity and break-even revenue; analyze product and customer profitability, product mix and profit variances; and evaluate how demand, pricing, production, capacity, yield, procurement and supply alternatives influence profitability and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-04-profit-and-margin.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
