@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#14283f">
   <meta name="description" content="Your personal offline-first S&OP learning library.">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=20?v=14">
+  <link rel="stylesheet" href="./styles.css?v=21">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
   <title>S&OP Academy</title>
 </head>
@@ -20,6 +20,7 @@
   </header>
 
   <main class="shell">
+    <div class="sticky-library-controls">
     <section class="hero progress-hero" aria-label="Your learning progress">
       <div class="progress-card">
         <div class="progress-heading"><span>YOUR PROGRESS</span><strong id="progress-count">0 / 0 topics</strong></div>
@@ -40,6 +41,7 @@
       <button class="library-tab" data-view="formulas" role="tab" aria-selected="false">Formula library</button>
       <button class="library-tab" data-view="glossary" role="tab" aria-selected="false">S&OP</button>
     </nav>
+    </div>
 
     <section id="module-list" class="module-list library-panel" aria-live="polite">
       <div class="loading">Loading your learning library…</div>
