@@ -1,7 +1,6 @@
 # Module 8 – Topic 8.8: S&OP Outputs and Implementation
 
-**Module 8: S&OP Governance and Management**  
-**Topic 8.8**
+**Module 8: S&OP Governance and Management** | **Topic 8.8**
 
 **Learning Level:** Level 1 → Level 2 → Level 3  
 **Teaching Approach:** Simple → Technical → Practical → Analytical
@@ -901,7 +900,7 @@ The company must produce 13,000 units to satisfy the expected demand and maintai
 
 But available capacity is only 11,000 units.
 
-**Capacity Gap: 2,000 units**
+<badge>Capacity Gap: 2,000 units</badge>
 
 This is the issue that must be addressed during supply planning and Executive S&OP.
 
