@@ -476,6 +476,15 @@
       "summary": "Understand how to determine inventory position by combining usable on-hand stock, qualified incoming purchase and production supply, reservations, customer and production commitments, and outstanding demand; distinguish on-hand, available inventory, inventory position, ATP, and PAB; calculate inventory position, available inventory, projected balances, multi-period positions, and net requirements; and apply timing-aware inventory analysis to manufacturing and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-03-inventory-position.md",
       "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-04",
+      "module": 5,
+      "topicNumber": "5.4",
+      "title": "Average Daily Usage (ADU)",
+      "summary": "Understand Average Daily Usage and how to calculate historical, working-day, calendar-day, simple and weighted consumption rates; select appropriate usage data for raw materials, WIP and finished goods; analyze demand, production volume, product mix, yield, scrap and unusual consumption; project material usage; and apply ADU to inventory coverage, replenishment, and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-04-average-daily-usage.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
