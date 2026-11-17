@@ -1,7 +1,7 @@
 const INDEX_URL = "./data/lectures-index.json";
 const APP_VERSION = "4";
 const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1" };
-const state = { modules: [], topics: [], filter: "all", query: "", activeTopic: null, activeModule: null };
+const state = { modules: [], topics: [], view: "modules", query: "", activeTopic: null, activeModule: null };
 const $ = (id) => document.getElementById(id);
 const readStore = (key) => { try { return JSON.parse(localStorage.getItem(key) || "[]"); } catch { return []; } };
 const writeStore = (key, value) => localStorage.setItem(key, JSON.stringify(value));
@@ -34,13 +34,9 @@ function renderModules() {
     const topics = state.topics.filter(t => Number(t.module) === Number(m.moduleNumber));
     const text = slug([m.title, ...topics.map(t => t.title)].join(" "));
     const matches = !q || text.includes(q);
-    const stats = moduleStatus(m);
-    const filterMatches = state.filter === "all" ||
-      (state.filter === "in-progress" && stats.done > 0 && stats.done < stats.total) ||
-      (state.filter === "bookmarked" && topics.some(t => bookmarks().includes(t.id)));
-    return matches && filterMatches;
+    return matches;
   });
-  $("module-count").textContent = `${state.modules.length} modules`;
+  $("module-count").textContent = `${visible.length} / ${state.modules.length} modules`;
   if (!visible.length) {
     list.innerHTML = '<div class="empty"><strong>No matching modules</strong><p>Try another search or switch the library filter.</p></div>';
     return;
@@ -56,6 +52,87 @@ function renderModules() {
     </button>`;
   }).join("");
   list.querySelectorAll("[data-module]").forEach(btn => btn.addEventListener("click", () => openModule(Number(btn.dataset.module))));
+}
+const FORMULAS = [
+  {category:"Demand planning",name:"Average Demand",formula:"Average Demand = Total Demand ÷ Number of Periods",why:"Averages demand across the selected periods so planners have a simple baseline. Use periods of comparable length and investigate unusual one-time demand before relying on the average.",example:"If demand over 3 months is 900, 1,050 and 1,050 units, average monthly demand = 3,000 ÷ 3 = 1,000 units/month."},
+  {category:"Demand planning",name:"Forecast Error",formula:"Forecast Error = Actual Demand − Forecast Demand",why:"Shows the direction and size of the forecast miss. A positive result means actual demand was higher than forecast; a negative result means the forecast was higher.",example:"Actual = 1,100 units; forecast = 1,000 units. Error = +100 units, meaning demand exceeded the forecast by 100."},
+  {category:"Demand planning",name:"Forecast Accuracy (simple absolute error form)",formula:"Accuracy = 1 − (|Actual − Forecast| ÷ Actual)",why:"Converts absolute forecast error into an intuitive percentage for a single period. This form needs care when actual demand is zero and is not the only accepted accuracy measure.",example:"Actual = 1,000; forecast = 900. Accuracy = 1 − (100 ÷ 1,000) = 90%."},
+  {category:"Demand planning",name:"WAPE",formula:"WAPE = Σ|Actual − Forecast| ÷ ΣActual × 100%",why:"Measures total absolute forecast error relative to total actual demand across several items or periods. Aggregation makes it useful when comparing a portfolio with different demand volumes.",example:"Total absolute error = 240 units; total actual demand = 4,000 units. WAPE = 240 ÷ 4,000 = 6%."},
+  {category:"Demand planning",name:"Forecast Bias",formula:"Bias % = Σ(Forecast − Actual) ÷ ΣActual × 100%",why:"Detects a repeated tendency to overforecast or underforecast. Positive bias under this convention means forecasts are higher than actual demand; negative bias means forecasts are lower.",example:"Forecast total = 5,300; actual total = 5,000. Bias = 300 ÷ 5,000 = +6%."},
+  {category:"Inventory",name:"Average Daily Usage (ADU)",formula:"ADU = Total Usage ÷ Number of Days",why:"Converts total consumption into a daily rate, allowing inventory quantities to be compared with time-based demand. Decide whether the denominator is calendar days or working days and use it consistently.",example:"A material consumed 2,400 kg over 30 calendar days has ADU = 80 kg/day."},
+  {category:"Inventory",name:"Days of Supply (DOS)",formula:"DOS = Available Inventory ÷ Average Daily Usage",why:"Estimates how long current usable inventory can support demand or consumption at the assumed rate. It is a coverage indicator, not a promise that stock will last if demand or supply changes.",example:"Available inventory = 1,200 units; ADU = 100 units/day. DOS = 12 days."},
+  {category:"Inventory",name:"Inventory Position",formula:"Inventory Position = On-hand + On-order − Allocated − Backorders",why:"Looks beyond the physical stock on the shelf by including confirmed incoming supply and known commitments. It helps prevent unnecessary replenishment or false confidence in stock availability.",example:"On-hand 500 + on-order 300 − allocated 150 − backorders 50 = 600 units."},
+  {category:"Inventory",name:"Safety Stock (basic buffer-days method)",formula:"Safety Stock = ADU × Buffer Days",why:"Creates a simple inventory cushion for uncertainty in demand or replenishment. Buffer days are a planning assumption, not a universal standard; more advanced methods use variability and service-level targets.",example:"ADU = 80 units/day and buffer = 4 days. Safety stock = 320 units."},
+  {category:"Inventory",name:"Reorder Point (ROP)",formula:"ROP = Demand During Lead Time + Safety Stock",why:"Signals when replenishment should be initiated so expected demand during supplier or production lead time is covered, with an additional protection buffer.",example:"ADU = 80 units/day; lead time = 10 days; safety stock = 320. ROP = 800 + 320 = 1,120 units."},
+  {category:"Inventory",name:"Inventory Turnover",formula:"Inventory Turnover = Cost of Goods Sold ÷ Average Inventory Value",why:"Indicates how many times inventory value is consumed or sold over a period. Use matching time periods and valuation bases; a high number is not automatically good if service suffers.",example:"Annual COGS = ₱12 million; average inventory = ₱2 million. Turnover = 6 times/year."},
+  {category:"Inventory",name:"Average Inventory",formula:"Average Inventory = (Beginning Inventory + Ending Inventory) ÷ 2",why:"Smooths the effect of comparing only one opening or closing snapshot. For highly seasonal or volatile inventory, use more frequent averages instead of only two points.",example:"Beginning inventory = ₱1.8M; ending = ₱2.2M. Average = ₱2.0M."},
+  {category:"Supply and capacity",name:"Capacity Utilization",formula:"Capacity Utilization = Actual Output ÷ Available Capacity × 100%",why:"Shows how much of the defined capacity is being used. The result is meaningful only when output and capacity use the same units, time period, product mix assumptions and resource definition.",example:"Actual output = 8,000 units; available capacity = 10,000 units. Utilization = 80%."},
+  {category:"Supply and capacity",name:"Production Requirement",formula:"Required Production = Demand + Target Ending Inventory − Beginning Inventory",why:"Balances the units needed to satisfy demand with the inventory position the business wants to carry at period end. Adjust the demand definition for backlog, scrap, yield or other planning rules where applicable.",example:"Demand = 12,000; target ending inventory = 2,000; beginning inventory = 3,000. Required production = 11,000 units."},
+  {category:"Supply and capacity",name:"Supply-Demand Gap",formula:"Supply-Demand Gap = Available Supply − Demand",why:"Quickly identifies whether planned supply covers demand. A negative result indicates a shortage; a positive result indicates potential surplus, subject to timing and inventory usability.",example:"Available supply = 9,500 units; demand = 10,200. Gap = −700 units, a 700-unit shortage."},
+  {category:"Supply and capacity",name:"Lead Time Demand",formula:"Lead Time Demand = ADU × Lead Time",why:"Estimates the quantity expected to be consumed while waiting for replenishment. ADU and lead time must use compatible day definitions.",example:"ADU = 80 kg/day; lead time = 12 days. Lead-time demand = 960 kg."},
+  {category:"Financial",name:"Revenue",formula:"Revenue = Units Sold × Selling Price per Unit",why:"Connects the volume plan and price assumption to expected sales value. Use the relevant net selling price and avoid treating production volume as sales unless the plan explicitly assumes shipment.",example:"5,000 units × ₱250/unit = ₱1,250,000 revenue."},
+  {category:"Financial",name:"Gross Profit",formula:"Gross Profit = Revenue − Cost of Goods Sold",why:"Shows the amount remaining after the cost of products sold, before operating expenses and other items. It links volume, price, product mix and manufacturing cost to financial performance.",example:"Revenue = ₱1.25M; COGS = ₱900,000. Gross profit = ₱350,000."},
+  {category:"Financial",name:"Gross Margin",formula:"Gross Margin % = Gross Profit ÷ Revenue × 100%",why:"Expresses gross profit as a share of revenue, making it easier to compare profitability across periods or product groups with different sales values.",example:"Gross profit = ₱350,000; revenue = ₱1.25M. Gross margin = 28%."},
+  {category:"Financial",name:"Inventory Carrying Cost",formula:"Carrying Cost = Average Inventory Value × Annual Carrying Cost Rate",why:"Estimates the annual cost of holding inventory, including applicable capital, storage, insurance, handling and obsolescence components. The rate should come from company Finance assumptions.",example:"Average inventory = ₱2M; annual carrying rate = 18%. Estimated annual carrying cost = ₱360,000."},
+  {category:"Financial",name:"Budget Variance",formula:"Variance = Actual (or Forecast) − Budget",why:"Quantifies the gap against the approved reference. Always label whether a positive variance is favorable or unfavorable because the interpretation differs for revenue, cost and profit.",example:"Forecast cost = ₱1.08M; budget = ₱1.00M. Variance = +₱80,000, unfavorable for cost."}
+];
+const GLOSSARY = [
+  ["S&OP","Sales & Operations Planning","A cross-functional business process that aligns demand, supply and financial plans into one agreed plan, usually reviewed on a regular cycle."],
+  ["Demand Plan","A time-phased view of expected customer demand, incorporating the statistical forecast and relevant commercial intelligence."],
+  ["Supply Plan","A time-phased view of how the organization intends to meet demand using production, procurement, inventory, capacity and other resources."],
+  ["Consensus Forecast","A forecast agreed across relevant functions after reviewing statistical outputs, market information, customer input and business assumptions."],
+  ["Demand Review","The S&OP meeting where demand assumptions, forecast changes, risks and opportunities are reviewed and an agreed demand plan is established."],
+  ["Supply Review","The meeting where the organization tests whether capacity, materials, suppliers, labor and inventory can support the demand plan."],
+  ["Pre-S&OP","A cross-functional reconciliation meeting that resolves issues where possible and prepares scenarios and recommendations for executive decisions."],
+  ["Executive S&OP","The leadership review where major trade-offs and escalated issues are decided and the integrated business plan is approved."],
+  ["S&OE","Sales and Operations Execution. The shorter-term process for managing near-term execution issues and deviations from the S&OP plan."],
+  ["Demand","The quantity of a product or service customers want or are expected to request during a defined period."],
+  ["Forecast","An estimate of future demand based on historical patterns, assumptions, market intelligence and relevant influencing factors."],
+  ["Forecast Accuracy","A measure of how close forecast values are to actual demand, using a clearly defined calculation method."],
+  ["Forecast Bias","A persistent tendency for forecasts to be higher or lower than actual demand."],
+  ["Lead Time","The elapsed time between initiating a replenishment or production activity and having the required item or output available."],
+  ["Safety Stock","Inventory held as a buffer against uncertainty in demand, supply or replenishment timing."],
+  ["Days of Supply (DOS)","An estimate of how many days available inventory can cover expected usage at a defined daily consumption rate."],
+  ["Reorder Point (ROP)","The inventory position at which replenishment should be triggered, commonly covering lead-time demand plus safety stock."],
+  ["Backorder","A customer order that has not yet been fulfilled and remains outstanding for future delivery."],
+  ["Capacity","The amount of output a resource, process, line or facility can produce within a defined time under stated assumptions."],
+  ["Bottleneck","The constrained resource or process step that limits the throughput of the wider production system."],
+  ["Utilization","The proportion of defined available capacity that is being used during a period."],
+  ["Inventory Position","A planning measure combining on-hand stock with incoming supply and subtracting allocations or other commitments, according to the company definition."],
+  ["Working Capital","Funds tied up in day-to-day operations. Inventory is one component and can materially affect cash availability."],
+  ["COGS","Cost of Goods Sold. The accounting cost assigned to products sold during a period."],
+  ["Gross Margin","Gross profit expressed as a percentage of revenue."],
+  ["Scenario Planning","The comparison of alternative future conditions and responses, such as base, upside and downside demand or supply cases."],
+  ["Trade-off","A decision that balances competing objectives, such as service, cost, capacity, inventory, risk and profitability."],
+  ["Demand-Supply Gap","The difference between available or planned supply and demand for a defined product and period."],
+  ["ABC Classification","An inventory segmentation method that groups items by their relative annual consumption value, often to differentiate control effort."],
+  ["XYZ Classification","An inventory segmentation method that groups items by demand variability or predictability."],
+  ["Obsolete Inventory","Stock that is no longer expected to be used or sold, often because of product changes, discontinuation or loss of demand."]
+];
+function renderReferenceLibraries() {
+  const q = slug(state.query);
+  const formulaItems = FORMULAS.filter(x => !q || slug([x.category,x.name,x.formula,x.why,x.example].join(" ")).includes(q));
+  $("formula-list").innerHTML = formulaItems.length ? formulaItems.map((x,i)=>`<article class="reference-card"><div class="reference-meta"><span>${escapeHTML(x.category)}</span><span>FORMULA</span></div><h3>${escapeHTML(x.name)}</h3><div class="formula-equation">${escapeHTML(x.formula)}</div><p><strong>Why this formula works</strong><br>${escapeHTML(x.why)}</p><p><strong>Example</strong><br>${escapeHTML(x.example)}</p></article>`).join("") : '<div class="empty">No matching formulas found.</div>';
+  const terms = GLOSSARY.filter(x => !q || slug(x.join(" ")).includes(q));
+  $("glossary-list").innerHTML = terms.length ? terms.map(x=>`<article class="glossary-card"><h3>${escapeHTML(x[0])}</h3><p class="glossary-full">${escapeHTML(x[1])}</p><p>${escapeHTML(x[2])}</p></article>`).join("") : '<div class="empty">No matching S&OP terms found.</div>';
+  if(state.view==="formulas") $("module-count").textContent = `${formulaItems.length} formulas`;
+  if(state.view==="glossary") $("module-count").textContent = `${terms.length} terms`;
+}
+function setView(view) {
+  state.view = view;
+  const labels = {modules:"Learning modules",formulas:"Formula library",glossary:"S&OP glossary"};
+  $("section-title").textContent = labels[view];
+  $("module-list").hidden = view!=="modules";
+  $("formula-list").hidden = view!=="formulas";
+  $("glossary-list").hidden = view!=="glossary";
+  document.querySelectorAll(".library-tab").forEach(btn=>{
+    const active=btn.dataset.view===view;
+    btn.classList.toggle("active",active);
+    btn.setAttribute("aria-selected",String(active));
+  });
+  $("search").placeholder = view==="modules" ? "Search modules or topics" : view==="formulas" ? "Search formulas or categories" : "Search S&OP terms";
+  renderModules();
+  renderReferenceLibraries();
 }
 function escapeHTML(value) { return String(value).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
 function openModule(number) {
@@ -119,8 +196,7 @@ function updateReaderProgress() {
   const ratio = maxScroll > 0 ? Math.min(1, Math.max(0, content.scrollTop / maxScroll)) : 1;
   const remaining = Math.max(0, Math.ceil((1 - ratio) * 100));
   $("reader-progress-fill").style.height = `${ratio * 100}%`;
-  $("reader-remaining").textContent = `${remaining}% left`;
-  $("reader-progress").setAttribute("aria-label", `${Math.round(ratio * 100)} percent read, ${remaining} percent remaining`);
+  $("reader-progress").setAttribute("aria-label", `${Math.round(ratio * 100)} percent read`);
 }
 function closeReader() {
   $("reader-view").hidden = true;
@@ -175,7 +251,7 @@ function toggleBookmark(id) {
 }
 function toggleComplete(id) {
   const items = progress(); const next = items.includes(id) ? items.filter(x => x !== id) : [...items,id];
-  writeStore(STORE.progress,next); $("complete-button").textContent = next.includes(id) ? "Completed ✓" : "Mark complete"; updateProgress(); renderModules();
+  writeStore(STORE.progress,next); $("complete-button").textContent = next.includes(id) ? "Completed ✓" : "Mark complete"; updateProgress(); setView(state.view);
 }
 async function loadLibrary() {
   try {
@@ -190,12 +266,8 @@ async function loadLibrary() {
   }
   updateProgress(); renderModules();
 }
-$("search").addEventListener("input", e => { state.query = e.target.value; renderModules(); });
-document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click", () => {
-  state.filter = btn.dataset.filter;
-  document.querySelectorAll(".filter").forEach(b => { const active=b===btn; b.classList.toggle("active",active); b.setAttribute("aria-selected",String(active)); });
-  renderModules();
-}));
+$("search").addEventListener("input", e => { state.query = e.target.value; renderModules(); renderReferenceLibraries(); });
+document.querySelectorAll(".library-tab").forEach(btn => btn.addEventListener("click", () => setView(btn.dataset.view)));
 $("close-dialog").addEventListener("click", () => $("lecture-dialog").close());
 $("reader-back").addEventListener("click", closeReader);
 $("reader-content").addEventListener("scroll", updateReaderProgress, { passive: true });
