@@ -287,6 +287,15 @@
       "summary": "Understand the purpose and position of the Executive S&OP Meeting, executive participants and decision rights, meeting inputs and activities, exception-based management, strategic demand-supply-financial trade-offs, approved plan outputs, and the S&OP Analyst's role in executive reporting, recommendations, decision records, and action monitoring.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-06-executive-sop-meeting.md",
       "status": "complete"
+    },
+    {
+      "id": "module-02-topic-02-07",
+      "module": 2,
+      "topicNumber": "2.7",
+      "title": "Understanding Planning Data",
+      "summary": "Understand planning data and distinguish master, transactional, historical, planning, and reference data; identify demand, supply, and inventory inputs; organize data by time, product, location, and business dimensions; understand ERP, MES, MRP, WMS, CRM, and other data sources; validate, cleanse, reconcile, and prepare planning datasets; distinguish actual records from assumptions and parameters; and assess data reliability for S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-07-understanding-planning-data.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
