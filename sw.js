@@ -1,4 +1,4 @@
-const CACHE_NAME = "sop-academy-shell-v24";
+const CACHE_NAME = "sop-academy-shell-v25";
 const CDN_ASSETS = [
   "https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js",
   "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js",
