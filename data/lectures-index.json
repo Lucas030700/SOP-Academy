@@ -512,6 +512,15 @@
       "summary": "Understand how Reorder Point determines when to replenish inventory; calculate ROP using average daily usage, replenishment lead time, and safety stock; account for variable demand and lead time, inventory position, open purchase orders, allocations and backorders; calculate replenishment quantities; and apply ROP monitoring to manufacturing procurement, production planning, and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-07-reorder-point.md",
       "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-08",
+      "module": 5,
+      "topicNumber": "5.8",
+      "title": "Inventory Turnover",
+      "summary": "Understand inventory turnover and its relationship to average inventory, COGS, DOS and DIO; calculate monthly, quarterly, annual and annualized turnover using consistent valuation bases; analyze value-based and quantity-based turnover; compare raw materials, WIP and finished goods; identify slow-moving and fast-moving inventory; and apply turnover analysis to demand, supply, procurement, production, working-capital and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-08-inventory-turnover.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
