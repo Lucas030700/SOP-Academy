@@ -467,6 +467,15 @@
       "summary": "Understand the complete recurring S&OP cycle, its five stages, activities, participants, inputs and outputs; trace demand, supply and financial information through the process; understand monthly calendars, cross-functional collaboration, one agreed set of numbers, governance, escalation, executive decisions, implementation, and the feedback loop.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-01-understanding-the-sop-cycle.md",
       "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-03",
+      "module": 5,
+      "topicNumber": "5.3",
+      "title": "Inventory Position",
+      "summary": "Understand how to determine inventory position by combining usable on-hand stock, qualified incoming purchase and production supply, reservations, customer and production commitments, and outstanding demand; distinguish on-hand, available inventory, inventory position, ATP, and PAB; calculate inventory position, available inventory, projected balances, multi-period positions, and net requirements; and apply timing-aware inventory analysis to manufacturing and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-03-inventory-position.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
