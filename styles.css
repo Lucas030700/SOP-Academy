@@ -1386,3 +1386,38 @@ body{background:#f6f7f8!important;color:#292d31!important}
 :root[data-theme="dark"] .lecture-body a{color:#d0d0d0!important}
 :root[data-theme="dark"] .lecture-body .katex,
 :root[data-theme="dark"] #reader-content .katex{color:#ededed!important}
+
+
+/* Dark reader navigation and lecture title: override inherited navy link/button colors */
+:root[data-theme="dark"] .reader-heading #reader-title,
+:root[data-theme="dark"] #reader-title,
+:root[data-theme="dark"] .reader-heading h1{
+  color:#f4f4f4!important;
+  -webkit-text-fill-color:#f4f4f4!important;
+}
+:root[data-theme="dark"] #reader-kicker,
+:root[data-theme="dark"] .reader-heading .eyebrow{
+  color:#a8a8a8!important;
+}
+:root[data-theme="dark"] #reader-back,
+:root[data-theme="dark"] .reader-back,
+:root[data-theme="dark"] button#reader-back{
+  color:#ededed!important;
+  -webkit-text-fill-color:#ededed!important;
+  background:#242424!important;
+  border-color:#454545!important;
+  box-shadow:none!important;
+}
+:root[data-theme="dark"] #reader-back span,
+:root[data-theme="dark"] .reader-back span{
+  color:#ededed!important;
+  -webkit-text-fill-color:#ededed!important;
+}
+:root[data-theme="dark"] #reader-back:active,
+:root[data-theme="dark"] .reader-back:active{
+  background:#333!important;
+}
+:root[data-theme="dark"] #reader-title *,
+:root[data-theme="dark"] .reader-heading *{
+  color:#f4f4f4!important;
+}
