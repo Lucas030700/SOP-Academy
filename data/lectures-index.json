@@ -557,6 +557,15 @@
       "summary": "Understand how to identify, measure, investigate, and analyze supply gaps across products and time periods; distinguish supply, capacity, material and delivery shortages; calculate gross and net gaps, projected inventory shortfalls, cumulative gaps, demand fulfillment and backlog; apply Pareto Analysis and the 5 Whys; and communicate operational and financial impacts during Supply Review and Pre-S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-02-identifying-supply-gaps.md",
       "status": "complete"
+    },
+    {
+      "id": "module-06-topic-06-03",
+      "module": 6,
+      "topicNumber": "6.3",
+      "title": "Supply-Demand Balancing Strategies",
+      "summary": "Understand how companies develop and evaluate supply-side and demand-side strategies to balance customer demand with available supply; compare overtime, additional shifts, subcontracting, alternative production lines, material expediting, inventory reallocation, build-ahead, demand rescheduling, allocation and product substitution; apply level and chase production, inventory drawdown, backlog and excess-supply analysis; calculate supply-demand gaps, additional production and capacity, inventory impact, remaining backlog, incremental balancing costs and demand fulfillment; evaluate operational feasibility, cost, customer service, revenue, profitability and multi-period impacts; and present cross-functional balancing recommendations during Supply Review and Pre-S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-03-supply-demand-balancing-strategies.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
