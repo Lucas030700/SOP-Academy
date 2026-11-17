@@ -350,6 +350,15 @@
       "summary": "Understand how statistical forecasts, customer information, market intelligence, and cross-functional inputs are evaluated and reconciled into one agreed demand plan; assess judgmental adjustments, avoid double-counting, conduct Demand Reviews, resolve conflicting assumptions, and communicate demand risks and decisions in S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-06-consensus-demand-planning.md",
       "status": "complete"
+    },
+    {
+      "id": "module-03-topic-03-07",
+      "module": 3,
+      "topicNumber": "3.7",
+      "title": "Forecast Accuracy and Forecast Bias",
+      "summary": "Understand how to measure forecast accuracy and error using MAD, MAPE, WAPE, MSE and RMSE; measure cumulative forecast error, mean forecast error and forecast bias; interpret forecasting performance at SKU, product-family and aggregate levels; investigate root causes; and use forecast KPIs to improve manufacturing and S&OP Demand Reviews.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-07-forecast-accuracy-and-forecast-bias.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
