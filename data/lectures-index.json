@@ -145,6 +145,15 @@
       "status": "complete"
     },
     {
+      "id": "module-09-topic-09-02",
+      "module": 9,
+      "topicNumber": "9.2",
+      "title": "Demand Planning KPIs",
+      "summary": "Understand how organizations measure demand planning performance, evaluate forecast quality, accuracy and bias, calculate and interpret MAPE, WAPE, MAE, Forecast Bias, FVA and Forecast Attainment, identify product-level and aggregate forecasting problems, and use demand KPIs to improve S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-02-demand-planning-kpis.md",
+      "status": "complete"
+    },
+    {
       "id": "module-09-topic-09-03",
       "module": 9,
       "topicNumber": "9.3",
