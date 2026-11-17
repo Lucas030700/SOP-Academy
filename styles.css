@@ -1444,3 +1444,27 @@ body{background:#f6f7f8!important;color:#292d31!important}
   color:#ededed!important;
   -webkit-text-fill-color:#ededed!important;
 }
+
+
+/* Module topic cards and sticky progress spacing refinement */
+.topic-row{
+  border-radius:6px!important;
+}
+.module-progress .module-overview{
+  border-radius:6px!important;
+}
+@media(max-width:650px){
+  .topic-row{
+    border-radius:6px!important;
+  }
+  /* Lift the progress panel slightly and give its lower edge breathing room */
+  .module-progress{
+    padding:5px 14px 5px!important;
+  }
+  .module-progress .module-overview{
+    border-radius:6px!important;
+  }
+  .lecture-body{
+    padding-top:16px!important;
+  }
+}
