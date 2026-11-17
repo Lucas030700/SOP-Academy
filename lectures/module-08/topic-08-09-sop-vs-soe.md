@@ -286,7 +286,7 @@ You should also understand how these two processes fit into the broader manageme
 | Tactical | Medium-term business alignment | Monthly demand, supply, capacity and inventory plans |
 | Operational | Immediate execution | Production sequencing, material shortages and order fulfillment |
 
-S&&OP primarily operates at the tactical level, with strategic decisions escalated when necessary.
+S&OP primarily operates at the tactical level, with strategic decisions escalated when necessary.
 
 S&OE primarily operates at the operational level.
 
