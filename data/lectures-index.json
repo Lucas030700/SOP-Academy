@@ -24,8 +24,8 @@
     },
     {
       "moduleNumber": 5,
-      "title": null,
-      "description": null
+      "title": "Inventory Management",
+      "description": "Understand inventory fundamentals, inventory types, inventory planning and control, replenishment, availability, costs, and working-capital trade-offs in manufacturing and S&OP."
     },
     {
       "moduleNumber": 6,
@@ -430,6 +430,15 @@
       "title": "Feasible Supply Plan",
       "summary": "Understand how to develop, validate, and evaluate a feasible supply plan by integrating demand requirements, production capacity, manpower, materials, inventory, supplier capabilities, lead times, bottlenecks, and operational constraints; calculate production requirements, available supply, projected inventory, supply-demand gaps, capacity feasibility, material shortages, and backlog; compare alternative supply scenarios; and communicate data-supported recommendations during Supply Review and Pre-S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-08-feasible-supply-plan.md",
+      "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-01",
+      "module": 5,
+      "topicNumber": "5.1",
+      "title": "Understanding Inventory",
+      "summary": "Understand inventory fundamentals and its role in manufacturing, supply chain operations, and S&OP; distinguish inventory, stock, and available supply; explain inventory functions, supply chain flow, inventory costs, working-capital implications, understocking and overstocking, raw materials, WIP and finished goods, the inventory balance equation, and inventory-related S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-01-understanding-inventory.md",
       "status": "complete"
     }
   ],
