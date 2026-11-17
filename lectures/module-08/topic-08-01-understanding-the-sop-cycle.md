@@ -1451,11 +1451,11 @@ Module 8 now teaches how those concepts are organized and executed as a recurrin
 | Previous Module | Knowledge Applied in the S&OP Cycle |
 |---|---|
 | Module 1: S&OP Fundamentals | Overall purpose, principles, and objectives |
-| Module 2: Supply Chain Management | Supply chain coordination and end-to-end information |
-| Module 3: Demand Planning | Demand forecasts and customer requirements |
-| Module 4: Supply Planning | Production, capacity, and supply feasibility |
-| Module 5: Inventory Management | Inventory availability, safety stock, and inventory projections |
-| Module 6: Demand-Supply Reconciliation | Performance monitoring, gap analysis, and demand-supply balancing |
+| Module 2: Demand Planning | Demand forecasts and customer requirements |
+| Module 3: Supply Planning | Production, capacity, and supply feasibility |
+| Module 4: Inventory Management | Inventory availability, safety stock, and inventory projections |
+| Module 5: Material and Procurement Planning | Supplier capacity, material requirements, and lead times |
+| Module 6: Performance Measurement and Analysis | KPIs, performance monitoring, and variance analysis |
 | Module 7: Financial Planning and Reconciliation | Financial impact, scenario analysis, and profitability |
 
 The relationship is important:
