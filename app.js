@@ -1,3 +1,14 @@
+const THEME_KEY = "sop-academy-theme";
+function applyTheme(theme) {
+  const dark = theme === "dark";
+  document.documentElement.dataset.theme = dark ? "dark" : "light";
+  const button = document.getElementById("theme-toggle");
+  if (button) {
+    button.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    button.title = dark ? "Switch to light mode" : "Switch to dark mode";
+    button.innerHTML = dark ? '<span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light</span>' : '<span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Dark</span>';
+  }
+}
 const INDEX_URL = "./data/lectures-index.json";
 const APP_VERSION = "5";
 const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1" };
@@ -320,5 +331,11 @@ window.addEventListener("resize", () => { if (!$("reader-view").hidden) updateRe
 $("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-dialog")) $("lecture-dialog").close(); });
 document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
 window.addEventListener("online",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="ONLINE";}); window.addEventListener("offline",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="OFFLINE";});
+applyTheme(localStorage.getItem(THEME_KEY) || "light");
+$("theme-toggle").addEventListener("click", () => {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+});
 setConnection(); $("version").textContent = `Library v${APP_VERSION}`; loadLibrary();
 if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" }).catch(()=>{}));
