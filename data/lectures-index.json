@@ -611,6 +611,15 @@
       "summary": "Understand how S&OP analysts convert operational and financial analysis into actionable business recommendations; distinguish findings, problem identification, alternative evaluation and recommendations; identify root causes and constraints; establish objectives and decision criteria; develop and compare alternatives using demand, supply, capacity, inventory, financial and customer information; quantify expected benefits, incremental costs, supply-gap reduction, demand fulfillment, inventory impact and ROI; apply weighted decision matrices and qualitative risk assessment; develop manufacturing recommendations; assign owners, deadlines and KPIs; and communicate evidence-based recommendations during Pre-S&OP and Executive S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-07-developing-recommendations.md",
       "status": "complete"
+    },
+    {
+      "id": "module-07-topic-07-03",
+      "module": 7,
+      "topicNumber": "7.3",
+      "title": "Cost Fundamentals",
+      "summary": "Understand cost, expense, expenditure and cash outflow; classify fixed, variable, direct, indirect, manufacturing, non-manufacturing, product, period and relevant costs; calculate direct materials, direct labor, manufacturing overhead, manufacturing cost, COGM, COGS and cost variances; analyze cost behavior, economies of scale and capacity utilization; and evaluate how demand, production, procurement, overtime, subcontracting, inventory build-ahead and rescheduling decisions affect manufacturing costs and S&OP financial performance.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-03-cost-fundamentals.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
