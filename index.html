@@ -29,34 +29,27 @@
     </section>
 
     <section class="toolbar">
-      <div><p class="eyebrow">LIBRARY</p><h2>Learning modules</h2></div>
+      <div><p class="eyebrow">LEARNING LIBRARY</p><h2 id="section-title">Learning modules</h2></div>
       <span id="module-count" class="count-pill">10 modules</span>
     </section>
 
     <label class="searchbox">
       <span aria-hidden="true">⌕</span>
-      <input id="search" type="search" placeholder="Search modules, topics, or terms" autocomplete="off">
+      <input id="search" type="search" placeholder="Search modules, formulas, or S&OP terms" autocomplete="off">
       <kbd>/</kbd>
     </label>
 
-    <div class="filter-row" role="tablist" aria-label="Library filter">
-      <button class="filter active" data-filter="all" role="tab" aria-selected="true">All modules</button>
-      <button class="filter" data-filter="in-progress" role="tab" aria-selected="false">In progress</button>
-      <button class="filter" data-filter="bookmarked" role="tab" aria-selected="false">Bookmarks</button>
-    </div>
+    <nav class="library-tabs" role="tablist" aria-label="Academy sections">
+      <button class="library-tab active" data-view="modules" role="tab" aria-selected="true">All modules</button>
+      <button class="library-tab" data-view="formulas" role="tab" aria-selected="false">Formula library</button>
+      <button class="library-tab" data-view="glossary" role="tab" aria-selected="false">S&OP</button>
+    </nav>
 
-    <section id="module-list" class="module-list" aria-live="polite">
+    <section id="module-list" class="module-list library-panel" aria-live="polite">
       <div class="loading">Loading your learning library…</div>
     </section>
-
-    <section class="quick-panel">
-      <div><span class="quick-icon">⌘</span><div><strong>Formula library</strong><small>Centralized S&OP formulas and definitions</small></div></div>
-      <span class="coming">Coming soon</span>
-    </section>
-    <section class="quick-panel">
-      <div><span class="quick-icon">Aa</span><div><strong>S&OP glossary</strong><small>Understand planning terminology</small></div></div>
-      <span class="coming">Coming soon</span>
-    </section>
+    <section id="formula-list" class="reference-list library-panel" hidden aria-live="polite"></section>
+    <section id="glossary-list" class="reference-list library-panel" hidden aria-live="polite"></section>
     <footer><span>S&OP ACADEMY</span><span id="version">Offline-ready library</span></footer>
   </main>
 
@@ -79,7 +72,7 @@
     </header>
     <article id="reader-content" class="reader-content"></article>
     <aside id="reader-progress" class="reader-progress" aria-label="Reading progress">
-      <span id="reader-remaining" class="reader-remaining">100% left</span>
+      <span id="reader-remaining" class="reader-remaining" aria-hidden="true"></span>
       <div class="reader-progress-track" aria-hidden="true"><span id="reader-progress-fill"></span></div>
     </aside>
     <footer class="reader-actions">
