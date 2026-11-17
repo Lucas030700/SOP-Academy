@@ -742,3 +742,15 @@ body{overscroll-behavior-y:none;touch-action:pan-y}
   .formula-item summary{min-height:51px;padding:12px 13px;font-size:12px}
   .formula-detail{padding:11px 13px 14px}
 }
+
+
+/* Ensure the home navigation never overlays the dedicated lecture reader */
+body.reading-mode .topbar,
+body.reading-mode .shell{display:none!important}
+.reader-view{z-index:60!important}
+.reader-head{position:relative;z-index:61;min-height:calc(76px + env(safe-area-inset-top))}
+.reader-back{position:relative;z-index:62;display:inline-flex;align-items:center;min-height:44px;min-width:70px}
+@media(max-width:650px){
+  .reader-head{min-height:calc(75px + env(safe-area-inset-top));padding-top:calc(10px + env(safe-area-inset-top))}
+  .reader-back{min-width:68px;padding:10px 2px}
+}
