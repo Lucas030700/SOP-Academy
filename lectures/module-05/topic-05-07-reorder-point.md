@@ -1,6 +1,7 @@
 # Module 5 – Inventory Management
 ## Topic 5.7: Reorder Point (ROP)
 
+<badge color="success">Level 1: Understanding → Level 2: Technical Application</badge> <badge color="info">Inventory Planning</badge>
 **Learning Objective:** Understand how companies determine the right time to replenish inventory so that sufficient stock remains available while waiting for incoming materials.
 
 ---
