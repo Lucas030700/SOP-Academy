@@ -139,6 +139,7 @@ function setView(view) {
 }
 function escapeHTML(value) { return String(value).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
 function openModule(number) {
+  state.activeModule = number;
   const mod = state.modules.find(m => Number(m.moduleNumber) === number);
   const topics = state.topics.filter(t => Number(t.module) === number);
   if (!topics.length) {
@@ -150,7 +151,8 @@ function openModule(number) {
   } else {
     $("lecture-kicker").textContent = `MODULE ${String(number).padStart(2,"0")}`;
     $("lecture-title").textContent = mod?.title || `Module ${number}`;
-    $("lecture-body").innerHTML = topics.map(t => `<article class="topic-row"><h3>${escapeHTML(t.topicNumber || "")} · ${escapeHTML(t.title)}</h3><p>${escapeHTML(t.summary || "Complete topic lecture")}</p><button class="button secondary" data-topic="${escapeHTML(t.id)}">Open lecture</button></article>`).join("");
+    const completedCount = topics.filter(t => progress().includes(t.id)).length;
+    $("lecture-body").innerHTML = `<div class="module-overview"><span>${topics.length} TOPICS</span><strong>${completedCount} of ${topics.length} completed</strong><div class="module-overview-track"><span style="width:${topics.length ? completedCount / topics.length * 100 : 0}%"></span></div></div><div class="module-topic-list">` + topics.map(t => `<article class="topic-row ${progress().includes(t.id) ? "is-complete" : ""}"><div class="topic-row-heading"><span class="topic-number">${escapeHTML(t.topicNumber || "")}</span><span class="topic-status">${progress().includes(t.id) ? "COMPLETED" : "LESSON"}</span></div><h3>${escapeHTML(t.title)}</h3><p>${escapeHTML(t.summary || "Complete topic lecture")}</p><button class="button secondary" data-topic="${escapeHTML(t.id)}">Open lecture <span aria-hidden="true">›</span></button></article>`).join("") + `</div>`;
     $("lecture-body").querySelectorAll("[data-topic]").forEach(b => b.addEventListener("click", () => openTopic(b.dataset.topic)));
     $("bookmark-button").hidden = true;
     $("complete-button").hidden = true;
