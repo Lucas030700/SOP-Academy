@@ -566,6 +566,15 @@
       "summary": "Understand how companies develop and evaluate supply-side and demand-side strategies to balance customer demand with available supply; compare overtime, additional shifts, subcontracting, alternative production lines, material expediting, inventory reallocation, build-ahead, demand rescheduling, allocation and product substitution; apply level and chase production, inventory drawdown, backlog and excess-supply analysis; calculate supply-demand gaps, additional production and capacity, inventory impact, remaining backlog, incremental balancing costs and demand fulfillment; evaluate operational feasibility, cost, customer service, revenue, profitability and multi-period impacts; and present cross-functional balancing recommendations during Supply Review and Pre-S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-03-supply-demand-balancing-strategies.md",
       "status": "complete"
+    },
+    {
+      "id": "module-06-topic-06-04",
+      "module": 6,
+      "topicNumber": "6.4",
+      "title": "Demand Prioritization",
+      "summary": "Understand how companies prioritize customer demand when available supply, production capacity, or inventory is insufficient; evaluate customer importance, delivery urgency, revenue, contribution, contractual obligations, product criticality and business impact; compare FIFO, customer-based, proportional, priority-based, product/market-based and fair-share allocation; calculate available supply, allocations, remaining supply, unfulfilled demand, backlog, fulfillment rates, revenue and contribution impact; apply alternative allocation approaches to a manufacturing scenario; and develop cross-functional, data-supported S&OP allocation recommendations.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-04-demand-prioritization.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
