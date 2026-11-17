@@ -29,8 +29,8 @@
     },
     {
       "moduleNumber": 6,
-      "title": null,
-      "description": null
+      "title": "Demand-Supply Reconciliation",
+      "description": "Compare demand requirements with available and planned supply, identify imbalances across products and time periods, and develop coordinated S&OP responses."
     },
     {
       "moduleNumber": 7,
@@ -448,6 +448,15 @@
       "title": "Types of Inventory",
       "summary": "Understand inventory classification by production stage, function or purpose, and demand characteristics; distinguish raw materials, work-in-process, finished goods, MRO, cycle stock, safety stock, pipeline, anticipation and decoupling inventory; explain independent and dependent demand; trace inventory movement through manufacturing; and apply inventory classification to supply planning and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-02-types-of-inventory.md",
+      "status": "complete"
+    },
+    {
+      "id": "module-06-topic-06-01",
+      "module": 6,
+      "topicNumber": "6.1",
+      "title": "Demand-Supply Matching",
+      "summary": "Understand how organizations compare customer orders and forecasts against available inventory, planned production, scheduled receipts, procurement, materials, and capacity; calculate available supply, supply-demand gaps, projected inventory, unfulfilled demand, backlog, and cumulative balances; analyze multi-product, multi-period manufacturing scenarios; distinguish temporary timing gaps from structural shortages; and communicate demand-supply mismatches to support S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-01-demand-supply-matching.md",
       "status": "complete"
     }
   ],
