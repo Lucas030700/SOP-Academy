@@ -530,6 +530,15 @@
       "summary": "Understand ABC Classification and the Pareto Principle; calculate annual consumption value, value percentages and cumulative percentages; rank and classify inventory into A, B and C categories; apply differentiated inventory controls; recognize operational-criticality limitations; and use ABC results with inventory turnover and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-09-abc-classification.md",
       "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-10",
+      "module": 5,
+      "topicNumber": "5.10",
+      "title": "XYZ Classification",
+      "summary": "Understand XYZ Classification and demand variability; calculate mean, standard deviation and coefficient of variation; classify inventory into X, Y and Z categories; interpret regular and intermittent consumption; apply demand predictability to forecasting, safety stock and replenishment; combine ABC-XYZ classification; and use variability analysis to support inventory and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-10-xyz-classification.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
