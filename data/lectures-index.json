@@ -44,8 +44,8 @@
     },
     {
       "moduleNumber": 9,
-      "title": null,
-      "description": null
+      "title": "S&OP Performance Measurement and KPIs",
+      "description": "Measure and interpret performance across demand, supply, inventory, customer service, financial results, and the S&OP process."
     },
     {
       "moduleNumber": 10,
@@ -142,6 +142,15 @@
       "title": "Understanding Product Flow in Supply Chain Management",
       "summary": "Understand the end-to-end physical movement of materials and products from suppliers to customers, the inbound, internal, and outbound stages, inventory transformation and availability, production bottlenecks, supply chain disruptions, and how product flow information supports S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-03-understanding-product-flow-in-supply-chain-management.md",
+      "status": "complete"
+    },
+    {
+      "id": "module-09-topic-09-01",
+      "module": 9,
+      "topicNumber": "9.1",
+      "title": "Introduction to Key Performance Indicators (KPIs)",
+      "summary": "Understand KPI fundamentals and the differences between measurements, metrics, KPIs, targets, actual results, and variances; distinguish leading and lagging indicators; select effective SMART-aligned KPIs; understand demand, supply, inventory, customer service, financial, and S&OP process KPI categories; evaluate targets and performance trade-offs; and use manufacturing KPI scorecards to support S&OP decisions and continuous improvement.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-01-introduction-to-kpis.md",
       "status": "complete"
     },
     {
