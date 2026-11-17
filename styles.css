@@ -473,3 +473,63 @@ body.reading-mode{overflow:hidden;background:#fff}
   .reader-actions{gap:8px;padding-left:13px;padding-right:13px}
   .reader-actions .button{min-height:45px;font-size:12px;padding:9px 7px}
 }
+
+
+/* Homepage: keep the progress card, remove the introductory hero copy */
+.progress-hero{
+  margin:22px 0 26px;
+  padding:18px 20px;
+  background:linear-gradient(135deg,#162d46,#24445e);
+}
+.progress-hero:after{display:none}
+.progress-hero .progress-card{padding:13px 15px 11px}
+.progress-hero .progress-track{margin:9px 0 7px}
+
+/* Slim right-edge reading progress indicator */
+.reader-progress{
+  position:absolute;
+  z-index:3;
+  top:50%;
+  right:max(7px,calc((100vw - 1060px)/2));
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  width:34px;
+  pointer-events:none;
+}
+.reader-remaining{
+  color:#61778a;
+  font:700 9px "DM Sans",sans-serif;
+  white-space:nowrap;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  letter-spacing:.02em;
+}
+.reader-progress-track{
+  position:relative;
+  width:4px;
+  height:min(34vh,230px);
+  min-height:110px;
+  overflow:hidden;
+  border-radius:8px;
+  background:#e8edf1;
+}
+.reader-progress-track span{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:0;
+  border-radius:8px;
+  background:#2c9b83;
+  transition:height .12s linear;
+}
+@media(max-width:650px){
+  .progress-hero{margin:15px 0 21px;padding:14px}
+  .reader-progress{right:4px;width:22px;gap:6px}
+  .reader-progress-track{height:25vh;min-height:95px;width:3px}
+  .reader-remaining{font-size:8px}
+  .reader-content{padding-right:30px}
+}
