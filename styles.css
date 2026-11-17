@@ -1468,3 +1468,25 @@ body{background:#f6f7f8!important;color:#292d31!important}
     padding-top:16px!important;
   }
 }
+
+
+/* Match topic cards exactly to homepage module-card geometry */
+.module-card,
+.topic-row{
+  border-radius:6px!important;
+}
+@media(max-width:650px){
+  .module-card,
+  .topic-row{
+    border-radius:6px!important;
+  }
+  /* Keep a clear opaque breathing-space below the sticky progress panel.
+     Topic cards scroll behind this area before becoming visible again. */
+  .module-progress{
+    padding:5px 14px 14px!important;
+    background:#f7f7f7!important;
+  }
+  :root[data-theme="dark"] .module-progress{
+    background:#111!important;
+  }
+}
