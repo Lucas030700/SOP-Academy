@@ -145,6 +145,15 @@
       "status": "complete"
     },
     {
+      "id": "module-09-topic-09-03",
+      "module": 9,
+      "topicNumber": "9.3",
+      "title": "Supply Planning KPIs",
+      "summary": "Understand how manufacturing organizations measure production plan attainment, schedule adherence, capacity utilization, OEE, production yield, customer and supplier on-time delivery, supplier lead time performance, and supply plan attainment; calculate and interpret supply performance, identify production and material constraints, and use supply KPIs to assess S&OP plan feasibility and support operational and management decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-03-supply-planning-kpis.md",
+      "status": "complete"
+    },
+    {
       "id": "module-09-topic-09-04",
       "module": 9,
       "topicNumber": "9.4",
