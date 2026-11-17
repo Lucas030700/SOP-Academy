@@ -14,8 +14,8 @@
     },
     {
       "moduleNumber": 3,
-      "title": null,
-      "description": null
+      "title": "Demand Planning",
+      "description": "Understand customer and market demand and develop the demand perspective that supports S&OP planning."
     },
     {
       "moduleNumber": 4,
@@ -295,6 +295,15 @@
       "title": "Understanding Planning Data",
       "summary": "Understand planning data and distinguish master, transactional, historical, planning, and reference data; identify demand, supply, and inventory inputs; organize data by time, product, location, and business dimensions; understand ERP, MES, MRP, WMS, CRM, and other data sources; validate, cleanse, reconcile, and prepare planning datasets; distinguish actual records from assumptions and parameters; and assess data reliability for S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-02/topic-02-07-understanding-planning-data.md",
+      "status": "complete"
+    },
+    {
+      "id": "module-03-topic-03-01",
+      "module": 3,
+      "topicNumber": "3.1",
+      "title": "Understanding Demand",
+      "summary": "Understand what demand represents in business and supply chain planning; distinguish customer needs, actual demand, sales, customer orders, open orders, backlog, historical demand, and forecasted demand; classify independent, dependent, derived, unconstrained, and constrained demand; identify internal and external demand drivers, demand patterns, planning levels, variability, and uncertainty; and apply demand analysis to manufacturing and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-01-understanding-demand.md",
       "status": "complete"
     }
   ],
