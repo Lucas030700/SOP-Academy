@@ -332,6 +332,15 @@
       "summary": "Understand and apply quantitative forecasting methods using historical demand data; calculate and compare naive forecasts, simple and weighted moving averages, simple exponential smoothing, linear trend regression, and basic seasonal forecasts; evaluate forecast errors using MAD, MAPE, MSE and bias; select methods based on demand patterns; and interpret statistical forecasts for manufacturing, procurement, inventory, and S&OP Demand Review decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-04-quantitative-forecasting-methods.md",
       "status": "complete"
+    },
+    {
+      "id": "module-03-topic-03-05",
+      "module": 3,
+      "topicNumber": "3.5",
+      "title": "Demand Influencing Factors",
+      "summary": "Understand internal business, external market, product, and customer-related factors that influence demand; distinguish normal variation, event-driven changes, temporary changes, structural changes, incremental demand, and demand shifts; quantify forecast adjustments, avoid double-counting, and evaluate demand assumptions and risks during S&OP Demand Review.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-05-demand-influencing-factors.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
