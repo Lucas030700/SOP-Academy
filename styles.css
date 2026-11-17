@@ -987,3 +987,43 @@ body.reading-mode .shell{display:none!important}
   }
   .lecture-body .module-overview{top:-1px!important}
 }
+
+
+/* Opaque sticky layers: scrolling cards must disappear underneath controls */
+.topbar{z-index:300!important}
+.progress-hero{
+  z-index:290!important;
+  isolation:isolate!important;
+  background:#f5f7fa!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+.searchbox{
+  z-index:280!important;
+  isolation:isolate!important;
+  opacity:1!important;
+  background:#fff!important;
+  background-color:#fff!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  box-shadow:0 5px 14px rgba(18,39,60,.09)!important;
+}
+.library-tabs{
+  z-index:270!important;
+  isolation:isolate!important;
+  opacity:1!important;
+  background:#edf1f5!important;
+  background-color:#edf1f5!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  box-shadow:0 5px 13px rgba(18,39,60,.07)!important;
+}
+#module-list,#formula-list,#glossary-list{
+  position:relative;
+  z-index:1;
+}
+@media(max-width:650px){
+  .progress-hero{background:#f5f7fa!important}
+  .searchbox{background:#fff!important}
+  .library-tabs{background:#edf1f5!important}
+}
