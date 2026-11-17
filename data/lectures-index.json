@@ -575,6 +575,15 @@
       "summary": "Understand how companies prioritize customer demand when available supply, production capacity, or inventory is insufficient; evaluate customer importance, delivery urgency, revenue, contribution, contractual obligations, product criticality and business impact; compare FIFO, customer-based, proportional, priority-based, product/market-based and fair-share allocation; calculate available supply, allocations, remaining supply, unfulfilled demand, backlog, fulfillment rates, revenue and contribution impact; apply alternative allocation approaches to a manufacturing scenario; and develop cross-functional, data-supported S&OP allocation recommendations.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-04-demand-prioritization.md",
       "status": "complete"
+    },
+    {
+      "id": "module-06-topic-06-05",
+      "module": 6,
+      "topicNumber": "6.5",
+      "title": "Scenario Planning",
+      "summary": "Understand how companies develop, evaluate, and compare alternative business scenarios involving demand, supply, capacity, inventory, supplier disruptions, and financial conditions; distinguish forecasting, scenario planning, sensitivity analysis, and contingency planning; calculate scenario demand, feasible production, available supply, projected inventory, supply-demand gaps, capacity utilization, fulfillment, revenue, costs, profitability, risk exposure, and expected outcomes; develop base, upside, downside, and combined manufacturing scenarios; identify trigger points and contingency actions; and prepare scenario analysis and recommendations for Pre-S&OP and management review.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-05-scenario-planning.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
