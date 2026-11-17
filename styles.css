@@ -1209,3 +1209,127 @@ body.reading-mode .shell{display:none!important}
   .module-progress .module-overview>strong{font-size:11px!important}
   .lecture-body{padding:13px 19px 28px!important}
 }
+
+
+/* Minimal monochrome charcoal theme */
+:root{
+  --ink:#111315;
+  --ink-soft:#202326;
+  --surface-dark:#292d31;
+  --surface-mid:#34393e;
+  --line-dark:#454b51;
+  --text-main:#f1f2f3;
+  --text-muted:#b2b8be;
+  --accent-mono:#d5d8db;
+}
+body{background:#111315!important;color:var(--text-main)!important}
+.topbar{
+  background:#111315!important;
+  color:#f4f5f6!important;
+  border-bottom:1px solid #292d31!important;
+}
+.topbar *{color:inherit}
+.sticky-library-controls{
+  background:#171a1d!important;
+  box-shadow:0 10px 22px rgba(0,0,0,.42)!important;
+}
+.sticky-library-controls .progress-hero{background:transparent!important}
+.progress-hero .progress-card{
+  background:linear-gradient(135deg,#202428,#30353a)!important;
+  border:1px solid #454b51!important;
+  box-shadow:none!important;
+}
+.progress-card,.progress-card *{color:#f1f2f3!important}
+.progress-card p{color:#b9c0c6!important}
+.progress-track,.module-progress-track{background:#4a5056!important}
+.progress-track span,.module-progress-track span{background:#d5d8db!important}
+.searchbox{
+  background:#252a2e!important;
+  border:1px solid #41474d!important;
+  color:#f1f2f3!important;
+  box-shadow:none!important;
+}
+.searchbox input{color:#f1f2f3!important}
+.searchbox input::placeholder{color:#aab1b8!important}
+.searchbox svg,.searchbox .icon{color:#c4c9ce!important}
+.library-tabs{
+  background:#252a2e!important;
+  border:1px solid #41474d!important;
+}
+.library-tab{color:#c1c6cb!important}
+.library-tab.active{
+  background:#e7e9eb!important;
+  color:#171a1d!important;
+  box-shadow:none!important;
+}
+.module-card,.topic-row,.reference-card,.glossary-card,.formula-item{
+  background:#202428!important;
+  background-image:none!important;
+  border-color:#3c4248!important;
+  color:#f0f2f3!important;
+  box-shadow:0 4px 14px rgba(0,0,0,.18)!important;
+}
+.module-card h3,.topic-row h3,.reference-card h3,.glossary-card h3,.formula-item summary{
+  color:#f2f3f4!important;
+}
+.module-card p,.topic-row p,.reference-card p,.glossary-card p,.formula-detail p{
+  color:#b8bec4!important;
+}
+.module-number,.topic-number,.topic-status,.reference-meta,.formula-category{
+  background:#30363b!important;
+  color:#cbd0d5!important;
+  border-color:#454c52!important;
+}
+.topic-row.is-complete{border-left-color:#c4c9ce!important}
+.topic-row.is-complete .topic-status{background:#3a4146!important;color:#f0f2f3!important}
+.module-foot,.module-card .muted{color:#aeb5bc!important}
+.module-progress{
+  background:#171a1d!important;
+  box-shadow:0 5px 14px rgba(0,0,0,.3)!important;
+}
+.module-progress .module-overview{
+  background:#252a2e!important;
+  border-color:#41474d!important;
+  box-shadow:none!important;
+}
+.module-progress .module-overview>span,
+.module-progress .module-overview>strong{color:#eef0f2!important}
+.module-progress .module-overview-track{background:#454b51!important}
+.module-progress .module-overview-track span{background:#d5d8db!important}
+.lecture-dialog,.dialog-head,.dialog-actions{
+  background:#171a1d!important;
+  color:#f1f2f3!important;
+  border-color:#383e44!important;
+}
+.lecture-dialog h2,.dialog-head h2,.lecture-dialog h3{color:#f1f2f3!important}
+.reader-view{background:#171a1d!important;color:#e9ecef!important}
+.reader-head,.reader-actions{background:#171a1d!important;border-color:#383e44!important}
+.reader-heading h1,.reader-back{color:#f1f2f3!important}
+.reader-status,.reader-heading .eyebrow{color:#aeb5bc!important}
+.reader-content{background:#171a1d!important;color:#d7dce0!important}
+.reader-content h1,.reader-content h2,.reader-content h3,.reader-content h4{color:#f1f2f3!important}
+.reader-content h2{border-color:#383e44!important}
+.reader-content th{background:#30363b!important;color:#f1f2f3!important}
+.reader-content td,.reader-content th{border-color:#454b51!important}
+.reader-content blockquote{background:#252a2e!important;border-color:#aeb5bc!important}
+.reader-content pre,.reader-content .katex-display{background:#252a2e!important;color:#f1f2f3!important}
+.button.secondary,.topic-row .button,.module-card button{
+  background:#343a40!important;
+  color:#f1f2f3!important;
+  border:1px solid #4a5158!important;
+}
+.button.primary,#reader-complete:not(.is-complete){
+  background:#e6e8ea!important;
+  color:#171a1d!important;
+}
+#reader-complete.is-complete{
+  background:#343a40!important;color:#f1f2f3!important;border:1px solid #626a72!important;
+}
+.formula-equation{background:#2b3035!important;border-color:#454c52!important;color:#f1f2f3!important}
+.formula-item summary i{background:#3a4046!important;color:#f1f2f3!important}
+.formula-item[open] summary{border-color:#454b51!important}
+.close-button{background:#30363b!important;color:#f1f2f3!important;border-color:#555d65!important}
+@media(max-width:650px){
+  .sticky-library-controls{background:#171a1d!important}
+  .module-progress{background:#171a1d!important}
+}
