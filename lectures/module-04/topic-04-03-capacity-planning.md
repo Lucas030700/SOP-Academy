@@ -1434,6 +1434,19 @@ The management team asks you:
 
 ---
 
+
+## Learning Progress Tracker
+
+Use this checklist to track your progress through Topic 4.3:
+
+- [ ] Understand the purpose of Capacity Planning
+- [ ] Differentiate Design, Effective, and Actual Capacity
+- [ ] Understand capacity load and availability
+- [ ] Understand capacity performance metrics
+- [ ] Calculate available and required capacity
+- [ ] Understand RCCP and its role in S&OP
+- [ ] Evaluate capacity shortages and management options
+
 ## Instructor's Closing Note
 
 May isang importanteng distinction na gusto kong baunin mo mula sa lesson na ito:
