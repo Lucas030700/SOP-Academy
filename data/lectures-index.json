@@ -647,6 +647,15 @@
       "summary": "Understand how operational plans are translated into financial results and reconciled against budgets; distinguish operational and financial reconciliation, budget, forecast and actual results; calculate revenue, cost, gross profit, operating profit, inventory value and working-capital variances; analyze volume, price, mix and efficiency impacts; identify operational causes of financial gaps; and coordinate Finance, Sales, Operations and Supply Chain to develop one integrated S&OP business plan.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-06-financial-reconciliation.md",
       "status": "complete"
+    },
+    {
+      "id": "module-07-topic-07-07",
+      "module": 7,
+      "topicNumber": "7.7",
+      "title": "Financial Scenario Analysis",
+      "summary": "Understand how companies evaluate alternative business conditions and translate operational assumptions into financial outcomes; develop base, upside and downside scenarios; calculate revenue, variable and fixed costs, contribution margin, gross and operating profit, inventory value, carrying cost, working capital, financial variances, ROI and payback; apply sensitivity analysis, identify financial drivers and risks, avoid double-counting, and present financially and operationally feasible alternatives during Pre-S&OP and Executive S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-07-financial-scenario-analysis.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
