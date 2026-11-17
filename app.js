@@ -36,7 +36,8 @@ function renderModules() {
     const matches = !q || text.includes(q);
     return matches;
   });
-  $("module-count").textContent = `${visible.length} / ${state.modules.length} modules`;
+  const countEl = $("module-count");
+  if (countEl) countEl.textContent = `${visible.length} / ${state.modules.length} modules`;
   if (!visible.length) {
     list.innerHTML = '<div class="empty"><strong>No matching modules</strong><p>Try another search or switch the library filter.</p></div>';
     return;
@@ -115,13 +116,15 @@ function renderReferenceLibraries() {
   $("formula-list").innerHTML = formulaItems.length ? formulaItems.map((x,i)=>`<details class="formula-item"><summary><span>${escapeHTML(x.name)}</span><i aria-hidden="true">+</i></summary><div class="formula-detail"><span class="formula-category">${escapeHTML(x.category)}</span><div class="formula-equation">${escapeHTML(x.formula)}</div><p><strong>Why this formula works</strong><br>${escapeHTML(x.why)}</p><p><strong>Example</strong><br>${escapeHTML(x.example)}</p></div></details>`).join("") : '<div class="empty">No matching formulas found.</div>';
   const terms = GLOSSARY.filter(x => !q || slug(x.join(" ")).includes(q));
   $("glossary-list").innerHTML = terms.length ? terms.map(x=>`<article class="glossary-card"><h3>${escapeHTML(x[0])}</h3><p class="glossary-full">${escapeHTML(x[1])}</p><p>${escapeHTML(x[2])}</p></article>`).join("") : '<div class="empty">No matching S&OP terms found.</div>';
-  if(state.view==="formulas") $("module-count").textContent = `${formulaItems.length} formulas`;
-  if(state.view==="glossary") $("module-count").textContent = `${terms.length} terms`;
+  const countEl = $("module-count");
+  if (countEl && state.view === "formulas") countEl.textContent = `${formulaItems.length} formulas`;
+  if (countEl && state.view === "glossary") countEl.textContent = `${terms.length} terms`;
 }
 function setView(view) {
   state.view = view;
   const labels = {modules:"Learning modules",formulas:"Formula library",glossary:"S&OP glossary"};
-  $("section-title").textContent = labels[view];
+  const titleEl = $("section-title");
+  if (titleEl) titleEl.textContent = labels[view];
   $("module-list").hidden = view!=="modules";
   $("formula-list").hidden = view!=="formulas";
   $("glossary-list").hidden = view!=="glossary";
