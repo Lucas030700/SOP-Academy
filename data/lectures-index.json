@@ -539,6 +539,15 @@
       "summary": "Understand XYZ Classification and demand variability; calculate mean, standard deviation and coefficient of variation; classify inventory into X, Y and Z categories; interpret regular and intermittent consumption; apply demand predictability to forecasting, safety stock and replenishment; combine ABC-XYZ classification; and use variability analysis to support inventory and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-10-xyz-classification.md",
       "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-11",
+      "module": 5,
+      "topicNumber": "5.11",
+      "title": "Excess and Obsolete Inventory",
+      "summary": "Understand how to identify, measure, manage, and prevent excess, slow-moving, non-moving, and obsolete inventory; compare inventory position and projected requirements with target inventory and future demand; calculate excess quantity and value, inventory aging and coverage, slow-moving inventory percentage, obsolete inventory value, and potential inventory reduction; assess write-downs, write-offs, working-capital exposure, and manufacturing scenarios involving raw materials, WIP, finished goods, demand changes, engineering revisions, and discontinued products; and coordinate recovery, prevention, and management decisions across Sales, Operations, Procurement, Engineering, Finance, and S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-11-excess-and-obsolete-inventory.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
