@@ -112,7 +112,7 @@ const GLOSSARY = [
 function renderReferenceLibraries() {
   const q = slug(state.query);
   const formulaItems = FORMULAS.filter(x => !q || slug([x.category,x.name,x.formula,x.why,x.example].join(" ")).includes(q));
-  $("formula-list").innerHTML = formulaItems.length ? formulaItems.map((x,i)=>`<article class="reference-card"><div class="reference-meta"><span>${escapeHTML(x.category)}</span><span>FORMULA</span></div><h3>${escapeHTML(x.name)}</h3><div class="formula-equation">${escapeHTML(x.formula)}</div><p><strong>Why this formula works</strong><br>${escapeHTML(x.why)}</p><p><strong>Example</strong><br>${escapeHTML(x.example)}</p></article>`).join("") : '<div class="empty">No matching formulas found.</div>';
+  $("formula-list").innerHTML = formulaItems.length ? formulaItems.map((x,i)=>`<details class="formula-item"><summary><span>${escapeHTML(x.name)}</span><i aria-hidden="true">+</i></summary><div class="formula-detail"><span class="formula-category">${escapeHTML(x.category)}</span><div class="formula-equation">${escapeHTML(x.formula)}</div><p><strong>Why this formula works</strong><br>${escapeHTML(x.why)}</p><p><strong>Example</strong><br>${escapeHTML(x.example)}</p></div></details>`).join("") : '<div class="empty">No matching formulas found.</div>';
   const terms = GLOSSARY.filter(x => !q || slug(x.join(" ")).includes(q));
   $("glossary-list").innerHTML = terms.length ? terms.map(x=>`<article class="glossary-card"><h3>${escapeHTML(x[0])}</h3><p class="glossary-full">${escapeHTML(x[1])}</p><p>${escapeHTML(x[2])}</p></article>`).join("") : '<div class="empty">No matching S&OP terms found.</div>';
   if(state.view==="formulas") $("module-count").textContent = `${formulaItems.length} formulas`;
