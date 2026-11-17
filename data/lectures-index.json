@@ -656,6 +656,15 @@
       "summary": "Understand how companies evaluate alternative business conditions and translate operational assumptions into financial outcomes; develop base, upside and downside scenarios; calculate revenue, variable and fixed costs, contribution margin, gross and operating profit, inventory value, carrying cost, working capital, financial variances, ROI and payback; apply sensitivity analysis, identify financial drivers and risks, avoid double-counting, and present financially and operationally feasible alternatives during Pre-S&OP and Executive S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-07/topic-07-07-financial-scenario-analysis.md",
       "status": "complete"
+    },
+    {
+      "id": "module-08-topic-08-02",
+      "module": 8,
+      "topicNumber": "8.2",
+      "title": "Data Gathering and Preparation",
+      "summary": "Understand how S&OP analysts collect, validate, consolidate, reconcile, and prepare reliable demand, production, inventory, procurement, supplier, and financial data; assess completeness, accuracy, consistency, timeliness, duplicates, missing records and outliers; establish data ownership, reporting cutoffs, planning calendars, assumptions and issue logs; and prepare trusted inputs for Demand Review and Supply Review.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-02-data-gathering-and-preparation.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
