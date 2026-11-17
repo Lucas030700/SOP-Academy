@@ -1709,6 +1709,10 @@ As the S&OP Analyst:
 
 ---
 
+## Interactive Answer Sheet
+
+You can answer directly below. Hindi kailangang perfect ang answers. Mas importante na makita natin kung naiintindihan mo ang reasoning behind each KPI.
+
 ## How we will evaluate your answers
 
 I will assess your responses based on four dimensions:
@@ -1753,6 +1757,6 @@ We will cover those in Topic 9.4, but only after completing this lesson.
 
 ## Your learning checkpoint
 
-I recommend answering the exercises in order, starting with Part A and Part B.
+I recommend answering the exercises in order, starting with Exercise 1 and Exercise 2.
 
 You can submit your answers together or one exercise at a time. I will check your calculations, explain mistakes, and challenge your business interpretation before we consider Topic 9.2 complete.
