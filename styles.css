@@ -1490,3 +1490,46 @@ body{background:#f6f7f8!important;color:#292d31!important}
     background:#111!important;
   }
 }
+
+
+/* Completion state: neutral surfaces and legible text in both themes */
+.topic-row.is-complete{
+  background:#f1f1f1!important;
+  border-color:#d8d8d8!important;
+  box-shadow:none!important;
+}
+.topic-row.is-complete h3{color:#171717!important}
+.topic-row.is-complete p{color:#666!important}
+.topic-row.is-complete .topic-status{
+  background:#dedede!important;
+  color:#444!important;
+  border-color:transparent!important;
+}
+:root[data-theme="dark"] .topic-row.is-complete{
+  background:#202020!important;
+  background-image:none!important;
+  border-color:#454545!important;
+  box-shadow:none!important;
+}
+:root[data-theme="dark"] .topic-row.is-complete h3{
+  color:#f1f1f1!important;
+  -webkit-text-fill-color:#f1f1f1!important;
+}
+:root[data-theme="dark"] .topic-row.is-complete p{color:#bdbdbd!important}
+:root[data-theme="dark"] .topic-row.is-complete .topic-status{
+  background:#353535!important;
+  color:#d5d5d5!important;
+  border-color:transparent!important;
+}
+
+/* One restrained burgundy accent for all progress indicators */
+.progress-track span,
+.mini-track span,
+.module-overview-track span{
+  background:#a52a45!important;
+}
+:root[data-theme="dark"] .progress-track span,
+:root[data-theme="dark"] .mini-track span,
+:root[data-theme="dark"] .module-overview-track span{
+  background:#c13b58!important;
+}
