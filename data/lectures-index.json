@@ -251,6 +251,15 @@
       "summary": "Understand the cross-functional S&OP organizational structure, departmental roles, responsibilities throughout the S&OP cycle, decision authority, accountability, collaboration, escalation, the S&OP Analyst's role, and how to apply a RACI Matrix in a manufacturing environment.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-07-roles-and-responsibilities.md",
       "status": "complete"
+    },
+    {
+      "id": "module-08-topic-08-06",
+      "module": 8,
+      "topicNumber": "8.6",
+      "title": "Executive S&OP Meeting",
+      "summary": "Understand the purpose and position of the Executive S&OP Meeting, executive participants and decision rights, meeting inputs and activities, exception-based management, strategic demand-supply-financial trade-offs, approved plan outputs, and the S&OP Analyst's role in executive reporting, recommendations, decision records, and action monitoring.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-06-executive-sop-meeting.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
