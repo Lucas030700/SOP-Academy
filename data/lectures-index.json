@@ -665,6 +665,15 @@
       "summary": "Understand how S&OP analysts collect, validate, consolidate, reconcile, and prepare reliable demand, production, inventory, procurement, supplier, and financial data; assess completeness, accuracy, consistency, timeliness, duplicates, missing records and outliers; establish data ownership, reporting cutoffs, planning calendars, assumptions and issue logs; and prepare trusted inputs for Demand Review and Supply Review.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-02-data-gathering-and-preparation.md",
       "status": "complete"
+    },
+    {
+      "id": "module-08-topic-08-03",
+      "module": 8,
+      "topicNumber": "8.3",
+      "title": "Demand Review Meeting",
+      "summary": "Understand the purpose and position of the Demand Review Meeting in the monthly S&OP cycle; distinguish statistical forecasts, sales forecasts and consensus demand plans; coordinate cross-functional roles and inputs; evaluate forecast variance, accuracy, bias, demand growth and promotional effects; investigate demand changes, challenge assumptions, reconcile commercial intelligence, establish a consensus demand plan, document risks and opportunities, and prepare the agreed demand plan for Supply Review.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-03-demand-review-meeting.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
