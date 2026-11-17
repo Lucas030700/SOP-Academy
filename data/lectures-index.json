@@ -521,6 +521,15 @@
       "summary": "Understand inventory turnover and its relationship to average inventory, COGS, DOS and DIO; calculate monthly, quarterly, annual and annualized turnover using consistent valuation bases; analyze value-based and quantity-based turnover; compare raw materials, WIP and finished goods; identify slow-moving and fast-moving inventory; and apply turnover analysis to demand, supply, procurement, production, working-capital and S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-08-inventory-turnover.md",
       "status": "complete"
+    },
+    {
+      "id": "module-05-topic-05-09",
+      "module": 5,
+      "topicNumber": "5.9",
+      "title": "ABC Classification",
+      "summary": "Understand ABC Classification and the Pareto Principle; calculate annual consumption value, value percentages and cumulative percentages; rank and classify inventory into A, B and C categories; apply differentiated inventory controls; recognize operational-criticality limitations; and use ABC results with inventory turnover and S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-05/topic-05-09-abc-classification.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
