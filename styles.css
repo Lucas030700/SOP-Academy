@@ -1144,3 +1144,68 @@ body.reading-mode .shell{display:none!important}
     background:#f5f8fa!important;
   }
 }
+
+
+/* Module progress is a dedicated fixed sibling, not part of the scrolling topic list */
+.module-progress[hidden]{display:none!important}
+.module-progress{
+  position:relative!important;
+  z-index:30!important;
+  flex:0 0 auto!important;
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  padding:12px clamp(18px,4vw,42px) 0!important;
+  background:#fff!important;
+  border:0!important;
+  box-shadow:0 5px 12px rgba(20,40,63,.035)!important;
+  isolation:isolate!important;
+}
+.module-progress .module-overview{
+  position:relative!important;
+  top:auto!important;
+  z-index:auto!important;
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:10px 12px!important;
+  width:100%!important;
+  margin:0!important;
+  padding:13px 15px!important;
+  border:1px solid #e1e9ef!important;
+  border-radius:13px!important;
+  background:#f5f8fa!important;
+  box-shadow:none!important;
+}
+.module-progress .module-overview>span{font-size:10px!important;letter-spacing:.1em!important;color:#718294!important}
+.module-progress .module-overview>strong{font-size:12px!important;color:#30465c!important}
+.module-progress .module-overview-track{
+  display:block!important;
+  flex:1 0 100%!important;
+  width:100%!important;
+  height:5px!important;
+  margin:0!important;
+  border-radius:20px!important;
+  overflow:hidden!important;
+  background:#dfe7ed!important;
+}
+.module-progress .module-overview-track span{display:block!important;height:100%!important;border-radius:20px!important;background:#5d9b8c!important}
+.lecture-body{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  overscroll-behavior:contain!important;
+  -webkit-overflow-scrolling:touch!important;
+  padding-top:16px!important;
+  clip-path:inset(0)!important;
+}
+.lecture-body .module-overview{display:none!important}
+@media(max-width:650px){
+  .module-progress{padding:9px 14px 0!important;box-shadow:0 4px 10px rgba(20,40,63,.04)!important}
+  .module-progress .module-overview{padding:11px 13px!important;border-radius:11px!important}
+  .module-progress .module-overview>span{font-size:9px!important}
+  .module-progress .module-overview>strong{font-size:11px!important}
+  .lecture-body{padding:13px 19px 28px!important}
+}
