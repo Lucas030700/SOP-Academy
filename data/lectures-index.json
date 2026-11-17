@@ -34,8 +34,8 @@
     },
     {
       "moduleNumber": 7,
-      "title": null,
-      "description": null
+      "title": "Financial Integration in S&OP",
+      "description": "Understand how operational plans translate into revenue, costs, profitability, inventory value, working capital, cash flow, and financial scenarios, and how Finance and operational teams reconcile one integrated S&OP business plan."
     },
     {
       "moduleNumber": 8,
@@ -49,8 +49,8 @@
     },
     {
       "moduleNumber": 10,
-      "title": null,
-      "description": null
+      "title": "Practical S&OP Application & Business Case Study",
+      "description": "Apply the concepts from Modules 1–9 in an end-to-end manufacturing case study: analyze historical data, develop demand and supply plans, assess inventory, reconcile demand and supply, evaluate financial impacts, prepare management recommendations, and complete an S&OP simulation."
     }
   ],
   "topics": [
