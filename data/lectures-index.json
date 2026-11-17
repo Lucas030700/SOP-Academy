@@ -314,6 +314,15 @@
       "summary": "Understand historical demand and actual sales, customer orders and backlog, customer forecasts, internal Sales input, statistical forecasts, market intelligence, promotional and new-product demand, and documented demand adjustments; evaluate source reliability, consolidate overlapping information without double-counting, and prepare a validated demand planning input for S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-02-types-of-demand-information.md",
       "status": "complete"
+    },
+    {
+      "id": "module-03-topic-03-03",
+      "module": 3,
+      "topicNumber": "3.3",
+      "title": "Introduction to Demand Forecasting",
+      "summary": "Understand demand forecasting and its role in S&OP; distinguish forecasts from customer orders, sales forecasts, targets, budgets, demand plans, supply plans and production plans; evaluate historical, customer, commercial, product and external forecasting inputs; compare qualitative and quantitative approaches; understand forecast levels, granularity, aggregation, horizons, the forecasting workflow and uncertainty; and apply demand forecasting concepts to manufacturing and cross-functional planning decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-03/topic-03-03-introduction-to-demand-forecasting.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
