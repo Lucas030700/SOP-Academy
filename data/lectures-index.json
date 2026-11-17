@@ -593,6 +593,15 @@
       "summary": "Understand how companies evaluate competing business alternatives and balance cost, capacity, inventory, customer service, delivery, risk, and profitability; distinguish trade-off analysis from scenario planning and cost-benefit analysis; calculate incremental cost and savings, contribution margin, cost per additional unit, inventory carrying cost, revenue exposure, total relevant cost, and net financial benefit; apply cost-benefit analysis, weighted decision matrices, sensitivity analysis, risk-impact assessment, and multi-criteria decision-making; compare overtime, subcontracting, inventory utilization, and demand rescheduling in a manufacturing shortage scenario; and prepare evidence-based trade-off analysis for Pre-S&OP and management decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-06-trade-off-analysis.md",
       "status": "complete"
+    },
+    {
+      "id": "module-06-topic-06-07",
+      "module": 6,
+      "topicNumber": "6.7",
+      "title": "Developing Recommendations",
+      "summary": "Understand how S&OP analysts convert operational and financial analysis into actionable business recommendations; distinguish findings, problem identification, alternative evaluation and recommendations; identify root causes and constraints; establish objectives and decision criteria; develop and compare alternatives using demand, supply, capacity, inventory, financial and customer information; quantify expected benefits, incremental costs, supply-gap reduction, demand fulfillment, inventory impact and ROI; apply weighted decision matrices and qualitative risk assessment; develop manufacturing recommendations; assign owners, deadlines and KPIs; and communicate evidence-based recommendations during Pre-S&OP and Executive S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-07-developing-recommendations.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
