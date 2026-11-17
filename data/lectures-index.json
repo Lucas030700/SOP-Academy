@@ -145,6 +145,15 @@
       "status": "complete"
     },
     {
+      "id": "module-09-topic-09-04",
+      "module": 9,
+      "topicNumber": "9.4",
+      "title": "Inventory KPIs",
+      "summary": "Understand how manufacturing organizations measure inventory performance, calculate inventory turnover, days of inventory and supply, average inventory, inventory accuracy, stockout rate, fill rate, service level, excess and obsolete inventory, and carrying cost; analyze raw materials, WIP and finished goods; identify shortages and excess stocks; and use inventory KPIs to support S&OP decisions and evaluate working-capital implications.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-09/topic-09-04-inventory-kpis.md",
+      "status": "complete"
+    },
+    {
       "id": "module-09-topic-09-05",
       "module": 9,
       "topicNumber": "9.5",
