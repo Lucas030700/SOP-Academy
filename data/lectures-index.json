@@ -458,6 +458,15 @@
       "summary": "Understand how organizations compare customer orders and forecasts against available inventory, planned production, scheduled receipts, procurement, materials, and capacity; calculate available supply, supply-demand gaps, projected inventory, unfulfilled demand, backlog, and cumulative balances; analyze multi-product, multi-period manufacturing scenarios; distinguish temporary timing gaps from structural shortages; and communicate demand-supply mismatches to support S&OP decisions.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-06/topic-06-01-demand-supply-matching.md",
       "status": "complete"
+    },
+    {
+      "id": "module-08-topic-08-01",
+      "module": 8,
+      "topicNumber": "8.1",
+      "title": "Understanding the S&OP Cycle",
+      "summary": "Understand the complete recurring S&OP cycle, its five stages, activities, participants, inputs and outputs; trace demand, supply and financial information through the process; understand monthly calendars, cross-functional collaboration, one agreed set of numbers, governance, escalation, executive decisions, implementation, and the feedback loop.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-01-understanding-the-sop-cycle.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
