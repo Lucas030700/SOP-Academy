@@ -386,6 +386,15 @@
       "summary": "Understand capacity planning and its role in Supply Planning and S&OP; distinguish design capacity, effective capacity, actual output, and practical available capacity; calculate available and required production capacity, utilization, efficiency, capacity gap, and capacity cushion; evaluate machine rates, shifts, downtime, setup, labor, and yield; apply Rough-Cut Capacity Planning (RCCP); and assess capacity-management options such as overtime, additional shifts, subcontracting, rescheduling, inventory build-ahead, and capacity investment.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-03-capacity-planning.md",
       "status": "complete"
+    },
+    {
+      "id": "module-04-topic-04-04",
+      "module": 4,
+      "topicNumber": "4.4",
+      "title": "Resource Planning",
+      "summary": "Understand resource planning and its role in Supply Planning and S&OP; distinguish resource, capacity, and production planning; identify manpower, machines, materials, tools, utilities, and time requirements; calculate labor-hours, machine-hours, material needs, availability, utilization, and resource gaps; evaluate resource constraints, allocation, shortages, surpluses, and corrective actions; and apply resource feasibility analysis to manufacturing and cross-functional S&OP decisions.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-04-resource-planning.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
