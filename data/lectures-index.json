@@ -674,6 +674,15 @@
       "summary": "Understand the purpose and position of the Demand Review Meeting in the monthly S&OP cycle; distinguish statistical forecasts, sales forecasts and consensus demand plans; coordinate cross-functional roles and inputs; evaluate forecast variance, accuracy, bias, demand growth and promotional effects; investigate demand changes, challenge assumptions, reconcile commercial intelligence, establish a consensus demand plan, document risks and opportunities, and prepare the agreed demand plan for Supply Review.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-03-demand-review-meeting.md",
       "status": "complete"
+    },
+    {
+      "id": "module-08-topic-08-04",
+      "module": 8,
+      "topicNumber": "8.4",
+      "title": "Supply Review Meeting",
+      "summary": "Understand the purpose and position of the Supply Review Meeting in the monthly S&OP cycle; distinguish Demand Review from Supply Review; coordinate Supply Planning, Production, Operations, Procurement, Inventory, Logistics and Finance; evaluate demand, inventory, production capacity, material availability, supplier commitments and operational constraints; calculate required production, capacity utilization, projected inventory, supply-demand gaps, material availability, backlog and production attainment; compare supply alternatives; develop a feasible proposed supply plan; and prepare risks, recommendations, action items and escalations for Pre-S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-08/topic-08-04-supply-review-meeting.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
