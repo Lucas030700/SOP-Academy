@@ -422,6 +422,15 @@
       "summary": "Understand supply planning strategy selection; compare Make-to-Stock, Make-to-Order, Assemble-to-Order, level, chase, hybrid, inventory build-ahead and production smoothing; evaluate overtime, subcontracting, alternative lines, rescheduling, allocation and supplier flexibility; calculate production requirements, inventory projections, capacity utilization and supply-demand gaps; compare supply alternatives and communicate recommendations during Supply Review and Pre-S&OP.",
       "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-07-supply-planning-strategies.md",
       "status": "complete"
+    },
+    {
+      "id": "module-04-topic-04-08",
+      "module": 4,
+      "topicNumber": "4.8",
+      "title": "Feasible Supply Plan",
+      "summary": "Understand how to develop, validate, and evaluate a feasible supply plan by integrating demand requirements, production capacity, manpower, materials, inventory, supplier capabilities, lead times, bottlenecks, and operational constraints; calculate production requirements, available supply, projected inventory, supply-demand gaps, capacity feasibility, material shortages, and backlog; compare alternative supply scenarios; and communicate data-supported recommendations during Supply Review and Pre-S&OP.",
+      "path": "https://raw.githubusercontent.com/Lucas030700/SOP-Academy/main/lectures/module-04/topic-04-08-feasible-supply-plan.md",
+      "status": "complete"
     }
   ],
   "note": "Only verified, published lectures are listed here. Add each new lecture after its Markdown file is committed. "
