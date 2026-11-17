@@ -1322,3 +1322,67 @@ body{background:#f7f7f7!important;color:#181818!important}
  .theme-toggle{min-height:30px;padding:4px 7px}
  .connection{font-size:9px}
 }
+
+
+/* Refinement: cool neutral graphite in light mode, neutral white typography in dark mode */
+:root{
+  --navy:#25292d!important;
+  --ink:#292d31!important;
+  --muted:#747a80!important;
+  --line:#e1e4e7!important;
+  --paper:#f6f7f8!important;
+  --teal:#626a70!important;
+  --soft:#eceff1!important;
+}
+body{background:#f6f7f8!important;color:#292d31!important}
+.topbar{background:#25292d!important}
+.progress-card{background:#30363b!important;border-color:#596168!important}
+.progress-track span,.mini-track span,.module-overview-track span{background:#8b9298!important}
+.library-tab.active,.button.primary,#reader-complete:not(.is-complete){background:#25292d!important}
+:root[data-theme="dark"]{
+  --navy:#080808!important;
+  --ink:#ededed!important;
+  --muted:#a6a6a6!important;
+  --line:#383838!important;
+  --paper:#111!important;
+  --teal:#bdbdbd!important;
+  --soft:#292929!important;
+}
+:root[data-theme="dark"] .lecture-body h1,
+:root[data-theme="dark"] .lecture-body h2,
+:root[data-theme="dark"] .lecture-body h3,
+:root[data-theme="dark"] .lecture-body h4,
+:root[data-theme="dark"] .lecture-body h5,
+:root[data-theme="dark"] .lecture-body h6,
+:root[data-theme="dark"] .lecture-body strong,
+:root[data-theme="dark"] .lecture-body b,
+:root[data-theme="dark"] .reader-content h1,
+:root[data-theme="dark"] .reader-content h2,
+:root[data-theme="dark"] .reader-content h3,
+:root[data-theme="dark"] .reader-content h4,
+:root[data-theme="dark"] .reader-content h5,
+:root[data-theme="dark"] .reader-content h6,
+:root[data-theme="dark"] .reader-content strong,
+:root[data-theme="dark"] .reader-content b,
+:root[data-theme="dark"] #reader-content h1,
+:root[data-theme="dark"] #reader-content h2,
+:root[data-theme="dark"] #reader-content h3,
+:root[data-theme="dark"] #reader-content h4,
+:root[data-theme="dark"] #reader-content h5,
+:root[data-theme="dark"] #reader-content h6,
+:root[data-theme="dark"] #reader-content strong,
+:root[data-theme="dark"] #reader-content b,
+:root[data-theme="dark"] .dialog-head h1,
+:root[data-theme="dark"] .dialog-head h2,
+:root[data-theme="dark"] .dialog-head h3,
+:root[data-theme="dark"] .dialog-head strong{
+  color:#f2f2f2!important;
+}
+:root[data-theme="dark"] .reader-content,
+:root[data-theme="dark"] #reader-content,
+:root[data-theme="dark"] .lecture-body{color:#d8d8d8!important}
+:root[data-theme="dark"] .reader-content a,
+:root[data-theme="dark"] #reader-content a,
+:root[data-theme="dark"] .lecture-body a{color:#d0d0d0!important}
+:root[data-theme="dark"] .lecture-body .katex,
+:root[data-theme="dark"] #reader-content .katex{color:#ededed!important}
