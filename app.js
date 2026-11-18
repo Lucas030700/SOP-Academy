@@ -316,8 +316,7 @@ $("search").addEventListener("input", e => { state.query = e.target.value; rende
 document.querySelectorAll(".library-tab").forEach(btn => btn.addEventListener("click", () => setView(btn.dataset.view)));
 $("close-dialog").addEventListener("click", () => $("lecture-dialog").close());
 $("reader-back").addEventListener("click", closeReader);
-$("reader-content").addEventListener("scroll", updateReaderProgress, { passive: true });
-window.addEventListener("resize", () => { if (!$("reader-view").hidden) updateReaderProgress(); });
+
 $("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-dialog")) $("lecture-dialog").close(); });
 document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
 window.addEventListener("online",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="ONLINE";}); window.addEventListener("offline",()=>{setConnection(); if(!$("reader-view").hidden) $("reader-connection").textContent="OFFLINE";});
