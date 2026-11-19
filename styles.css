@@ -1533,3 +1533,70 @@ body{background:#f6f7f8!important;color:#292d31!important}
 :root[data-theme="dark"] .module-overview-track span{
   background:#c13b58!important;
 }
+
+
+/* Dark-mode lecture scrollbar: keep the scroll position indicator visible */
+:root[data-theme="dark"] .reader-content,
+:root[data-theme="dark"] #reader-content,
+:root[data-theme="dark"] .lecture-body{
+  scrollbar-width:thin!important;
+  scrollbar-color:#888 #242424!important;
+}
+:root[data-theme="dark"] .reader-content::-webkit-scrollbar,
+:root[data-theme="dark"] #reader-content::-webkit-scrollbar,
+:root[data-theme="dark"] .lecture-body::-webkit-scrollbar{
+  width:7px!important;
+  height:7px!important;
+}
+:root[data-theme="dark"] .reader-content::-webkit-scrollbar-track,
+:root[data-theme="dark"] #reader-content::-webkit-scrollbar-track,
+:root[data-theme="dark"] .lecture-body::-webkit-scrollbar-track{
+  background:#242424!important;
+  border-radius:8px!important;
+}
+:root[data-theme="dark"] .reader-content::-webkit-scrollbar-thumb,
+:root[data-theme="dark"] #reader-content::-webkit-scrollbar-thumb,
+:root[data-theme="dark"] .lecture-body::-webkit-scrollbar-thumb{
+  background:#888!important;
+  border:1px solid #242424!important;
+  border-radius:8px!important;
+}
+:root[data-theme="dark"] .reader-content::-webkit-scrollbar-thumb:hover,
+:root[data-theme="dark"] #reader-content::-webkit-scrollbar-thumb:hover,
+:root[data-theme="dark"] .lecture-body::-webkit-scrollbar-thumb:hover{
+  background:#aaa!important;
+}
+
+/* Dark-mode math and formula panels */
+:root[data-theme="dark"] .lecture-body .katex-display,
+:root[data-theme="dark"] #reader-content .katex-display,
+:root[data-theme="dark"] .reader-content .katex-display,
+:root[data-theme="dark"] .lecture-body .math-block,
+:root[data-theme="dark"] #reader-content .math-block,
+:root[data-theme="dark"] .lecture-body .formula-box{
+  background:#242424!important;
+  background-image:none!important;
+  color:#f1f1f1!important;
+  border:1px solid #414141!important;
+  border-radius:6px!important;
+}
+:root[data-theme="dark"] .lecture-body .katex,
+:root[data-theme="dark"] #reader-content .katex,
+:root[data-theme="dark"] .reader-content .katex,
+:root[data-theme="dark"] .lecture-body .katex *,
+:root[data-theme="dark"] #reader-content .katex *,
+:root[data-theme="dark"] .lecture-body mjx-container,
+:root[data-theme="dark"] #reader-content mjx-container{
+  color:#f1f1f1!important;
+  -webkit-text-fill-color:#f1f1f1!important;
+}
+:root[data-theme="dark"] .lecture-body .katex .mord,
+:root[data-theme="dark"] .lecture-body .katex .mbin,
+:root[data-theme="dark"] .lecture-body .katex .mrel,
+:root[data-theme="dark"] .lecture-body .katex .mop,
+:root[data-theme="dark"] #reader-content .katex .mord,
+:root[data-theme="dark"] #reader-content .katex .mbin,
+:root[data-theme="dark"] #reader-content .katex .mrel,
+:root[data-theme="dark"] #reader-content .katex .mop{
+  color:#f1f1f1!important;
+}
