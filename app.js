@@ -11,13 +11,36 @@ function applyTheme(theme) {
 }
 const INDEX_URL = "./data/lectures-index.json";
 const APP_VERSION = "5";
-const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1" };
+const STORE = { progress: "sop-academy-progress-v1", bookmarks: "sop-academy-bookmarks-v1", reading: "sop-academy-reading-position-v1" };
 const state = { modules: [], topics: [], view: "modules", query: "", activeTopic: null, activeModule: null };
 const $ = (id) => document.getElementById(id);
 const readStore = (key) => { try { return JSON.parse(localStorage.getItem(key) || "[]"); } catch { return []; } };
 const writeStore = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 const progress = () => readStore(STORE.progress);
 const bookmarks = () => readStore(STORE.bookmarks);
+const readingPositions = () => { try { return JSON.parse(localStorage.getItem(STORE.reading) || "{}"); } catch { return {}; } };
+function saveReadingPosition() {
+  const topic = state.activeTopic;
+  const content = $("reader-content");
+  if (!topic || !content || $("reader-view").hidden) return;
+  try {
+    const positions = readingPositions();
+    const maxScroll = Math.max(0, content.scrollHeight - content.clientHeight);
+    if (maxScroll <= 0) return;
+    positions[topic.id] = content.scrollTop;
+    localStorage.setItem(STORE.reading, JSON.stringify(positions));
+  } catch {}
+}
+function restoreReadingPosition(id) {
+  const content = $("reader-content");
+  const position = Number(readingPositions()[id] || 0);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      content.scrollTop = Math.min(position, Math.max(0, content.scrollHeight - content.clientHeight));
+    });
+  });
+}
+
 const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
 function setConnection() {
@@ -198,7 +221,7 @@ async function openTopic(id) {
     const markdown = await response.text();
     const lectureMarkdown = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
     $("reader-content").innerHTML = renderLectureMarkdown(lectureMarkdown);
-    $("reader-content").scrollTop = 0;
+    restoreReadingPosition(id);
   } catch (error) {
     $("reader-content").innerHTML = `<div class="reader-error"><strong>Unable to load this lecture.</strong><p>${escapeHTML(error.message)}</p><button class="button secondary" id="reader-retry" type="button">Try again</button></div>`;
     $("reader-retry").addEventListener("click", () => openTopic(id));
@@ -316,6 +339,10 @@ $("search").addEventListener("input", e => { state.query = e.target.value; rende
 document.querySelectorAll(".library-tab").forEach(btn => btn.addEventListener("click", () => setView(btn.dataset.view)));
 $("close-dialog").addEventListener("click", () => $("lecture-dialog").close());
 $("reader-back").addEventListener("click", closeReader);
+$("reader-content").addEventListener("scroll", saveReadingPosition, { passive: true });
+window.addEventListener("pagehide", saveReadingPosition);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") saveReadingPosition(); });
+
 
 $("lecture-dialog").addEventListener("click", e => { if(e.target === $("lecture-dialog")) $("lecture-dialog").close(); });
 document.addEventListener("keydown",e=>{if(e.key==="/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("search").focus();}});
